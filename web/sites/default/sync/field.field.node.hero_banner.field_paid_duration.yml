@@ -1,0 +1,26 @@
+uuid: 6edcae96-17ec-4464-80f3-177bc24bf71e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_paid_duration
+    - node.type.hero_banner
+  module:
+    - datetime_range
+id: node.hero_banner.field_paid_duration
+field_name: field_paid_duration
+entity_type: node
+bundle: hero_banner
+label: 'Paid Duration'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    default_date_type: now
+    default_date: now
+    default_end_date_type: relative
+    default_end_date: '+30 days'
+default_value_callback: ''
+settings: {  }
+field_type: daterange

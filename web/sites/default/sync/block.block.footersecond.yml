@@ -1,0 +1,25 @@
+uuid: 8883a04a-44f7-48b6-b19a-b5e21a96382a
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.footer-second
+  module:
+    - system
+  theme:
+    - bartikcustomgary
+id: footersecond
+theme: bartikcustomgary
+region: footer_fourth
+weight: 0
+provider: null
+plugin: 'system_menu_block:footer-second'
+settings:
+  id: 'system_menu_block:footer-second'
+  label: Footer-second
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

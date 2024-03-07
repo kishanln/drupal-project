@@ -1,0 +1,47 @@
+<?php
+
+use Drupal\views\ViewExecutable;
+use Drupal\Core\Url;
+use Drupal\Core\Link;
+/**
+ * Gets HTML output of a switch which will switch between grid and list display of a view.
+ */
+
+
+function map_toggle_get_views_display_switch() {
+  // Creating link for 'Grid'.
+  $grid_url = Url::fromUri('internal:/page/grid');
+  $grid_options = [
+    'query' => \Drupal::request()->query->all(),
+    'attributes' => ['class' => ['page-grid-switch']],
+  ];
+  $grid_link = Link::fromTextAndUrl(t('Grid'), $grid_url)->toString($grid_options);
+
+  // Creating link for 'List'.
+  $list_url = Url::fromUri('internal:/page/list');
+  $list_options = [
+    'query' => \Drupal::request()->query->all(),
+    'attributes' => ['class' => ['page-list-switch']],
+  ];
+  $list_link = Link::fromTextAndUrl(t('List'), $list_url)->toString($list_options);
+
+  // Combining links with separator '|'.
+  $switch = $grid_link . ' | ' . $list_link;
+
+  // Adding CSS class for the whole switch.
+  $switch = "<div class='page-display-switch'>" . $switch . "</div>";
+  return $switch;
+}
+
+/**
+ * Implements hook_views_pre_view().
+ */
+function map_toggle_views_pre_view(ViewExecutable $view, $display_id, array &$args) {
+    // dd($view);
+    if ($view->id() == 'leaflet_map' && $display_id == 'page_1' || $display_id == 'attachment_1') {
+        // dd($view);
+      // Adds a display switch to the header of a view.
+      // 'footer' as second parameter will add the display switch to the footer of the view instead.
+      $view->element['#views']['#markup'] = map_toggle_get_views_display_switch();
+    }
+  }

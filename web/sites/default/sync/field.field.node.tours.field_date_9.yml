@@ -1,0 +1,21 @@
+uuid: 5a5a4be4-056d-4d07-87e4-476ba900ef30
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_date_9
+    - node.type.tours
+  module:
+    - datetime_range
+id: node.tours.field_date_9
+field_name: field_date_9
+entity_type: node
+bundle: tours
+label: 'Tours date'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: daterange

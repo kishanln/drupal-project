@@ -1,0 +1,49 @@
+uuid: d4b946c7-e22b-4070-9226-2dea27940dc2
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.hero_banner.body
+    - field.field.node.hero_banner.field_approved
+    - field.field.node.hero_banner.field_banner_ad_paid
+    - field.field.node.hero_banner.field_banner_ad_paid_duration
+    - field.field.node.hero_banner.field_banner_ad_state
+    - field.field.node.hero_banner.field_hero_banner_booking_site
+    - field.field.node.hero_banner.field_image
+    - field.field.node.hero_banner.field_paid_duration
+    - field.field.node.hero_banner.field_venue_name
+    - field.field.node.hero_banner.field_venue_street_address
+    - node.type.hero_banner
+  module:
+    - image
+    - user
+id: node.hero_banner.teaser
+targetEntityType: node
+bundle: hero_banner
+mode: teaser
+content:
+  field_image:
+    type: image
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+  links:
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  body: true
+  field_approved: true
+  field_banner_ad_paid: true
+  field_banner_ad_paid_duration: true
+  field_banner_ad_state: true
+  field_hero_banner_booking_site: true
+  field_paid_duration: true
+  field_venue_name: true
+  field_venue_street_address: true

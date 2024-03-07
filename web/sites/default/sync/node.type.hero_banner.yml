@@ -1,0 +1,17 @@
+uuid: a4bba50c-fbb0-4a2c-8266-cedc26e899ee
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Hero Banner'
+type: hero_banner
+description: ''
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: false

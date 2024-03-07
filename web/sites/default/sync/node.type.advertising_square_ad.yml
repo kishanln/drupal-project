@@ -1,0 +1,17 @@
+uuid: aa0b427c-aa98-4771-95a6-8d70105df45c
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Advertising - Square Ad'
+type: advertising_square_ad
+description: 'Create your own Square ad'
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: false

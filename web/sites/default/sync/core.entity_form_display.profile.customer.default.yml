@@ -1,0 +1,28 @@
+uuid: 9396477a-8b06-4a5a-a9d4-f1331aa5c9a7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.profile.customer.address
+    - profile.type.customer
+  module:
+    - address
+  enforced:
+    module:
+      - commerce_order
+_core:
+  default_config_hash: 3LyHGK7R4HxqejbxONet1S9j9ekqLJuFpwT-MNJygvo
+id: profile.customer.default
+targetEntityType: profile
+bundle: customer
+mode: default
+content:
+  address:
+    type: address_default
+    weight: 0
+    settings:
+      wrapper_type: details
+    third_party_settings: {  }
+    region: content
+hidden:
+  is_default: true

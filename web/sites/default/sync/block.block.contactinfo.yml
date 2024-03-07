@@ -1,0 +1,25 @@
+uuid: 748809ac-96b0-405f-b121-84718516e785
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:0b1a36bf-fc79-4873-a431-99253a96e9f5'
+  module:
+    - block_content
+  theme:
+    - bartikcustomgary
+id: contactinfo
+theme: bartikcustomgary
+region: footer_fourth
+weight: -16
+provider: null
+plugin: 'block_content:0b1a36bf-fc79-4873-a431-99253a96e9f5'
+settings:
+  id: 'block_content:0b1a36bf-fc79-4873-a431-99253a96e9f5'
+  label: 'contact info'
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

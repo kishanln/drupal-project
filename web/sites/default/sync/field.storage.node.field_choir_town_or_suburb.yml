@@ -1,0 +1,21 @@
+uuid: 19df35f4-3a16-437b-af0c-a22fffc89ec8
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_choir_town_or_suburb
+field_name: field_choir_town_or_suburb
+entity_type: node
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

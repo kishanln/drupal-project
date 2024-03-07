@@ -1,0 +1,23 @@
+uuid: e578a7a2-1982-4555-b2e5-10d661606e5e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_url_including_http
+    - node.type.tours
+  module:
+    - link
+id: node.tours.field_url_including_http
+field_name: field_url_including_http
+entity_type: node
+bundle: tours
+label: 'Website URL (optional)'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 16
+  title: 0
+field_type: link

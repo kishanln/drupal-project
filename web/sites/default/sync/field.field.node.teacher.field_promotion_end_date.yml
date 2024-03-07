@@ -1,0 +1,21 @@
+uuid: b0cbb0b2-cb28-4fd8-8f91-4756a0c5b49c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_promotion_end_date
+    - node.type.teacher
+  module:
+    - datetime
+id: node.teacher.field_promotion_end_date
+field_name: field_promotion_end_date
+entity_type: node
+bundle: teacher
+label: 'Promotion End Date'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

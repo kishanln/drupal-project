@@ -1,0 +1,19 @@
+uuid: 5108031b-2624-4523-8415-4374eda0968f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_tour_venue_name
+    - node.type.tours
+id: node.tours.field_tour_venue_name
+field_name: field_tour_venue_name
+entity_type: node
+bundle: tours
+label: 'Tour Venue Name'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

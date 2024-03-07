@@ -1,0 +1,21 @@
+uuid: 84ba7363-c6cb-47ab-954f-ae56ae16958a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_banner_ad_paid_duration
+    - node.type.advertising_square_ad
+  module:
+    - datetime_range
+id: node.advertising_square_ad.field_banner_ad_paid_duration
+field_name: field_banner_ad_paid_duration
+entity_type: node
+bundle: advertising_square_ad
+label: 'Square Ad Paid Duration'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: daterange

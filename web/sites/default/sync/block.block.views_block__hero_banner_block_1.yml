@@ -1,0 +1,30 @@
+uuid: 8a0d359b-3faf-4a92-8d98-527576ea4284
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.hero_banner
+  module:
+    - system
+    - views
+  theme:
+    - bartik
+id: views_block__hero_banner_block_1
+theme: bartik
+region: content
+weight: -10
+provider: null
+plugin: 'views_block:hero_banner-block_1'
+settings:
+  id: 'views_block:hero_banner-block_1'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: /homepage
+    negate: false
+    context_mapping: {  }

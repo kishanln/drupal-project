@@ -1,0 +1,23 @@
+uuid: ecd4d290-03d5-49cd-bef1-1a998cefcb4e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_choir_paid
+    - node.type.choir_or_group_listing
+id: node.choir_or_group_listing.field_choir_paid
+field_name: field_choir_paid
+entity_type: node
+bundle: choir_or_group_listing
+label: 'Choir Paid old'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

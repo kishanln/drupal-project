@@ -1,0 +1,19 @@
+uuid: 5d11979d-45d1-4cb9-acb3-dadedb853cb2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_town_or_suburb_6
+    - node.type.tours
+id: node.tours.field_town_or_suburb_6
+field_name: field_town_or_suburb_6
+entity_type: node
+bundle: tours
+label: 'Town or Suburb 6'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

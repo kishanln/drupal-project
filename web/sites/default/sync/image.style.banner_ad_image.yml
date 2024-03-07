@@ -1,0 +1,14 @@
+uuid: a65038b7-c391-4729-8cee-35a913d540f5
+langcode: en
+status: true
+dependencies: {  }
+name: banner_ad_image
+label: 'Banner Ad Image'
+effects:
+  3ad915ee-72c9-4fd2-ad77-09633848868b:
+    uuid: 3ad915ee-72c9-4fd2-ad77-09633848868b
+    id: image_resize
+    weight: 1
+    data:
+      width: 685
+      height: 90

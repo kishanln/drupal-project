@@ -1,0 +1,23 @@
+uuid: ec378b31-9a1d-4eac-a894-d946788b0d61
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_add_date_10
+    - node.type.tours
+id: node.tours.field_add_date_10
+field_name: field_add_date_10
+entity_type: node
+bundle: tours
+label: 'add date 10'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

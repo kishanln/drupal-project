@@ -1,0 +1,25 @@
+uuid: 21cb6b3a-e3d8-438f-b1e5-4a9faada3919
+langcode: en
+status: true
+dependencies:
+  config:
+    - crop.type.tour_listing
+  module:
+    - crop
+name: your_listing
+label: 'Tour listing'
+effects:
+  d25bfc32-bb9c-41b7-91de-c227e12f577a:
+    uuid: d25bfc32-bb9c-41b7-91de-c227e12f577a
+    id: crop_crop
+    weight: 1
+    data:
+      crop_type: tour_listing
+  053b691f-97c1-4a57-8ac8-85277709691a:
+    uuid: 053b691f-97c1-4a57-8ac8-85277709691a
+    id: image_scale_and_crop
+    weight: 2
+    data:
+      width: 680
+      height: 375
+      anchor: center-center

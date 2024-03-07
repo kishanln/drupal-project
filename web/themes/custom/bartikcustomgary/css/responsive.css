@@ -1,0 +1,350 @@
+ /*Responsive*/ 
+ *{box-sizing: border-box;}
+ @media only screen and (max-width: 1200px) { 
+ .layout-main-wrapper.layout-container, 
+ .site-footer .layout-container	{max-width: 100%;width: 96%;margin: 0 auto !important;padding: 0px !important;} 
+	 .region-breadcrumb {padding: 0px !important;} 
+	 div#block-bartikcustomgary-mainnavigation {width: 100%;} 
+	 .region.region-primary-menu {padding: 15px 17px;} 
+	 .clearfix.region.region-header {padding: 40px 20px;} 
+	 .region-secondary-menu .menu {margin: 0 20px !important;} 
+	 #block-bartikcustomgary-views-block-banner-ad-block-1 {width: 100%;} 
+	 #block-bartikcustomgary-mainnavigation #superfish-main li span {width: auto;float: left;} 
+	 ul.sf-menu.sf-style-white {margin-bottom: 20px;width:100%;} 
+	 #block-bartikcustomgary-mainnavigation ul li a {width: auto;text-shadow: none;} 
+	 #block-bartikcustomgary-mainnavigation #superfish-main li {margin-right: 0px;} 
+	 #block-bartikcustomgary-mainnavigation ul ul li a {font-size: 11px;} 
+	 #block-bartikcustomgary-mainnavigation #superfish-main-toggle { 
+	 background: transparent;color: #000;padding: 10px;border: 0px;} 
+	 #main {width: 100%;float: left;margin: 10px 0px;} 
+	 .layout-one-sidebar main#content {width: 70%;float: right;padding-left: 0;border: 1px solid #ccc;} 
+	 .views_slideshow_cycle_teaser_section {width: 100% !important;} 
+ #sidebar-first .block {float: left;width: 100%;padding: 0;} 
+ .about-left-section h2, .about-right-section h2 {font-size: 20px !important;} 
+	 .form-actions {width: 100%;float: left;margin:0px 0px 5px !important;} 
+	 .layout-main #sidebar-first {border: 1px solid #ccc;width: 27%;float: left;} 
+	 .region.region-sidebar-first {width: 100%;padding: 5%;margin-bottom: 0px;} 
+	 .view-header h1 {margin: 20px 0px;font-size: 26px;} 
+ #node-ad-type-form #edit-field-select-adtype .js-form-item.form-item {width: 25%;} 
+	 #node-ad-type-form .square p {margin-top: 50px;} 
+	 .node-form .custom-choir1 h1 {font-size: 26px;}  
+	 #content #edit-actions--3 {position: static;} 
+	 /*.view-node-edit-block .views-field-edit-node-1 span a {margin-top: 0;} */
+	 div#block-views-block-node-edit-block-block-3 .views-field-edit-node-1 span.field-content a { margin-top: 20px;}
+	 .cart-textt {width: 100%;} 
+	 .node-form #edit-first-submit, .form-actions .form-submit{margin-right:0px !important;} 
+	 .block .view-what-s-new-view .view-content {width: 100%;margin-right: 0;} 
+	 #main-wrapper #sidebar-second {width: 24%;float:right;} 
+	.layout-two-sidebars #content {width: 48%;float: left;} 
+	 .view-display-id-attachment_2 .views-field.views-field-nothing {float: right;width: 60%;margin-left: 20px;}
+	 .views_slideshow_cycle_main .slider-title {font-size: 18px;line-height: 20px;} 
+	 .views_slideshow_cycle_main .slider-state, .views_slideshow_cycle_main .slider-date { 
+	 font-size: 10px;} 
+	 .view-what-s-new-view .attachment-after {width: 100%;} 
+ .view-display-id-attachment_2 .views-field-field-image {width: 30%;} 
+	.site-footer .site-footer__top .region {width: 32%;float: left;clear: right;} 
+	 .view-filters .form-radios .js-form-item {width: 19%; padding-bottom: 10px;} 
+	 #block-bartikcustomgary-search .button.search-form__submit, .search-form__submit {
+	 width: auto !important;margin: 0px !important;} 
+	 #block-topmenu ul {margin: 0px 20px;} 
+	 #block-bartikcustomgary-branding {float: left;width: 100%;text-align:center;} 
+ } 
+
+ @media only screen and (max-width: 980px) { 
+	 #block-bartikcustomgary-mainnavigation #superfish-main li span, 
+	#block-bartikcustomgary-mainnavigation ul li a {
+	padding: 14px 13px;font-size: 9px;}
+	
+ }  
+ @media only screen and (max-width: 800px) { 
+ 
+ } 
+ @media only screen and (max-width: 768px) {
+ ul.sf-menu li {z-index: unset;} 
+	 .layout-main-wrapper.layout-container, 
+	 .site-footer .layout-container{width:90%;} 
+	 .layout-main #sidebar-first {width: 100%;margin: 20px 0px;}
+	 .layout-two-sidebars #content {width: 100%;margin:20px 0px;} 
+	 #main-wrapper #sidebar-second {width: 100%;border: 1px solid #e7e7e7;} 
+	 .block .view-what-s-new-view .view-content {width: 100%;margin-right: 0;} 
+	 .site-footer .site-footer__top .region {width: 100%;} 
+	 #page .site-footer__bottom .region {margin-top: 0;} 
+	 #page .site-footer {padding: 35px 0 0px;} 
+	 .region-secondary-menu .menu {margin: 0 20px !important;}
+	 div#block-bartikcustomgary-mainnavigation {width: auto;float: right;} 
+	 div.sf-accordion-toggle.sf-style-white a span {display: none;} 
+	 .region-primary-menu .block-blockg48-content .text-formatted p {margin-top: 0px !important;} 
+	 div.sf-accordion-toggle.sf-style-white a{float:right;} 
+	 .sf-accordion-toggle.sf-style-white {position: relative;} 
+	 .region-footer-third .clearfix.menu li {padding: 5px 0px !important;} 
+	 .region-primary-menu #superfish-main-accordion {text-align: left; 
+	 left: 20px !important;position: absolute;top: 47px !important;right: 20px;/*background: rgba(0,0,0,0.9) !important;*/display: block;width: auto;/*padding: 20px 0px;*/margin: 0 auto;} 
+	 .clearfix.region.region-header {padding: 20px;} 
+ .region-primary-menu #superfish-main-accordion li {background: rgba(0,0,0,0.9) !important;position: relative;} 
+	 .view-filters .form-radios .js-form-item {width: auto;} 
+	 .view-what-s-new-view .view-filters {margin-bottom: 20px;} 
+	 .layout-one-sidebar main#content {width: 100%;float: left;border-left: 1px solid #ccc;padding:0px;} 
+	 .views-field-buy-it-now #edit-actions {position: static;margin: 10px 0px !important;} 
+	 .about-right-section {width: 100%;} 
+	 #block-bartikcustomgary-useraccountmenu .clearfix.menu, #sidebar-second .block .logout-ul { 
+	 width: 100%;} 
+ .site-footer .block {padding: 0 !important;float: left;width: 100%;margin: 10px 0px;} 
+	 .region.region-footer-third .block { 
+	 margin-top: 0px;padding: 0px 0px 0px 8px;} 
+	 .site-footer__top .content .menu {padding-left: 10px !important;} 
+	 .about-left-section {width: 100%;} 
+	.about-left-section {width: 100%;padding-right: 0;} 
+	 .region.region-sidebar-first .block {width: 100% !important;} 
+	.view-footer .view-what-s-new-view .view-content .views-col {width: 100% !important;}
+     .views_slideshow_cycle_teaser_section .views_slideshow_cycle_slide {width: 100% !important;} 
+	 .layout-two-sidebars #content {border-left: 1px solid #ccc;}
+	  .path-teachers div#block-bartikcustomgary-content .views-field-nothing, .path-workshop div#block-bartikcustomgary-content .views-field-nothing, .path-voice-teachers div#block-bartikcustomgary-content .views-field-nothing, .path-performance div#block-bartikcustomgary-content .views-field-nothing, .path-tours div#block-bartikcustomgary-content .views-field-nothing, .path-choirs div#block-bartikcustomgary-content .views-field-nothing {width: 100%;padding-left: 0px;} 
+	  .view-header h1 {margin: 10px 0px;font-size: 22px;text-align:left;} 
+	 .field--type-string h1, .field--type-string h3, .field--type-list-string h1, node-form .custom-event h1, .node-form .custom-event h3, #block-step3 .field--name-body h2 {
+	 font-size: 26px;}  
+	 #node-ad-type-form .field--type-list-string h2 {margin: 10px 0px !important;} 
+	 .layout-one-sidebar #node-ad-type-form .form-wrapper .form-text, .layout-one-sidebar #node-ad-type-form .form-wrapper .form-url, .layout-one-sidebar #node-ad-type-form .form-wrapper .form-select {width: 100% !important;}
+	 #node-ad-type-form #edit-field-select-adtype .js-form-item.form-item {width: 50%;} 
+	 .text-formatted.field.field--name-body h2 {font-size: 19px;margin-top: 0px;} 
+	 .text-formatted.field.field--name-body h1 {font-size: 16px;margin-top: 0px;} 
+	 #uc-cart-view-form table thead {width: 100%;/*float: left;*/} 
+	 #uc-cart-view-form table tbody {/*float: left;*/width: 100%;} 
+	 #uc-cart-view-form table input, #uc-cart-view-form table textarea {font-size: 11px;} 
+	 #uc-cart-view-form table tfoot tr, 
+	 #uc-cart-view-form table tbody tr{width: 100%;/*float: left;*/padding: 0px;} 
+	 #uc-cart-view-form table tfoot {width: 100%;/*float: left;*/} 
+	 #uc-cart-view-form table tr td,#uc-cart-view-form table tr th {padding: 4px 6px;} 
+	 form#uc-cart-view-form div#edit-actions {width: auto;} 
+	 .cart-textt {width: auto;}
+	 .path-node .image-widget-data .form-submit {margin: 15px 0px 10px 0px;}
+	 .node-form .js-form-item input, .node-form .js-form-item select {width: 100%;} 
+	 .node-form .js-form-item label {font-size: 12px;} 
+	 form#node-performance-listing-form.step1 fieldset#edit-field-event-date-0 #edit-field-event-date-0-value .js-form-item {width: auto;float: left;} 
+	 form#node-performance-listing-form.step1 fieldset#edit-field-event-date-0 #edit-field-event-date-0-value .js-form-item:nth-child(3n) select.form-select, 
+	 form#node-performance-listing-form.step1 fieldset#edit-field-event-date-0 #edit-field-event-date-0-end-value .js-form-item:nth-child(3n) select.form-select	{ 
+ margin-right: 0px !important;} 
+	 .node-form .required .fieldset-wrapper h4 {float: left;width: 100%;} 
+	 .node-form #edit-field-event-date-wrapper .container-inline {float: left;width: 100%;} 
+	 .node-form #edit-field-event-date-wrapper .container-inline .js-form-item{width: auto;float: left;margin: 5px 0px;} 
+	 .node-form .field--widget-daterange-datelist select.form-select {margin-right: 6px;} 
+	 .node-form fieldset.required {padding: 0px;} 
+	 #content .form-radios .js-form-item label {font-size: 10px;} 
+	 #contact-message-feedback-form .js-form-item input {width: 100%;border-radius: 0px;} 
+	 .region-primary-menu .block-block-content .text-formatted p {margin-top: 0px !important;} 
+	 #mailchimp-signup-subscribe-block-register-user-newsletter-form #edit-actions {margin: 0px !important;}
+	 #sidebar-first .mailchimp-signup-subscribe-form .form-submit {margin: 0px !important;} 
+	 #block-bartikcustomgary-content .node .page_title {font-size: 24px;}
+	 .region.region-footer-first .text-formatted p {margin: 0px;}  
+	 #edit-field-event-date-wrapper {width: 100%;float: left;}
+ }  
+
+ @media only screen and (max-width: 767px){ 
+ 	.layout-main #sidebar-first {border: 0;}
+ 	body.user-logged-in .layout-main #sidebar-first {border: 1px solid #ccc;margin: 20px 0;}
+	 #block-bartikcustomgary-search {width: 100%;margin-top: 17px;}
+	 div#block-bartikcustomgary-search .content.container-inline {width: 100%;} 
+	 #search-block-form #edit-actions--2 {float: right;padding: 0px;} 
+	 #block-bartikcustomgary-search .search-form .form-search {width: 100%;}
+	 .node-form #edit-first-submit, .form-actions .form-submit {margin: 10px 0px !important;width:auto !important;font-size:14px;} 
+     form#search-block-form .js-form-item.form-item {width: 86%;padding-top: 5px;padding-bottom: 5px;} 
+     #main-wrapper #sidebar-second {border-left: 1px solid #e7e7e7;} 
+     .view-what-s-new-view .attachment-after {float: left;width: 100%;} 
+     #block-bartikcustomgary-mainnavigation ul li span,
+	 #block-bartikcustomgary-mainnavigation ul li a {font-size: 13px;color: #fff !important;font-weight: 700; cursor:pointer;padding: 14px 20px;} 
+	 #sidebar-first .block {width: auto;} 
+	#block-bartikcustomgary-views-block-banner-ad-block-1 img, 
+	 #block-bartikcustomgary-views-block-banner-ad-block-1 {width: 100%;float: left;} 
+	 #block-bartikcustomgary-account-menu .clearfix.menu li a {padding-right: 0px;} 
+ .region.region-primary-menu {padding:20px;position: relative;width:100%;} 
+	 div.sf-accordion-toggle.sf-style-white > a::after {font-size: 40px;right: 0;font-weight: 100;} 
+    .site-footer__bottom {float: left;width: 100%;} 
+   .mailchimp-newsletter-mergefields {width: 100%;float: left;} 
+   .views_slideshow_cycle_slide {width: 100% !important;} 
+    .views_slideshow_cycle_main .slider-title {font-size: 16px;} 
+    .views_slideshow_cycle_main .views-field-nothing {padding: 10px;} 
+    #block-bartikcustomgary-mainnavigation ul li span:hover, 
+     #block-bartikcustomgary-mainnavigation ul li a:hover { 
+	 color: #000 !important;background: #fff;border-radius: 0px;} 
+	 div#block-bartikcustomgary-content .right-teacher-sec .tech-title a {line-height: 25px;font-size: 15px;margin-bottom: 0px;} 
+     #block-bartikcustomgary-mainnavigation ul ul {
+	 margin-top: 17px;background: #fff;float: left !important;width: 100%;position: absolute;top: 40px !important;z-index: 999999 !important;left: 0px !important;right: 0px;margin: 0 auto;} 
+	 .sf-clone-parent {display: none;} 
+	 .image-widget-data .image-data__crop-wrapper {float: left;width: 100%;}
+	 #edit-actions {margin: 0px !important;padding: 0px;} 
+	 .view-node-edit-block .views-field-edit-node-1 span a {font-size: 14px;} 
+	 .region-content span .Pay_for_later a {margin-right: 3px;font-size: 14px;/*margin-top: 0;*/} 
+	 .uc-product-add-to-cart-form .form-submit {display: none !important;} 
+	 .view-id-after_submit_node_details .views-field-field-website-url .field-content {font-size: 12px;}
+	 .view-after-submit-node-details .views-field-title {font-size: 15px;}
+	 #block-topmenu ul {padding: 0.2em 0px;} 
+	 #block-topmenu ul li a {font-size: 9px;} 
+	 #node-ad-type-form .appear-col p {margin-top: 5%;width: 100%;text-align: left;} 
+	 div#block-bartikcustomgary-views-block-videos-block-block-1 .slick__slide {padding: 10px 5px;}
+	  div#block-views-block-node-edit-block-block-3 .views-field-edit-node-1 span.field-content a { margin-top:0px;}
+	  body.user-logged-in h2#block-bartikcustomgary-useraccountmenu-menu { margin-bottom: 10px!important; display: block;padding-bottom: 10px!important;}
+	  .region.region-content div#block-bartikcustomgary-content .views-field.views-field-title{
+	  	margin-bottom: 0;
+	  }
+	  #sidebar-first .view-new-listings .views-row{
+	  	margin-bottom: 50px;
+	  }
+	  #sidebar-first .view-new-listings .views-row:last-child {
+	    margin-bottom: 0;
+	}
+
+ }
+ @media only screen and (max-width: 480px) { 
+	 .view-display-id-attachment_2 .views-field-field-image {width: 100%;text-align: center;} 
+	 .view-display-id-attachment_2 .views-field-field-image {width: 22%;} 
+	 .view-display-id-attachment_2 .views-field.views-field-nothing {width: 70%;margin-left: 15px;} 
+	 .view-what-s-new-view .views-field span a {font-size: 14px;} 
+	 .clearfix.region.region-header {padding: 10px 20px 0px;} 
+	 #block-bartikcustomgary-branding .site-branding__logo {margin: 0px;} 
+	 .region-secondary-menu .menu {text-align: center;}
+	#block-bartikcustomgary-account-menu .clearfix.menu li a {font-size: 8px;} 
+	 .views_slideshow_cycle_main .slider-title {font-size: 11px;} 
+	 .views_slideshow_cycle_main .slider-state, .views_slideshow_cycle_main .slider-date { 
+	 font-size: 11px;} 
+	 .region.region-primary-menu {width: 100%;} 
+	 #block-bartikcustomgary-search {width: 100%;} 
+	 .path-teachers div#block-bartikcustomgary-content .views-field-field-image, .path-workshop div#block-bartikcustomgary-content .views-field-field-image, .path-voice-teachers div#block-bartikcustomgary-content .views-field-field-image, .path-performance div#block-bartikcustomgary-content .views-field-field-image, .path-tours div#block-bartikcustomgary-content .views-field-field-image, .path-choirs div#block-bartikcustomgary-content .views-field-field-image { *
+	 float: left;width: 100%;} 
+	 #block-bartikcustomgary-content .views-field-nothing h1 {font-size: 20px;} 
+	 .post-img {margin-right: 0;width:100%;} 
+	 .post-right {width: 100%;} 
+ #node-ad-type-form .square {width: 100%;} 
+	 #node-ad-type-form .square p {margin-top: 10px;text-align: left;} 
+	 #sidebar-first .block-views-blocknew-listings-block-1 .views-field a {font-size: 14px;} 
+	 .site-footer__bottom .owl-wrapper .owl-item {width: 248px !important;  margin: 0px 0px} 
+	 #block-topmenu ul li a {font-size: 9px;} 
+	 .post-right a{font-size:32px;}
+	 .region-content span .Save_for_later a{margin-bottom:20px;}
+	 
+ } 
+
+/******23rd june 2020*******/
+/**************************/
+div#block-bartikcustomgary-content .right-teacher-sec { word-break: break-all;}
+
+ @media only screen and (max-width:991px ){
+.view-id-detail_view #edit-actions { position: static!important; margin: 15px 0!important;}
+.processing {width: 100%;}
+div#block-bartikcustomgary-content .outer-bottom-ctnt .right-div {width: 100%; padding-left: 0;}
+}
+
+
+@media only screen and (min-width:768px ){
+ div#block-views-block-hero-banner-block-1-2 {display: none;}
+ div#block-mailchimpsubscriptionformmailinglistsignup-2 {display: none;}
+}
+ @media only screen and (max-width:767px ){
+ div#sidebar-first .views-field.views-field-nothing{display: block;}
+ div#sidebar-first .region.region-sidebar-first { margin: auto; float: none;}
+ div#sidebar-first .views-field.views-field-views-conditional-field-1 a img { width: 100%;}
+ div#sidebar-first .views-field.views-field-field-square-banner-ad-image- .field-content img {width: 100%;}
+ div#sidebar-second .views-field.views-field-field-image .field-content a { display: block;}
+.view-footer .view-content .views-field.views-field-field-image a img {width: 100%;}
+.view-footer .view-content .views-field.views-field-field-image a {display: block;}
+div#block-bartikcustomgary-views-block-hero-banner-block-1 { display: none;}
+div#block-mailchimpsubscriptionformregisterusernewsletter { display: none;}
+div#mailchimp-newsletter-3ec9ab0827-mergefields input[type=text], div#mailchimp-newsletter-3ec9ab0827-mergefields input[type=email] {
+width: 100%;}
+div#sidebar-first .region.region-sidebar-first { display: inline-block; width: 100%; padding-left: 15px; padding-right: 15px;}
+.layout-one-sidebar div#sidebar-first .region.region-sidebar-first .views-element-container{ display: none; }
+div#block-mailchimpsubscriptionformmailinglistsignup-2 h2 {border: 0;padding-left: 0;padding-right: 0;}
+div#block-mailchimpsubscriptionformmailinglistsignup-2 h2:after{background-image: none!important;}
+div#block-bartikcustomgary-fblikebox iframe {width: 100%!important;max-width: 100%!important;}
+div#block-bartikcustomgary-fblikebox .content span {width: 100%!important;}
+div#block-bartikcustomgary-fblikebox .content span ._2p3a {width: 100%!important;}
+.layout-one-sidebar main#content img { width: 100%;}
+/*div#sidebar-first {display: none;}*/
+div#block-bartikcustomgary-content .views-field.views-field-title span.field-content { font-size: 17px; text-align: left;}
+
+}
+
+ @media only screen and (max-width:480px ){
+	.site-footer__bottom .slick-list .slick-slide{  width: 247px;}
+	.slick-dots li { margin: 0 2px!important;}
+}
+
+
+/**24th june 2020**/
+@media only screen and (max-width:1200px ){
+	a.advertise_btn {position: static;float: left;}
+}
+
+@media only screen and (max-width:991px ){
+	div#main-wrapper section.section div#edit-actions { width: 223px; padding-left: 0!important;}
+	div#main-wrapper section.section div#edit-actions input#edit-submit-1398 {font-size: 16px;width: 100%!important; margin-top: 0!important;}
+}
+@media only screen and (max-width:767px ){
+	.layout-main #sidebar-first{margin: 0;}
+	/*.layout-one-sidebar div#sidebar-first div { display: none;}*/
+	div#edit-actions input#edit-submit-508 { display: block!important;}
+	div#main-wrapper section.section { position: relative;}
+	div#main-wrapper section.section div#edit-actions {position: absolute;bottom: -23px;left: 6px;width: 80px;text-align: center;padding-left: 11px;background: #fff;}
+	div#main-wrapper section.section div#edit-actions { width:  auto; padding-left: 10px;padding-right: 10px;}
+	div#main-wrapper section.section div#edit-actions input#edit-submit-1398 { padding-left: 28px!important; padding-right: 28px!important;}
+	div#block-bartikcustomgary-content form#uc-product-buy-it-now-form-1398 div#edit-actions {    padding: 0!important;}
+	div#main-wrapper section.section div#edit-actions input#edit-submit-1398 {font-size: 16px;width: 100%!important; margin-top: 0!important;}
+	#views-exposed-form-what-s-new-view-block-1 .form-submit{display: none;}
+	div#block-bartikcustomgary-views-block-tour-listing-page-block-1 .view.view-tour-listing-page.view-id-tour_listing_page a img {
+    width: 100%;}
+    .views_slideshow_cycle_teaser_section .views_slideshow_cycle_slide a img {width: 100%;}
+    .path-cart div#edit-actions { position: static!important;}
+    .tableresponsive-toggle-columns {display: none;}
+
+
+}
+
+@media only screen and (max-width:580px ){
+	.view-id-after_submit_node_details .views-field { display: block;}
+	.view-id-after_submit_node_details .views-label { display: block;width: 100%;}
+	.path-contact main#content div#edit-actions {position: static!important;}
+	.path-contact main#content div#edit-actions input#edit-preview {width: 100%!important;}
+	div#page-wrapper .main-content .section {text-align: justify;}
+	.right-div h1 {font-size: 20px; margin-bottom: 30px;}
+	#block-bartikcustomgary-content .views-field-title-2 a{ padding: 5px 15px;}
+	div#block-bartikcustomgary-content p {text-align: justify;}
+	.ui-dialog .ui-dialog-title { font-size: 17px;}
+	.ui-dialog .ui-dialog-content { padding: 20px 15px 0;}
+	.ui-dialog .js-form-item label {text-align: left;   word-break: break-word;}
+	.views-field.views-field-buy-it-now form#uc-product-buy-it-now-form-1407 div#edit-actions {padding: 0!important;width: 251px!important;}
+	.view-display-id-page_4 .views-field.views-field-title-2 .views-field.views-field-buy-it-now { display: inline-block; width: 100%;}
+	.views-field.views-field-buy-it-now form#uc-product-buy-it-now-form-1407 div#edit-actions input#edit-submit-1407 {width: 100%!important; padding: 6px 22px!important;  font-size: 16px;}
+	.ui-dialog .login-popup-form h4, form#user-login-form .login-popup-form h4 { margin: 0;}
+}
+
+@media only screen and (max-width:600px ){
+	input#edit-submit-1410 { width: 240px!important; font-size: 16px;}
+}
+
+@media only screen and (max-width: 575px){	
+	.view-subscriptions .views-row .views-col .views-field-variations-target-id form .form-actions{
+		width: 100% !important;
+	}
+}
+
+
+@media(max-width: 1199px) and (min-width: 769px){
+	.teacherview .views-row .views-field-nothing{
+		padding-left: 15px;
+		width: calc(100% - 122px);
+		margin-left: 0;
+	}
+	.teacherview .views-row .views-field-field-image{
+		width: 122px;
+	}
+}
+
+@media(max-width: 991px) and (min-width: 769px){
+	.whatsonwrap .leftpanel{
+		width: 100%;
+	}
+	.whatsonwrap .rightpanel{
+		width: 100%;
+	}
+	.whatsonwrap .rightpanel .item-list{
+		padding-left: 0;
+	}
+}

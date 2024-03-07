@@ -1,0 +1,31 @@
+uuid: 9cfd233d-1a23-497d-8b03-966dd418defb
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.node_edit_block
+  module:
+    - system
+    - views
+  theme:
+    - bartikcustomgary
+id: views_block__node_edit_block_block_1
+theme: bartikcustomgary
+region: content
+weight: -13
+provider: null
+plugin: 'views_block:node_edit_block-block_1'
+settings:
+  id: 'views_block:node_edit_block-block_1'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+  context_mapping: {  }
+visibility:
+  request_path:
+    id: request_path
+    pages: "/teacher/*\r\n/workshops/*\r\n/event/*\r\n/choir-or-group-listing/*\r\n/tours/*"
+    negate: false
+    context_mapping: {  }

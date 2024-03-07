@@ -1,0 +1,24 @@
+uuid: 321ded3e-28b1-4eb3-af3a-4fae3f8a8eca
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.videos_block
+  module:
+    - views
+  theme:
+    - bartikcustomgary
+id: bartikcustomgary_views_block__videos_block_block_1
+theme: bartikcustomgary
+region: content_bottom
+weight: -22
+provider: null
+plugin: 'views_block:videos_block-block_1'
+settings:
+  id: 'views_block:videos_block-block_1'
+  label: 'Feature Videos'
+  provider: views
+  label_display: visible
+  views_label: 'Feature Videos'
+  items_per_page: none
+visibility: {  }

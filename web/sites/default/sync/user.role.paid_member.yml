@@ -1,0 +1,41 @@
+uuid: a2ee8d28-20cb-40d9-996a-6c5d2d2edd38
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.choir_or_group_listing
+    - node.type.performance_listing
+    - node.type.teacher
+    - node.type.tours
+    - node.type.workshops
+    - workflows.workflow.editorial
+  module:
+    - commerce_recurring
+    - content_moderation
+    - file
+    - node
+id: paid_member
+label: 'Paid Member'
+weight: 3
+is_admin: null
+permissions:
+  - 'cancel own commerce_subscription'
+  - 'create choir_or_group_listing content'
+  - 'create performance_listing content'
+  - 'create teacher content'
+  - 'create tours content'
+  - 'create workshops content'
+  - 'delete own files'
+  - 'edit own choir_or_group_listing content'
+  - 'edit own performance_listing content'
+  - 'edit own teacher content'
+  - 'edit own tours content'
+  - 'edit own workshops content'
+  - 'use editorial transition create_new_draft'
+  - 'use editorial transition draft'
+  - 'use editorial transition published'
+  - 'use editorial transition review'
+  - 'view any unpublished content'
+  - 'view latest version'
+  - 'view own commerce_subscription'
+  - 'view own unpublished content'

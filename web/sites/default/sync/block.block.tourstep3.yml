@@ -1,0 +1,31 @@
+uuid: 32c487f2-a192-4bf9-9349-9ffbb7a44e5c
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:1387f2b2-9f82-4e9b-a567-59c9809b5c42'
+  module:
+    - block_content
+    - system
+  theme:
+    - bartikcustomgary
+id: tourstep3
+theme: bartikcustomgary
+region: content
+weight: -20
+provider: null
+plugin: 'block_content:1387f2b2-9f82-4e9b-a567-59c9809b5c42'
+settings:
+  id: 'block_content:1387f2b2-9f82-4e9b-a567-59c9809b5c42'
+  label: 'Tour step3'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: '/tours/*'
+    negate: false
+    context_mapping: {  }

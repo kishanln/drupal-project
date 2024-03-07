@@ -1,0 +1,32 @@
+<?php
+
+use Drupal\Component\Datetime\TimeInterface;
+use Drupal\Core\Entity\EntityTypeManagerInterface;
+
+/**
+ * Implements hook_cron().
+ */
+function subscription_alter_cron() {
+  
+    $entity_manager = \Drupal::entityTypeManager();
+  $subscription_storage =  $entity_manager->getStorage('commerce_subscription');
+  $subscription_ids = $subscription_storage->getQuery()
+    ->condition('state', ['active'], 'IN')
+    ->condition('ends', Drupal::time()->getRequestTime(), '<=')
+    ->accessCheck(FALSE)
+    ->execute();
+  if (!$subscription_ids) {
+    return;
+  }
+
+  /** @var \Drupal\commerce_recurring\Entity\SubscriptionInterface[]  $subscriptions */
+  $subscriptions = $subscription_storage->loadMultiple($subscription_ids);
+
+  foreach ($subscriptions as $subscription) {
+   
+    $subscription->cancel(FALSE);
+    $subscription->save();
+  }
+}
+
+

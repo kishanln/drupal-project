@@ -1,0 +1,23 @@
+uuid: 08a3dabc-ed22-4df1-88ec-44d086ad2e1e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_approved
+    - node.type.tours
+id: node.tours.field_approved
+field_name: field_approved
+entity_type: node
+bundle: tours
+label: 'Tour Approved'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

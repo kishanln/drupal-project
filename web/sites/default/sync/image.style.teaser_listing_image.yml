@@ -1,0 +1,25 @@
+uuid: b9f4716c-1f90-45a1-aa7f-0587f8a8e770
+langcode: en
+status: true
+dependencies:
+  config:
+    - crop.type.full_listing_image
+  module:
+    - crop
+name: teaser_listing_image
+label: 'Teaser Listing Image'
+effects:
+  8528fe7c-a0fa-4512-ae70-38f8d9cbb845:
+    uuid: 8528fe7c-a0fa-4512-ae70-38f8d9cbb845
+    id: image_scale_and_crop
+    weight: -9
+    data:
+      width: 218
+      height: 120
+      anchor: center-center
+  67a819c5-6ec5-4218-b964-bec11b9b1433:
+    uuid: 67a819c5-6ec5-4218-b964-bec11b9b1433
+    id: crop_crop
+    weight: -10
+    data:
+      crop_type: full_listing_image

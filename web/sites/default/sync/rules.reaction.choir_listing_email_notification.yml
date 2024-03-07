@@ -1,0 +1,91 @@
+uuid: dd284327-7cce-45de-90db-d8f2c219a049
+langcode: en
+status: true
+dependencies: {  }
+id: choir_listing_email_notification
+label: 'Choir listing email notification'
+events:
+  -
+    event_name: 'rules_entity_insert:node'
+description: 'Choir listing email notification for admin'
+tags: {  }
+config_version: '3'
+expression:
+  id: rules_rule
+  uuid: 7b28c8cd-4f46-4e50-ba0f-cd15fda81529
+  weight: 0
+  conditions:
+    id: rules_and
+    uuid: e5dc7064-4ffd-45c0-88b0-ec0d80172c95
+    weight: 0
+    conditions:
+      -
+        id: rules_condition
+        uuid: ca0ba7f0-ffd3-468a-b04e-014a69915492
+        weight: 0
+        context_values:
+          types:
+            - choir_or_group_listing
+        context_mapping:
+          node: node
+        context_processors:
+          types:
+            rules_tokens: {  }
+        provides_mapping: {  }
+        condition_id: rules_node_is_of_type
+        negate: false
+  actions:
+    id: rules_action_set
+    uuid: bf9f396c-e7dc-48b3-9d16-e24f0aaf6dff
+    weight: 0
+    actions:
+      -
+        id: rules_action
+        uuid: b6a30b03-d271-4c37-aab4-11759dde0af0
+        weight: 0
+        context_values:
+          to:
+            - info@choircentral.com.au
+          subject: 'A new choir listing has been created and may need moderating.'
+          message: 'Dear Admin, a new choir listing has been created and may need moderating. https://choircentral.com.au/node/{{node.nid}}/edit'
+          reply: ''
+          language: ''
+        context_mapping: {  }
+        context_processors:
+          to:
+            rules_tokens: {  }
+          subject:
+            rules_tokens: {  }
+          message:
+            rules_tokens: {  }
+          reply:
+            rules_tokens: {  }
+          language:
+            rules_tokens: {  }
+        provides_mapping: {  }
+        action_id: rules_send_email
+      -
+        id: rules_action
+        uuid: 8ed2e4c5-d53d-469e-89d8-99e3c913bbbc
+        weight: 0
+        context_values:
+          to:
+            - '{{node.uid.entity.mail.value}}'
+          subject: 'Your choir listing has been created and may need moderating.'
+          message: 'Dear Choir Central member, Your choir listing has been created and may need moderating.'
+          reply: ''
+          language: ''
+        context_mapping: {  }
+        context_processors:
+          to:
+            rules_tokens: {  }
+          subject:
+            rules_tokens: {  }
+          message:
+            rules_tokens: {  }
+          reply:
+            rules_tokens: {  }
+          language:
+            rules_tokens: {  }
+        provides_mapping: {  }
+        action_id: rules_send_email

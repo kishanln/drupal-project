@@ -1,0 +1,21 @@
+smtp_on: false
+smtp_host: mail.choircentral.com.au
+smtp_hostbackup: ''
+smtp_port: '587'
+smtp_protocol: tls
+smtp_autotls: true
+smtp_timeout: 30
+smtp_username: test@choircentral.com.au
+smtp_password: shikha
+smtp_from: info@choircentral.com.au
+smtp_fromname: info
+smtp_client_hostname: mail.choircentral.com.au
+smtp_client_helo: HELLO
+smtp_allowhtml: '0'
+smtp_test_address: devtest220@gmail.com
+smtp_debugging: false
+prev_mail_system: php_mail
+smtp_keepalive: false
+_core:
+  default_config_hash: 2v5R3I9tNatGzKQjuZWh1y_955xK09313Vn-IIuedyI
+smtp_reroute_address: ''

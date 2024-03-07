@@ -1,0 +1,76 @@
+uuid: bab31258-7d13-43f9-ac3b-20fa41c15457
+langcode: en
+status: true
+dependencies: {  }
+id: paypal_notifications
+label: 'PAYPAL NOTIFICATIONS'
+events:
+  -
+    event_name: 'rules_entity_insert:commerce_payment'
+description: ''
+tags: {  }
+config_version: '3'
+expression:
+  id: rules_rule
+  uuid: a6999303-5897-4e5e-8941-64a6c01f3035
+  weight: 0
+  conditions:
+    id: rules_and
+    uuid: a5afe010-06b3-42f8-aa5f-cd8a233e59c2
+    weight: 0
+    conditions: {  }
+  actions:
+    id: rules_action_set
+    uuid: c7464e78-624f-4d0e-96d5-4c64840a9104
+    weight: 0
+    actions:
+      -
+        id: rules_action
+        uuid: 7262435a-2431-4225-a0c5-4724ea83d05d
+        weight: 0
+        context_values:
+          to:
+            - info@choircentral.com.au
+          subject: 'A payment has been received.'
+          message: 'A payment has been received.'
+          reply: ''
+          language: ''
+        context_mapping: {  }
+        context_processors:
+          to:
+            rules_tokens: {  }
+          subject:
+            rules_tokens: {  }
+          message:
+            rules_tokens: {  }
+          reply:
+            rules_tokens: {  }
+          language:
+            rules_tokens: {  }
+        provides_mapping: {  }
+        action_id: rules_send_email
+      -
+        id: rules_action
+        uuid: 9c5536a4-0e3e-4b9a-9da6-90a0b15323c0
+        weight: 0
+        context_values:
+          to:
+            - '{{commerce_payment.order_id.entity.mail.value}}'
+          subject: 'Your payment had been made.'
+          message: 'Your payment had been made.'
+          reply: ''
+          language: ''
+        context_mapping: {  }
+        context_processors:
+          to:
+            rules_tokens: {  }
+          subject:
+            rules_tokens: {  }
+          message:
+            rules_tokens: {  }
+          reply:
+            rules_tokens: {  }
+          language:
+            rules_tokens: {  }
+        provides_mapping: {  }
+        action_id: rules_send_email

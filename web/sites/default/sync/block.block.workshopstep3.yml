@@ -1,0 +1,31 @@
+uuid: e1f08f7e-78f2-4323-8cd4-81033deb85d7
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:26e1bdff-19c1-4666-8f74-116fa51c5b58'
+  module:
+    - block_content
+    - system
+  theme:
+    - bartikcustomgary
+id: workshopstep3
+theme: bartikcustomgary
+region: content
+weight: -21
+provider: null
+plugin: 'block_content:26e1bdff-19c1-4666-8f74-116fa51c5b58'
+settings:
+  id: 'block_content:26e1bdff-19c1-4666-8f74-116fa51c5b58'
+  label: 'workshop step3'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: '/workshops/*'
+    negate: false
+    context_mapping: {  }

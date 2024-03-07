@@ -1,0 +1,42 @@
+uuid: 1b413f69-a322-4324-89dc-624c24f4bee9
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.add_on_product
+  module:
+    - ctools
+    - system
+    - views
+  theme:
+    - bartikcustomgary
+id: views_block__add_on_product_block_1
+theme: bartikcustomgary
+region: content
+weight: -16
+provider: null
+plugin: 'views_block:add_on_product-block_1'
+settings:
+  id: 'views_block:add_on_product-block_1'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    bundles:
+      choir_or_group_listing: choir_or_group_listing
+      performance_listing: performance_listing
+      teacher: teacher
+      tours: tours
+      workshops: workshops
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+  request_path:
+    id: request_path
+    pages: "/node/*/edit\r\n/node/add/*\r\n/teacher/*\r\n/workshops/*\r\n/event/*\r\n/choir-or-group-listing/*\r\n/tours/*\r\n"
+    negate: true
+    context_mapping: {  }

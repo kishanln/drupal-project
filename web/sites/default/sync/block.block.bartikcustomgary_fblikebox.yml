@@ -1,0 +1,50 @@
+uuid: aaa86bf1-3218-460b-af5f-88516f6e4530
+langcode: en
+status: true
+dependencies:
+  module:
+    - fb_likebox
+    - system
+    - user
+  theme:
+    - bartikcustomgary
+id: bartikcustomgary_fblikebox
+theme: bartikcustomgary
+region: sidebar_second
+weight: -24
+provider: null
+plugin: fb_likebox_block
+settings:
+  id: fb_likebox_block
+  label: 'FB Likebox'
+  provider: fb_likebox
+  label_display: '0'
+  url: 'https://www.facebook.com/ChoirCentralAustralia/'
+  app_id: '430557667050436'
+  hide_header: 0
+  stream: 1
+  events: 0
+  messages: 0
+  show_faces: '0'
+  title: 'Acappella Central'
+  width: 350
+  height: 700
+  hide_cta: 0
+  small_header: 0
+  adapt_container_width: 1
+  language: en_GB
+visibility:
+  user_role:
+    id: user_role
+    roles:
+      anonymous: anonymous
+      authenticated: authenticated
+      administrator: administrator
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'
+  request_path:
+    id: request_path
+    pages: "<front>\r\n/choirs-and-groups\r\n/whats-on-in-your-state\r\n/workshops\r\n/voice-teachers"
+    negate: false
+    context_mapping: {  }

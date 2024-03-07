@@ -1,0 +1,21 @@
+uuid: 8dd008f3-45e4-4dd3-8445-ec8f28464d58
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_banner_ad_paid_duration
+    - node.type.teacher
+  module:
+    - datetime_range
+id: node.teacher.field_banner_ad_paid_duration
+field_name: field_banner_ad_paid_duration
+entity_type: node
+bundle: teacher
+label: 'Teacher Paid Duration'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: daterange

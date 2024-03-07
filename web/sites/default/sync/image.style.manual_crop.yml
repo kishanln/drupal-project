@@ -1,0 +1,17 @@
+uuid: bc595bcf-bc4c-4bb2-a0bc-8856fdc1f489
+langcode: en
+status: true
+dependencies:
+  config:
+    - crop.type.event_listing
+  module:
+    - crop
+name: manual_crop
+label: 'Manual crop'
+effects:
+  450202e5-11aa-4178-8c80-c96bdaa1d70d:
+    uuid: 450202e5-11aa-4178-8c80-c96bdaa1d70d
+    id: crop_crop
+    weight: 1
+    data:
+      crop_type: event_listing

@@ -1,0 +1,22 @@
+uuid: ab129b74-596f-4a16-8539-a4ef6019a4c5
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.choir_or_group_listing
+id: node.choir_or_group_listing.status
+field_name: status
+entity_type: node
+bundle: choir_or_group_listing
+label: Published
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

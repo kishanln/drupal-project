@@ -1,0 +1,15 @@
+uuid: 493b23ea-0718-4344-a7a7-7ea4d88c0812
+langcode: en
+status: true
+dependencies: {  }
+name: hero_banner
+label: 'Hero Banner Image'
+effects:
+  719e5e5d-649b-4aa5-b97e-ebebe7ea3f0b:
+    uuid: 719e5e5d-649b-4aa5-b97e-ebebe7ea3f0b
+    id: image_scale
+    weight: 1
+    data:
+      width: 570
+      height: 427
+      upscale: false

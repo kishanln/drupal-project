@@ -1,0 +1,19 @@
+uuid: 6002dfed-4145-403e-b6cb-dd305f05f5f0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_choir_listing_contact_name
+    - node.type.choir_or_group_listing
+id: node.choir_or_group_listing.field_choir_listing_contact_name
+field_name: field_choir_listing_contact_name
+entity_type: node
+bundle: choir_or_group_listing
+label: 'Choir Listing Contact Name'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

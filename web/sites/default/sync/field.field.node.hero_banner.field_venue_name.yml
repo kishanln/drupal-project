@@ -1,0 +1,19 @@
+uuid: 95a2141b-af05-4534-94fe-ba1c9dd71ba7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_venue_name
+    - node.type.hero_banner
+id: node.hero_banner.field_venue_name
+field_name: field_venue_name
+entity_type: node
+bundle: hero_banner
+label: 'Venue Name'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

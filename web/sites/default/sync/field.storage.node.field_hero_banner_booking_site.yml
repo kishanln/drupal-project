@@ -1,0 +1,19 @@
+uuid: 60e71ce7-cf4f-443e-8879-2246a84a9a45
+langcode: en
+status: true
+dependencies:
+  module:
+    - link
+    - node
+id: node.field_hero_banner_booking_site
+field_name: field_hero_banner_booking_site
+entity_type: node
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

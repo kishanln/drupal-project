@@ -1,0 +1,12 @@
+format: full_html
+name: 'Choir Central'
+mail: info@choircentral.com.au
+linkonly: false
+_core:
+  default_config_hash: K-CsbDCpdo87etSfdahl1iomaod_-AfrRo-6I8RbTQA
+textonly: false
+sitestyle: false
+simple_address: false
+advanced:
+  incoming: false
+  key: OivGFFpw1ita4Gus2zJPmLWcwssyyMDysvq388nIP1A

@@ -1,0 +1,21 @@
+uuid: cb72e885-28bf-4a1c-bdd1-06abf2dc95ee
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_promotion_end_date
+    - node.type.workshops
+  module:
+    - datetime
+id: node.workshops.field_promotion_end_date
+field_name: field_promotion_end_date
+entity_type: node
+bundle: workshops
+label: 'Promotion End Date'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

@@ -1,0 +1,21 @@
+uuid: 27aa5402-0911-48e2-959a-bb034e63330e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_event_date
+    - node.type.workshops
+  module:
+    - datetime_range
+id: node.workshops.field_event_date
+field_name: field_event_date
+entity_type: node
+bundle: workshops
+label: 'Workshop Date'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: daterange

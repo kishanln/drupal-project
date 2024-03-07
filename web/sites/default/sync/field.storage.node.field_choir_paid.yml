@@ -1,0 +1,22 @@
+uuid: 8854f77d-01df-4c9a-b79e-c53ee82b14d8
+langcode: en
+status: true
+dependencies:
+  module:
+    - field_permissions
+    - node
+third_party_settings:
+  field_permissions:
+    permission_type: custom
+id: node.field_choir_paid
+field_name: field_choir_paid
+entity_type: node
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

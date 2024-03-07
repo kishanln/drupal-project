@@ -1,0 +1,29 @@
+uuid: d39580a3-966c-4076-b2fe-4ce82e5d9672
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_banner_ad_state
+    - node.type.choir_or_group_listing
+    - taxonomy.vocabulary.state
+id: node.choir_or_group_listing.field_banner_ad_state
+field_name: field_banner_ad_state
+entity_type: node
+bundle: choir_or_group_listing
+label: 'Choir State'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      state: state
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

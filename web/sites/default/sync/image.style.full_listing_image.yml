@@ -1,0 +1,25 @@
+uuid: 26f998cb-c641-4435-a46c-1307040742ba
+langcode: en
+status: true
+dependencies:
+  config:
+    - crop.type.full_listing_image
+  module:
+    - crop
+name: full_listing_image
+label: 'Full Listing Image'
+effects:
+  206a4a9a-389e-4eba-a6c2-521142b900f4:
+    uuid: 206a4a9a-389e-4eba-a6c2-521142b900f4
+    id: crop_crop
+    weight: -10
+    data:
+      crop_type: full_listing_image
+  db92378d-e681-442c-a507-9ad59143c77c:
+    uuid: db92378d-e681-442c-a507-9ad59143c77c
+    id: image_crop
+    weight: 3
+    data:
+      width: 680
+      height: 375
+      anchor: center-center

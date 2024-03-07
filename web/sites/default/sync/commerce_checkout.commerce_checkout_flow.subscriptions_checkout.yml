@@ -1,0 +1,55 @@
+uuid: 1447c57b-c503-49d5-af21-abc4500b93d1
+langcode: en
+status: true
+dependencies:
+  module:
+    - commerce_payment
+    - commerce_paypal
+    - commerce_stripe
+id: subscriptions_checkout
+label: 'Subscriptions checkout'
+plugin: multistep_default
+configuration:
+  display_checkout_progress: true
+  display_checkout_progress_breadcrumb_links: false
+  panes:
+    review:
+      step: review
+      weight: 10
+    completion_message:
+      message:
+        value: "<p>Subscription purchase successfully.<br />\r\nYou can manage your listing from the <a href=\"/user\">My account</a> page or create a new listing by clicking <a href=\"/node/add\">here</a>.</p>\r\n"
+        format: full_html
+      step: complete
+      weight: 10
+    order_summary:
+      view: ''
+      step: _sidebar
+      weight: 10
+    completion_register:
+      step: complete
+      weight: 10
+    contact_information:
+      double_entry: false
+      step: order_information
+      weight: 10
+    login:
+      allow_guest_checkout: false
+      allow_registration: true
+      step: login
+      weight: 10
+    payment_information:
+      step: order_information
+      weight: 10
+    payment_process:
+      capture: true
+      step: payment
+      weight: 10
+    paypal_checkout_payment_process:
+      capture: true
+      step: payment
+      weight: 10
+    stripe_review:
+      button_id: edit-actions-next
+      step: review
+      weight: 10

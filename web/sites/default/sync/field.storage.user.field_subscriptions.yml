@@ -1,0 +1,26 @@
+uuid: ffbbdd21-3853-4a66-9244-c7c98f08e9b0
+langcode: en
+status: true
+dependencies:
+  module:
+    - field_permissions
+    - mailchimp_lists
+    - user
+third_party_settings:
+  field_permissions:
+    permission_type: custom
+id: user.field_subscriptions
+field_name: field_subscriptions
+entity_type: user
+type: mailchimp_lists_subscription
+settings:
+  mc_list_id: 3ec9ab0827
+  double_opt_in: false
+  send_welcome: false
+module: mailchimp_lists
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

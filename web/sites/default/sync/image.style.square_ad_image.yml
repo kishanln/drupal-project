@@ -1,0 +1,15 @@
+uuid: 1dd0f1fa-a60f-48e8-99cd-e922c8991202
+langcode: en
+status: true
+dependencies: {  }
+name: square_ad_image
+label: 'Square Ad Image'
+effects:
+  256102f7-5710-4ee5-85d1-a91c5d8189ca:
+    uuid: 256102f7-5710-4ee5-85d1-a91c5d8189ca
+    id: image_scale
+    weight: 1
+    data:
+      width: 270
+      height: 270
+      upscale: false

@@ -1,0 +1,23 @@
+uuid: 29c29bef-351b-42bc-93ef-2eae9d10a6fb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_url_including_http
+    - node.type.teacher
+  module:
+    - link
+id: node.teacher.field_url_including_http
+field_name: field_url_including_http
+entity_type: node
+bundle: teacher
+label: 'Website URL (optional)'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 16
+  title: 0
+field_type: link

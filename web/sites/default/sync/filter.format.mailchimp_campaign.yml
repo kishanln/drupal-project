@@ -1,0 +1,33 @@
+uuid: 1d2560c6-9969-4daf-8475-5b906e84d072
+langcode: en
+status: true
+dependencies:
+  module:
+    - mailchimp_campaign
+    - slick
+_core:
+  default_config_hash: 9DcGEOycSbmLfu0UQSd_Xa2nVtxo9y3iP6wK3nHyWe4
+name: 'Mailchimp campaign'
+format: mailchimp_campaign
+weight: 0
+filters:
+  filter_htmlcorrector:
+    id: filter_htmlcorrector
+    provider: filter
+    status: true
+    weight: 1
+    settings: {  }
+  filter_mailchimp_campaign:
+    id: filter_mailchimp_campaign
+    provider: mailchimp_campaign
+    status: true
+    weight: 0
+    settings: {  }
+  slick_filter:
+    id: slick_filter
+    provider: slick
+    status: false
+    weight: 4
+    settings:
+      optionset: default
+      media_switch: ''

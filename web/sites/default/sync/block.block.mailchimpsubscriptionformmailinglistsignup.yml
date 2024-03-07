@@ -1,0 +1,26 @@
+uuid: 711cfc8c-86ea-4e6e-9ae0-b6d10e7dc47b
+langcode: en
+status: false
+dependencies:
+  module:
+    - mailchimp_signup
+    - system
+  theme:
+    - bartikcustomgary
+id: mailchimpsubscriptionformmailinglistsignup
+theme: bartikcustomgary
+region: content_bottom
+weight: -21
+provider: null
+plugin: 'mailchimp_signup_subscribe_block:mailing_list_signup'
+settings:
+  id: 'mailchimp_signup_subscribe_block:mailing_list_signup'
+  label: 'SIGN UP FOR LATEST NEWS'
+  provider: mailchimp_signup
+  label_display: visible
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

@@ -1,0 +1,29 @@
+uuid: cd9c71d8-27d8-498b-a96b-e62f38e6f443
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_state_date_3
+    - node.type.tours
+    - taxonomy.vocabulary.state
+id: node.tours.field_state_date_3
+field_name: field_state_date_3
+entity_type: node
+bundle: tours
+label: State
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      state: state
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

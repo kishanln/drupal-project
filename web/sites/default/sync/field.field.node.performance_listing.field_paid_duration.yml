@@ -1,0 +1,21 @@
+uuid: fe46180c-857f-4a2c-a89e-322729d9e903
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_paid_duration
+    - node.type.performance_listing
+  module:
+    - datetime_range
+id: node.performance_listing.field_paid_duration
+field_name: field_paid_duration
+entity_type: node
+bundle: performance_listing
+label: 'Paid Duration'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: daterange

@@ -1,0 +1,22 @@
+uuid: d268a439-5807-4d28-bbc2-cca180085014
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.advertising_square_ad
+id: node.advertising_square_ad.promote
+field_name: promote
+entity_type: node
+bundle: advertising_square_ad
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

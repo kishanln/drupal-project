@@ -1,0 +1,18 @@
+uuid: aa094eaa-dc4f-43a3-b794-45ee69fa0a45
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.videos
+id: node.videos.title
+field_name: title
+entity_type: node
+bundle: videos
+label: 'Video Upload'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

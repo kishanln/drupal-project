@@ -1,0 +1,18 @@
+uuid: 5fc2f924-779d-4019-85d3-157640928f8b
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.advertising_banner_ad
+id: node.advertising_banner_ad.title
+field_name: title
+entity_type: node
+bundle: advertising_banner_ad
+label: 'Title for this Ad'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,1224 @@
+/************************#sidebar-first*******************************/
+.layout-main .sidebar .section {padding: 0px 15px 0;}
+.layout-main .sidebar h2 {font-weight: 700;text-transform: uppercase;color: #4d8631;margin: 0px 0 0;font-size: 15px;margin:0px 0px 15px;border-bottom: 1px solid #ccc;padding: 0px;cursor: pointer;float: left;width: 100%;}
+.sidebar .block-views-blocknew-listings-block-1  h2 {margin: 12px 0px;}
+#sidebar-second h2 {font-weight: 700;text-transform: uppercase;color: #4d8631;margin: 9px 0 0;font-size: 13px;margin-bottom: 0px;border: 1px solid #ccc;padding: 5px 15px;position: relative;cursor: pointer;}
+.layout-main .sidebar #block-bartikcustomgary-useraccountmenu-menu {font-weight: 700;text-transform: uppercase;color: #4d8631;margin: 0px 0 0;font-size: 15px;margin: 0px 0px;border-bottom: 1px solid #ccc;padding: 0px;cursor: pointer;float: left;width: 100%;position: relative;background-image: url("http://choircentral.com.au/themes/bartikcustom2/images/down-arrow.jpg") !important;background-position: 98% center;background-repeat: no-repeat;background-size: 10px auto;}
+#sidebar-second h2::after {background-image: url('../images/icons8-sort-down-24.png');width: 10%;height: 100%;position: absolute;content: "";background-repeat: no-repeat;background-size: 20px;top: 0;right: 3px;background-position: center;}
+#block-bartikcustomgary-useraccountmenu .content {margin: 0px;}
+#block-bartikcustomgary-useraccountmenu .clearfix.menu,#sidebar-second .block .logout-ul {position: static;float: left;width: 94%;background: #fff;padding: 10px;z-index: 9999;box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);margin: 5px 0px 0px;}
+#block-bartikcustomgary-useraccountmenu .clearfix.menu li:hover,#sidebar-second .block .logout-ul li:hover {background: #f0f0f0;}
+#block-bartikcustomgary-useraccountmenu .clearfix.menu li,#sidebar-second .block .logout-ul li {padding: 0px;float: left;width: 100%;display: block;}
+#block-bartikcustomgary-useraccountmenu .clearfix.menu li a,#sidebar-second .block .logout-ul li a {border-bottom: 0;width: 100%;float: left;padding: 7px 0px;text-align: center;color: #000;text-transform: uppercase;}
+#sidebar-second .block .content {margin-top: 0;}
+.layout-main #block-test h2 {font-weight: 700;text-transform: uppercase;color: #4d8631;margin: 0px 0 0;font-size: 15px;margin: 0px 0px;border-bottom: 1px solid #ccc;padding: 0px;cursor: pointer;float: left;width: 100%;position: relative;background-image: url("http://choircentral.com.au/themes/bartikcustom2/images/down-arrow.jpg") !important;background-position: 98% center;background-repeat: no-repeat;background-size: 10px auto;} 
+.layout-main #sidebar-first .text-formatted ul li {border-bottom: 1px solid #4d8631;list-style: outside none none;padding: 7px;text-align: center;}
+.layout-main #sidebar-first .text-formatted ul li:last-child {border: 0 none;}
+#sidebar-first .text-formatted ul li a {text-decoration: none;border: 0;color: #4d8631;font-size: 15px;font-weight: bold;text-transform: uppercase;list-style: outside none none;padding: 7px;text-align: center;}
+#sidebar-first .text-formatted ul {border: 1px solid #ccc;border-radius: 2px;padding: 0px;}
+#sidebar-first .text-formatted ul li:hover {background: #4d8631 none repeat scroll 0 0;color: #fff;}
+#sidebar-first .text-formatted ul li:hover a {color: #fff;}
+#sidebar-first .block-views-blocknew-listings-block-1 .views-field a {color: #222527;font-size: 16px;border: none;margin: 7px 0 0;display: block;font-weight: 600;}
+#block-bartikcustomgary-tools .menu li a {color: #000;text-transform: uppercase;padding: 12px 18px;}
+#block-bartikcustomgary-tools .menu li a:hover {border-bottom: 1px solid #4d8631;color: #4d8631;}
+#sidebar-first .views-field-field-performance-listing-date .datetime {color: #b6b1c1;font-size: 12px;}
+#sidebar-first .view-new-listings .views-row {margin-bottom: 0px;}
+#sidebar-first .field-content p {margin-bottom: 0px;}
+#sidebar-first .js-form-item.form-item .form-text,#sidebar-first .js-form-item.form-item .form-email{width: 100%;height: 35px;}
+#sidebar-first .search-form .form-search {float: left;margin-right: 5px;padding: 4px;width: 75%;}
+#sidebar-first .block {border-color: transparent;background-color: #ffffff;margin-bottom: 0px !important;padding: 15px 15px 0px;float:left;width:87%;}
+.layout-main #sidebar-first {border: 1px solid #ccc;width: 21%;margin: 0;float: left;border-right: 0px;}
+#main-wrapper #sidebar-second {margin: 0px;width: 21%;overflow: hidden;float: left;border: 1px solid #e7e7e7;border-left:0px;}
+.layout-one-sidebar main#content {margin: 0px;width: 79%;border-left: 0px;}
+.about-left-section {float: left;width: 47%;padding-right: 2%;}
+.about-left-section h2, .about-right-section h2 {font-size: 22px !important;color: #4d8631;font-weight: 600;margin-bottom: 10px !important;}
+.about-right-section p, .about-left-section p {text-align: justify;font-size: 15px;line-height: 1.6;color: #989797;}
+.about-right-section {float: left;width: 50%;}
+.layout-two-sidebars #content {border-top: 1px solid #ccc;border-left: 0px;width: 57%;margin:0px;float: left;}
+#block-bartikcustomgary-views-block-what-s-on-block-1 h2 {border-bottom: solid 2px #d4ac4b;font-weight: 700;text-transform: uppercase;color: #5e8746;margin: 9px 0px 30px 0;font-size: 20px;padding: 0 0 5px;}
+.view-filters .form-radios .js-form-item {float: left;width: 10%;display: inline-block;margin-right: 1%;}
+#content .form-radios .js-form-item label {color: #000;display: inline-block;cursor: pointer;font-weight: bold;padding: 3px 11px;margin: 0px;font-size: 12px;}
+#block-bartikcustomgary-views-block-what-s-on-block-1 .form-radios .js-form-item input[type="radio"] {visibility: hidden;}
+.region.region-sidebar-first #block-bartikcustomgary-useraccountmenu .content ul {border: 1px solid #ccc;border-radius: 2px;padding: 0px;display: none;}
+.region.region-sidebar-first #block-bartikcustomgary-useraccountmenu .content ul li {padding: 0px;}
+.region.region-sidebar-first #block-bartikcustomgary-useraccountmenu .content ul li a {border-bottom: 1px solid #4d8631;list-style: outside none none;padding: 7px;text-align: center;width: 95%;float: left;text-decoration: none;color: #5e8746;font-size: 15px;font-weight: bold;text-transform: uppercase;}
+.region.region-sidebar-first #block-bartikcustomgary-useraccountmenu .content ul li a:hover {background-color: #4d8631;color: #fff;}
+.region.region-sidebar-first #block-bartikcustomgary-useraccountmenu .content ul li:last-child a {border: 0px;}
+.region.region-sidebar-first .content {margin: 0px;}
+.region-sidebar-first #block-bartikcustomgary-tools .clearfix.menu li a {border-bottom: 1px solid #5e8746;list-style: outside none none;padding: 7px;text-align: center;width: 95%;float: left;color: #5e8746;font-size: 15px;font-weight: bold;text-transform: uppercase;color: #4d8631;}
+.region-sidebar-first #block-bartikcustomgary-tools .clearfix.menu {border: 1px solid #ccc;border-radius: 2px;padding: 0px;}
+.region-sidebar-first #block-bartikcustomgary-tools .clearfix.menu li a:hover {background-color: #4d8631;color: #fff;}
+.region-sidebar-first #block-bartikcustomgary-tools .clearfix.menu li {padding: 0px;}
+/*--------------sidebar-second---------------------------*/
+#block-bartikcustomgary-views-block-tour-listing-page-block-1 h2 {font-weight: 700;text-transform: uppercase;color: #5e8746;margin: 9px 0 0;margin-bottom: 0px;font-size: 14px;margin-bottom: 12px;}
+#sidebar-second .views-row .views-field a {color: #222527;font-size: 16px;border: none;margin: 7px 0 0;display: block;font-weight: 600;}
+#sidebar-second .views-field-field-performance-listing-date .datetime {color: #a8abb0;font-size: 15px;}
+.region-sidebar-second .block {border: 0px !important;margin: 0px 0px 12px !important;padding: 15px 15px 0px !important;float: left;width: 90%;}
+.region-sidebar-second .block-views-blocktour-listing-page-block-1 {padding-top: 0px !important;}
+#sidebar-second .block-fb-likebox-block {border-top: 0px;border-left: 0px !important;}
+/*---------------------------header--------------------------*/
+#block-bartikcustomgary-mainnavigation #superfish-main li::after {background-image: url('../images/icons8-expand-arrow-32(1).png');width: 10%;height: 100%;position: absolute;content: "";background-repeat: no-repeat;background-size: 10px;top: 14px;right:3px;}
+#block-bartikcustomgary-mainnavigation ul .sf-no-children::after {display: none !important;}
+ul.menu span {color: #000;text-transform: uppercase;font-size: 12px;margin-bottom: 0px;float: left;width: 100%;}
+#block-bartikcustomgary-mainnavigation ul ul li::after {display: none !important;}
+#block-bartikcustomgary-mainnavigation ul ul {margin-top: 17px;}
+#block-bartikcustomgary-mainnavigation #superfish-main li {position: relative;margin-right: 3px;z-index: 99;background: #fff;}
+#block-bartikcustomgary-mainnavigation #superfish-main li:hover {background: #f0f0f0;}
+#block-bartikcustomgary-useraccountmenu .clearfix.menu li a {color: #000;text-transform: uppercase;}
+.step1 #edit-actions,.step2 #edit-first-submit,.node-form #edit-delete,.uc-product-node .display-price {display: none !important;}
+#block-bartikcustomgary-mainnavigation ul li a {color: #808080;text-transform: uppercase;padding: 15px 15px;margin: 0px;width: 100%;background: transparent;font-size:13px;font-weight:600;}
+#block-bartikcustomgary-mainnavigation ul .active-trail a {color: #4d8631;}
+#block-bartikcustomgary-mainnavigation ul ul .active-trail a {color: #4d8631 !important;}
+#block-bartikcustomgary-mainnavigation ul ul li a {/*color: #000 !important;font-weight: normal;*/font-size: 13px;}
+.breadcrumb ol li a {color: #4d8631;text-transform: uppercase;font-weight: bold;}
+#block-bartikcustomgary-account-menu .clearfix.menu li a {color: #fff;text-transform: uppercase;font-size: 12px;}
+.section.layout-container.clearfix {max-width: 100%;margin: 0px;}
+.section.layout-container.clearfix {max-width: 100%;margin: 0px;}
+.region.region-primary-menu {float: left;padding: 15px 31px 0px;width: 100%;border: 1px solid #ddd;border-top: 2px solid #5c8eb9;border-right: 0px;border-left: 0px;}
+.region-primary-menu .block-block-content .text-formatted p {margin: 0px !important;margin-top: 12px !important;}
+.region-primary-menu .block-block-content {float: left;width: auto;}
+.region-primary-menu .block-block-content a {background: #4d8631;/*height: 21px;*/margin-top: 4px;padding: 10px 10px;font-size: 12px;color: white;text-transform: uppercase;letter-spacing: 1px;font-weight: 600;}
+div#block-bartikcustomgary-mainnavigation {float: left;width: 80%;}
+.path-frontpage .node__content {display: none;}
+.attachment.attachment-after .field-content,.view-what-s-new-view .field-content {color: grey;font-size: 13px;}
+#block-bartikcustomgary-search .search-form .form-search {float: left;margin:0px;padding: 0;border: 0px;}
+#block-bartikcustomgary-search .search-form .form-search:focus {outline: 0px;}
+#block-bartikcustomgary-search .button.search-form__submit,.search-form__submit {overflow: hidden;width: 34px;height: auto;margin-right: 0;margin-left: 0;padding: 0;cursor: pointer;text-indent: -9999px;direction: ltr;background: url('../images/icons8-search-48.png') no-repeat center;border: 0px;background-size: 20px;}
+.search-form__submit:focus {outline: 0px;}
+.region.region-secondary-menu {background: #4d8631;}
+#block-topmenu ul li a:hover {text-decoration: underline;}
+#block-topmenu {float: left;width: 100%;background: #4d8631;margin-bottom: 40px;}
+#block-topmenu ul {margin: 0px 50px;padding: 0.8em 0px;list-style: none;text-align: right;float: right;width: auto;}
+#block-topmenu ul li a {padding: 0.8em;font-size: 12px;color: #fff;text-transform: uppercase;}
+#block-topmenu ul li {display: inline-block;}
+.clearfix.region.region-header {padding: 40px 50px;}
+#block-bartikcustomgary-views-block-banner-ad-block-1 {margin: 0px;}
+#block-bartikcustomgary-branding {margin: 0px;}
+.site-branding__text .site-branding__slogan {color: #4d8631;}
+/*------------user/9/edit----------------------*/
+.user-register-form .form-type-email .description,.user-register-form .form-item-name .description {display: none;}
+.layout-one-sidebar #user-form h1 {color: #676767;font-size: 36px;line-height: 1.2;font-weight: 300;font-family: 'Open Sans', sans-serif;}
+#user-form .custom-text h4 {color: #5c853e;font-size: 18px;line-height: 1.2;font-family: 'Open Sans', sans-serif;}
+#user-form .user_mark h3 {font-size: 24px;color: #676767;margin-bottom: 0px;font-family: 'Open Sans', sans-serif;}
+#user-form .user_mark ul li a {color: #676767;border: 0px;font-family: 'Open Sans', sans-serif;font-size: 14px;}
+#user-form .user_mark p {margin-bottom: 0px;font-size: 14px;}
+#user-form .user_mark ul li {list-style: none;}
+#user-form .user_mark ul {color: #676767;}
+#edit-account .js-form-item label,#edit-account .password-confirm.js-password-confirm {font-size: 12px;margin-bottom: 5px;font-family: 'Open Sans', sans-serif;font-weight: 600;}
+#edit-account #edit-pass--description {display: none;}
+#edit-account .js-form-item input {width: 100%;height: 35px;border-radius: 2px;}
+#user-form #edit-pass .js-form-item {margin-bottom: 10px;}
+#user-form .form-item-mail {/*max-width: 33em;*/}
+#user-form #edit-actions {max-width: 33em;padding: 0px;margin-top: 0px;}
+#user-form #edit-actions #edit-submit {width: 100%;background: #4d8631;border-radius: 0px;height: 35px;font-size: 15px;color: #fff;}
+.page-node-type-page .highlighted {display: none;}
+#block-bartikcustomgary-mainnavigation #superfish-main li span:hover{background-color:transparent;}
+/*------------------footer---------------------*/
+.footer-text {float: left;width: 100%;color: #a9acab;font-size: 14px;}
+.site-footer__top .menu-item--expanded .menu li a:hover,.region-footer-third .clearfix.menu li a {background: transparent !important;}
+.site-footer__top .region.region-footer-first {width: 25%;}
+.site-footer .site-footer__top .region {width: 32%;margin:0%;}
+.site-footer__top .region h2 {color: #676767;font-size: 15px;font-weight: 700;}
+.region-footer-second .views-row span {color: #000;font-size: 12px;text-transform: capitalize;}
+.region.region-footer-second .views-row {
+float: left;width: auto;padding: 5px;border: 1px solid grey;margin-right: 10px;margin-top: 15px;}
+.region-footer-third .clearfix.menu li a {color: #000;text-transform: uppercase;border: 0px !important;padding:0px !important;}
+.region-footer-third .clearfix.menu li a:hover {background: #f0f0f0;}
+.region.region-footer-third .block {margin-top: 0px;padding: 10px;}
+.region-footer-fourth .field__item p {margin-bottom: 5px;color: #a9acab;font-size: 14px;}
+.region.region-footer-fourth .field__item p a {color: #616161;font-size: 14px;font-weight: bold;}
+.region.region-footer-fourth .field__item p a:hover {color: #4d8631;}
+.region.region-footer-fifth span {color: #000;}
+.region.region-footer-fifth span a {color: #4d8631;font-size: 15px;border: 0px;}
+.region.region-footer-fifth span a:hover {border-bottom: 1px solid #4d8631;color: #4d8631;background: transparent;}
+.region.region-footer-fifth {margin: 0px;}
+.site-footer {padding-top: 0px !important;}
+.region.region-footer-fifth .block {margin: 0px;}
+.region.region-footer-fifth .content {padding: 30px 0px;}
+.site-footer .layout-container {padding: 0px;}
+.site-footer__bottom #block-mailchimpsubscriptionformregisterusernewsletter {float: none;width: 70%;margin: 0 auto;display: table;margin-top: 25px;}
+.site-footer__top .content .menu-item--expanded .menu{position:absolute;background: #fff;z-index: 9999;border: 1px solid #ccc;box-shadow: 2px 2px 10px rgba(0,0,0,0.5);top:28px;width: 225px;}
+.region-footer-third .clearfix.menu li {padding:5px 10px !important;position: relative;width: auto;clear: both;float: left;}
+.region-footer-third .clearfix.menu{margin-top:15px;}
+.clearfix.menu .menu-item--expanded .menu-item {padding: 10px !important;}
+.region-footer-third .clearfix.menu li a {text-indent: 0;}
+.site-footer__top .content {position: relative;}
+/*------------------what's on-----------------------*/
+.view-id-after_submit_node_details .views-field-field-website-url .field-content {text-transform: lowercase;}
+.view-id-after_submit_node_details .views-label-field-website-url {float: left;width: auto;font-size: 15px !important;font-weight: normal;padding: 0px;margin-top:3px;}
+.path-whats-on-in-your-state div#block-bartikcustomgary-content .views-row .views-field-field-image {float: left;width: 23%;}
+.path-whats-on-in-your-state div#block-bartikcustomgary-content .views-row .views-field-nothing {float: right;width: 75%;clear: right;padding-left: 8px;}
+div#block-bartikcustomgary-content .right-teacher-sec .tech-title a {font-size: 25px;color: #4d8631;font-weight: normal;border: 0px;text-transform: capitalize;font-family: 'Open Sans', sans-serif;margin-bottom: 10px;width: 100%;float: left;}
+div#block-bartikcustomgary-content .right-teacher-sec {color: #6f7175;font-size: 14px;float: left;font-weight: 500;margin-bottom: 0;text-transform: capitalize;line-height: 19px;font-family: 'Open Sans', sans-serif;}
+div#block-bartikcustomgary-content .tech-link {margin-top: 10px;}
+div#block-bartikcustomgary-content .right-teacher-sec .tech-disc p {font-size: 12px;display: contents;text-transform: none;}
+div#block-bartikcustomgary-content .views-row {float: left;width: 100%;margin-bottom: 30px;border-bottom: 1px solid #ccc;padding-bottom: 30px;}
+div#block-bartikcustomgary-content .right-teacher-sec .tech-disc a {color: green;font-size: 13px;border: 0px;}
+div#block-bartikcustomgary-content .views-row .views-field-field-image a {border: 0px;}
+div#block-bartikcustomgary-content .tech-Qualification,div#block-bartikcustomgary-content .tech-title {margin-bottom: 5px;}
+div#block-bartikcustomgary-content .right-teacher-sec .tech-disc a:hover {color: #000;}
+.vertical-tabs__menu {margin: 0 !important;padding: 0;width: 100%;float: left;}
+.vertical-tabs {margin: 0px !important;border: 1px solid #ccc;}
+.vertical-tabs__panes {float: left;width: 100%;margin: 0px 0px 10px !important;}
+.views-field-buy-it-now #edit-actions {position: absolute;left: 24%;top: -28px;margin: 0px !important;padding: 0px;}
+.path-teacher-detail-view #block-bartikcustomgary-content .views-field-title-2 p {margin: 20px 0px;}
+/*------------------------workshops--------------------------*/
+.node-form .form-wrapper {margin-bottom: 0px !important;} 
+.node-form .js-form-item input,.node-form .js-form-item select {height: auto;width: 50%;border: 1px solid #ccc;}
+.js-form-managed-file .js-form-item  .required{border:0px;}
+#edit-field-workshop-start-date-wrapper .js-form-item input {width: auto;}
+.node-form #edit-field-workshop-start-date-wrapper {margin-bottom: 0px;}
+.node-form #edit-body-wrapper .filter-wrapper {padding: 20px;display: none;}
+.node-form .description {margin-top: 12px;font-size: 14px;}
+.node-form #edit-second-submit {background: #659b35;color: #fff;margin: 0px 0px 10px 0px;}
+.node--type-workshops .text-formatted.field .field__item p {margin-bottom: 0px;}
+.node--type-workshops .field {margin-bottom: 10px;float: left;width: 100%;}
+.tabs.primary {display: none;}
+.region-sidebar-second #block-bartikcustomgary-useraccountmenu ul,#block-test ul {display: none;}
+#sidebar-first .block .content .views-field-body,#sidebar-first .block .content {margin-bottom: 0px !important;}
+#block-mailchimpsubscriptionformregisterusernewsletter h2 {margin-top: 25px;font-weight: 700;text-transform: uppercase;color: #000;font-size: 14px;width: auto;float: left;}
+.node--view-mode-full .field .field__label {float: left;width: auto;font-size: 18px !important;line-height: 1.5;color:#676767;padding-right: 10px;font-weight: bold;}
+.node--view-mode-full .field  {width:100%;float:left;margin: 0px;}
+.region-content .node--view-mode-full .field {float: left;width: 100%;margin-bottom: 10px !important;}
+#edit-field-select-adtype .js-form-item input {float: left;width: auto;margin-top:5px;}
+.node-form .js-form-item .details-wrapper .option {float: left;width: auto;margin-left: 5px;}
+.node-form .js-form-item .details-wrapper #edit-revision {float: left;width: auto;}
+#block-mailchimpsubscriptionformregisterusernewsletter .js-form-item{width: 100%;float: left;margin:0px 0px 5px;}
+#block-mailchimpsubscriptionformregisterusernewsletter .form-item-mergevars-email input {width: 100%;float: left;}
+.mailchimp-signup-subscribe-form .form-actions .button {float: left;background: #4d8631;margin-top: 4px;padding: 5px 26px;color: #fff;border-radius: 0px;}
+.site-footer__bottom .block-views-blockvideos-block-block-1 .content {margin-top: 24px;}
+/************************17/09/2019********************************/
+.layout-main .sidebar .section {padding: 0px;float: left;width: 100%;}
+.region.region-sidebar-first {float: left;width: 100%;margin-bottom: 10px;}
+.sidebar .block .content .views-field-body,.sidebar .block .content {font-size: 13px;line-height: 1.6;color: #989797;}
+.sidebar .block .content .views-field-field-event-date .field-content {padding: 6px 0px;}
+.attachment.attachment-after .view-content li {margin-bottom: 5px;border-bottom: 1px solid #ddd;padding-bottom: 12px;}
+.right-teacher-sec {font-size: 14px;}
+#sidebar-first .block-views-blocknew-listings-block-1 .views-field a:hover {color: #4d8631;}
+#sidebar-second .views-row .views-field a:hover {color: #4d8631;}
+.view-what-s-new-view .views-field span a:hover {color: #4d8631;}
+.view-what-s-new-view .views-field .views-field-field-event-date .field-content {padding: 6px 0px;}
+.site-footer__bottom .block-views-blockvideos-block-block-1 {background: #3e4b5e;padding: 20px !important;position: relative;}
+.site-footer__bottom .block-views-blockvideos-block-block-1 a {color: white;border-bottom: 0px;font-weight: 600;font-size: 15px;}
+.site-footer__bottom .block-views-blockvideos-block-block-1 a:hover {color: #4d8631;}
+.site-footer__bottom .block-views-blockvideos-block-block-1 .view-footer {padding-bottom: 15px;}
+#block-mailchimpsubscriptionformregisterusernewsletter .js-form-item.form-item.js-form-type-radio.form-type-radio.js-form-item-mergevars-state.form-item-mergevars-state {
+width: 33%;float: left;margin-right: 0;}
+#block-mailchimpsubscriptionformregisterusernewsletter #edit-mergevars-state--wrapper {width: auto;float: left;margin-left:0px;}
+/*----------------single-page----------------------------------*/
+.view-after-submit-node-details .views-field-title {margin-bottom: 20px;font-size: 36px;color: #676767;font-weight: 300;text-transform: capitalize;font-family: 'Open Sans', sans-serif;line-height: 1.2;}
+.field--type-string h1,.field--type-string h3,.field--type-list-string h1,node-form .custom-event h1,.node-form .custom-event h3,#block-step3 .field--name-body h2 {margin-bottom: 20px;font-size: 36px;color: #676767;font-weight: 300;font-family: 'Open Sans', sans-serif;line-height: 1.2;margin-top: 0px;text-align:center;} 
+div#block-bartikcustomgary-content .view-after-submit-node-details .views-field-field-image {width: 100%;float: left;}
+div#block-bartikcustomgary-content .view-after-submit-node-details .views-field-body {font-size: 14px;color: #676767;line-height: 1.2;margin-top: 17px;float: left;width: 100%;}
+.view-after-submit-node-details  .views-field-field-venue-street-address,.view-after-submit-node-details  .views-field-field-event-date,.view-after-submit-node-details .views-field-field-website-url {
+font-size: 15px;color: #676767;text-transform: capitalize;}
+.view-after-submit-node-details .views-field-field-event-date-1 {font-size: 14px;color: #676767;text-transform: capitalize;font-family: 'Open Sans', sans-serif;}
+.view-after-submit-node-details  .views-field-addtoany-share {float: left;width: 100%;margin: 15px 0px;}
+.path-teachers div#block-bartikcustomgary-content .views-field-field-image,.path-workshop div#block-bartikcustomgary-content .views-field-field-image,.path-voice-teachers div#block-bartikcustomgary-content .views-field-field-image,.path-performance div#block-bartikcustomgary-content .views-field-field-image,.path-tours div#block-bartikcustomgary-content .views-field-field-image,.path-choirs div#block-bartikcustomgary-content .views-field-field-image {float: left;width: 17%;}
+.path-teachers div#block-bartikcustomgary-content .views-field-nothing,.path-workshop div#block-bartikcustomgary-content .views-field-nothing,.path-voice-teachers div#block-bartikcustomgary-content .views-field-nothing,.path-performance div#block-bartikcustomgary-content .views-field-nothing,.path-tours div#block-bartikcustomgary-content .views-field-nothing,.path-choirs div#block-bartikcustomgary-content .views-field-nothing {float: right;width: 81%;clear: right;padding-left: 8px;}
+.view-header h1 {color: #676767;font-weight: 300;text-transform: capitalize;font-family: 'Open Sans', sans-serif;line-height: 1.2;margin: 30px 0px;text-align: left;text-align: center;font-size: 36px;}
+.path-tours div#block-bartikcustomgary-content .tech-Email p a {color: green;font-size: 13px;border: 0px;}
+/*----------------choir-page----------------------------------*/
+.custom-choir h3 {font-size: 26px;color: #4d8631;padding-bottom: 10px;text-align: left;width: 100%;float: left;font-weight: 300;}
+.welcome_wraper ul li {list-style: none;margin-bottom: 5px;position:relative;}
+.welcome_wraper ul li a {font-size: 16px;border: 0px;font-family: "Open Sans", sans-serif;color: rgb(113, 114, 115);}
+.welcome_wraper p {margin-bottom: 0px;font-size: 15px;}
+.welcome_wraper ul li:after {background-image: url(../images/icons8-more-than-32.png);background-repeat: no-repeat;background-position: center center;background-size: 10px;width: 2%;position: absolute;content: "";height: 100%;top: 0px;left: -19px;}
+.welcome_wraper ul li a:hover {border-bottom: 1px solid #000;color:#000;}
+.choir-details-page .choir-views span {float: left;width: auto;margin-right: 10px;font-size: 14px;color: #676767;text-transform: capitalize;font-family: 'Open Sans', sans-serif;}
+.choir-details-page .choir-views p,.choir-details-page .views-field-field-choir-town-or-suburb {font-size: 14px;color: #676767;font-family: 'Open Sans', sans-serif;margin: 0px;}
+.choir-views {width: 100%;float: left;margin-bottom: 2px;}
+.path-choir-details #block-bartikcustomgary-content  .views-field-nothing {width: 100% !important;}
+.choir-details-page .choir-views p a {text-transform:lowercase;}
+form#search-block-form {display: none;}
+#block-bartikcustomgary-search h2 {margin: 0px;}
+form#search-block-form {border: 1px solid #4d8631;background: #fff;float:right;width:100%;}
+div#block-bartikcustomgary-search .content.container-inline{position: absolute;right: 0;top: 44px;z-index: 1!important;width:170%;}
+form#search-block-form .js-form-item.form-item {float: left;width: 109px;margin: 0px;padding-left: 5px;padding-top: 8px;}
+#block-bartikcustomgary-search {width: 85px;float: right;border: 1px solid #ccc;margin-top: 4.4px;    padding: 6px 5px;position: relative;cursor: pointer;}
+#block-bartikcustomgary-search h2{position: relative;font-size: 14px;}
+#block-bartikcustomgary-search h2:after{background: url(../images/icons8-search-48.png) no-repeat right;background-size: 20px;position: absolute;content: "";width: 100%;height: 100%;right: 0px;}
+form#search-block-form div#edit-actions {float: right;padding: 0px;background: #fff;margin: 0px !important;position: relative;left: 0;width:auto;}
+.site-footer__bottom .owl-wrapper .owl-item {text-align: center;width: 267px !important;margin: 0px 23px;}
+.views-view-grid .views-col {float: left;width: 31% !important;margin: 0px 2% 0px 0px;}
+.views-view-grid.horizontal .views-field-title a {font-size: 15px;color: #000;font-weight: bold;border: 0px;}
+.text-formatted.field.field--name-body {float: left;width: 100%;}
+.uc-product-add-to-cart-form  #edit-actions input {float: left;background: #4d8631;margin-top: 4px;padding: 5px 26px;color: #fff;border-radius: 0px;}
+#uc-cart-checkout-form #payment-pane, .field--name-field-banner-ad-images .messages.messages--status{display:none !important;}
+.page-node-type-product #edit-submit-508{display: block;}
+#field-event-date-values {position: relative;}
+#edit-field-event-date-wrapper {position: relative;}
+.draggable {position: relative;}
+.add-date-button {position: absolute;right: 0;bottom: 65px;width: 33%;height: 0px;}
+.clearfix.add-date-button input {width: 100px;text-align: center;font-size: 30px;font-weight: bold;text-indent: -372px;background-image: url('../images/newplus_PNG110.png') !important;
+background-size: 25px !important;background-repeat: no-repeat !important;background-position: center;background-color: #4d8631;border-radius: 0px;height: 34px; margin: 0px;}
+.clearfix.add-date-button input:hover,.clearfix.add-date-button input:focus{width: 100px;text-align: center;font-size: 30px;font-weight: bold;text-indent: -372px;background-image: url('../images/newplus_PNG110.png') !important;background-size: 25px !important;background-repeat: no-repeat !important;background-position: center;background-color: #4d8631;border-radius: 0px;height: 34px;margin: 0px;}  
+.forget-pass {float: left;width: 100%;}    
+#block-bartikcustomgary-mainnavigation #superfish-main li span {font-size: 13px;color: #808080;text-transform: uppercase;font-weight: 600;padding: 14px 19px; margin-bottom: 0px; cursor: pointer;}    
+.node-tours-form.step2 fieldset{display: none;}
+/*advertise*/
+.node .page_title {font-size: 36px;color: #676767;font-weight: 300;text-transform: capitalize;font-family: 'Open Sans', sans-serif;line-height: 1.2;}
+.advertise-upper h2 {margin: 0px;}
+.advertise-upper p {font-size: 14px;color: #676767;line-height: 1.2;margin-top: 15px;}
+.advertise-upper .herro-links {float: left;width: 100%;}
+.advertise-upper .herro-links label {float: left;width: auto;margin-right: 10px;font-size: 14px;color: #676767;text-transform: capitalize;font-family: 'Open Sans', sans-serif;font-weight: normal;}
+.advertise-mail span a {font-size: 14px;color: #676767;font-family: 'Open Sans', sans-serif;margin: 0px;}
+.advertise-bottom h2 {float: left;width: 100%;margin: 0px;}
+.view-display-id-page_6.view-id-after_submit_node_details .field-content {float: none;width: auto;}
+.view-id-after_submit_node_details .views-field {float: left;width: 100%;margin-bottom: 2px;}
+.welcome_wrapper_ad p a{color: gray;font-size: 18px;border-bottom: 0px;}
+/*********16th march 2020********/
+/*******************************/
+#sidebar-first .block ,.region-sidebar-second .block{width:100%!important;}
+#content {border-left: 1px solid #ccc!important;}
+.views_slideshow_cycle_teaser_section {border-bottom:1px solid #ddd;}
+.view-display-id-attachment_2 .field-content{margin-bottom: 15px;}
+.attachment.attachment-after .view-content {margin-top:-9px;}
+.view-id-after_submit_node_details .field-content p b{font-weight: 500!important;}
+.view-display-id-page_6.view-id-after_submit_node_details .field-content {font-size:14px;color:#676767;}
+div#block-bartikcustomgary-content .views-field.views-field-body .field-content {margin-top: 0px;}
+div#block-bartikcustomgary-content .views-field.views-field-body .field-content strong {font-weight:500;}
+.view-id-after_submit_node_details .field-content a ,.view-id-after_submit_node_details .field-content{font-size:14px;color: #676767;text-decoration:none;border:0;}
+.region.region-content div#block-bartikcustomgary-content .views-field.views-field-title{margin-bottom: 20px;}
+.views-field.views-field-addtoany-share{margin-bottom: 20px;}
+.attachment.attachment-after .view-content li{padding-bottom:17px;}
+/*********17th march 2020********/
+/*******************************/
+div#block-bartikcustomgary-content .views-row b {font-weight: 500;}
+.block .view-what-s-new-view .view-content .skin-default span.field-content a {font-size: 15px;color: #000;font-weight: bold;border: 0px;}
+.block .view-what-s-new-view .view-content .skin-default span.field-content a:hover {color:#4d8631;}
+.view-id-after_submit_node_details .field-content a:hover {color: #4d8631;}
+article.contextual-region.node.node--type-page.node--view-mode-full.clearfix {clear: both!important;}
+#sidebar-second .views-row .views-field a{display:inline-block; }
+.sidebar .block-views-blocknew-listings-block-1 h2 {margin-top: 0; padding-bottom: 2px; border: 0;margin-left: 1px; border-bottom: 1px solid #ccc;}
+#block-bartikcustomgary-views-block-tour-listing-page-block-1 h2 {margin-top: 15px;padding: 0;border: 0;margin-bottom: 5px;font-size: 15px;}
+#block-bartikcustomgary-views-block-tour-listing-page-block-1 h2::after {position: static;}
+#main-wrapper #sidebar-second {border: 1px solid #ccc;border-left:0;}
+.view-what-s-new-view .attachment-after {float: right;width: 49%;}
+.site-footer__top nav#block-footersecond .content {display: inline-block;}
+.tech-Email p {font-size: 12px;}
+div#block-bartikcustomgary-content .tech-Qualification{margin-bottom:0;}
+div#block-bartikcustomgary-fblikebox {padding: 0!important;}
+/*********30th march 2020********/
+/*******************************/
+/*.view-id-after_submit_node_details .views-label ,.view-id-after_submit_node_details .views-label{ padding-top: 4px!important;}*/
+div#block-bartikcustomgary-content .views-field.views-field-title span.field-content {font-size: 36px;}
+.view-id-after_submit_node_details .views-field {display: flex;align-items: center;}
+.view-id-after_submit_node_details .views-label {font-size: 14px;}
+.view-id-after_submit_node_details .field-content a, .view-id-after_submit_node_details .field-content {font-size: 14px;color: #676767;text-decoration: none;border: 0;line-height: normal;}
+/*********3rd april 2020********/
+/******************************/
+.view-id-detail_view #edit-actions{position: static;}
+.view-id-detail_view #edit-actions .form-submit{border-radius:0px;}
+span.tickbox {display: inline-flex!important;align-items: center;}
+span.tickbox input {margin: 0 5px 0 0!important;}
+main#content span.tagNam {text-transform: uppercase;}
+main#content span.rmv-the {text-transform: lowercase;}
+.trm_nsw .rmv-the {display:none;}
+.trm_qld span.rmv-the,
+.trm_sa span.rmv-the,
+.trm_tas span.rmv-the,
+.trm_vic span.rmv-the,
+.trm_wa span.rmv-the{ display: none;}
+.node-form .field--widget-daterange-datelist select.form-select {border-radius: 5px;font-size: 14px;padding: 5px 10px;height: auto;border: 1px solid #ccc;}
+div#edit-field-tour-duration-wrapper fieldset.js-form-item.form-item .fieldset-wrapper h4.label {font-size: 18px;color: #4d8631;display: inline-block;margin-bottom: 0px;}
+div#edit-field-tour-duration-wrapper fieldset.js-form-item.form-item.js-form-wrapper.form-wrapper span.fieldset-legend {font-family: 'Open Sans', sans-serif;
+font-weight: 400;font-size: 14px;color: #717273;float: left;width: 100%;cursor: auto;}
+fieldset#edit-field-tour-duration-0 div#edit-field-tour-duration-0-end-value {margin-bottom: 20px;}
+fieldset#edit-field-tour-duration-0 {border: 0;padding-left: 0;}
+fieldset#edit-field-tour-duration-0 div#edit-field-tour-duration-0-value {margin-bottom: 15px;}
+div#edit-field-tour-duration-wrapper fieldset.js-form-item.form-item.js-form-wrapper.form-wrapper span.fieldset-legend:after {display: inline-block;width: 6px;height: 6px;margin: 0 0.3em;content: "";vertical-align: super;background-image: url(../../../../misc/icons/ee0000/required.svg);background-repeat: no-repeat;background-size: 6px 6px;}
+.clearfix.text-formatted.field.field--name-body.field--type-text-with-summary.field--label-above {display: flex;align-items: center;}
+.duration-text {margin-bottom: 0;color: #4d8631;}
+fieldset#edit-field-event-date-0 {margin-top: 2px;}
+.term_in {text-transform: lowercase;}
+.term_choir_or_group_listing .term_in,
+.term_teachers .term_in {display: inline!important;}
+ul.messages__list li { line-height: normal;}
+.views_slideshow_cycle_teaser_section { margin-bottom: 13px;}
+a, a.link {border: 0;}
+* { word-break: break-word;}
+.custom-text.login-popup-form {text-align: left;}
+.clearfix.text-formatted.field.field--name-body.field--type-text-with-summary.field--label-above { display: block;}
+.path-cart .region.region-content {overflow-x: auto;overflow-y: hidden;}
+.region.region-content table#edit-items {min-width: 750px;}
+.views-field.views-field-title-2 span.tickbox {margin-bottom: 10px;margin-top: 5px;}
+
+input#edit-submit-1410 {width: 240px!important;}
+#header{max-width: 1350px; margin: 0 auto;}
+
+@media only screen and (max-width:767px ){
+ .tableresponsive-toggle-columns {display: none;}
+ }
+ .custom-text.login-popup-form a.use-ajax.login-popup-form.reg-button h4 {margin-bottom: 0!important;}
+.custom-text.login-popup-form span.text h4 {margin-top: 0!important;}
+.uc-cart-view-form.memebership_sub .cart-textt{display: none; }
+
+
+/**********14th september 2020**********/
+/**************************************/
+fieldset#edit-field-banner-ad-state-target-id--wrapper {width: 100%;}
+fieldset#edit-field-banner-ad-state-target-id--wrapper {margin: 0; }
+fieldset#edit-field-banner-ad-state-target-id--foPWJk2Xnik--wrapper,
+.bef-exposed-form .form--inline > .form-item {/*width: 100%;*/ margin: 0; }
+div#drupal-modal .form-actions.js-form-wrapper.form-wrapper input.button.js-form-submit.form-submit{display: block!important;}
+form#views-exposed-form-search-page-1 input.form-text {display: block!important;border: 1px solid #4d8631!important;background-color: #fff;float: right!important;width: 142px;margin: 0px;padding: 7px;}
+div#block-exposedformsearchpage-1 h2 {height: 34px;width: 85px;margin-right: 0;margin-left: auto;border: 1px solid #ccc;margin-top: 6px;padding: 6px 5px;position: relative;cursor: pointer;font-size: 14px;}
+div#block-exposedformsearchpage-1 {display: flex;width: 100%;flex-direction: column;}
+div#block-exposedformsearchpage-1 h2:after {background: url(../images/icons8-search-48.png) no-repeat right;background-size: 20px;position: absolute;content: "";width: 100%;height: 100%;right: 4px;top: 0;}
+form#views-exposed-form-search-page-1 .js-form-item.form-item.js-form-type-textfield.form-type-textfield.js-form-item-title.form-item-title:after {
+background: url(../images/icons8-search-48.png) no-repeat right;
+background-size: 20px;position: absolute;content: "";width: 100%;height: 100%;right: 5px;top: 0;}
+form#views-exposed-form-search-page-1  .js-form-item.form-item.js-form-type-textfield.form-type-textfield.js-form-item-title.form-item-title{position: relative;}
+form#views-exposed-form-search-page-1 input.form-text::placeholder{font-size: 0;}
+form#views-exposed-form-search-page-1 .form--inline.clearfix {display: flex;justify-content: flex-end;}
+form#views-exposed-form-search-page-1 .form--inline.clearfix div#edit-actions {margin: 0!important;padding: 0;}
+form#views-exposed-form-search-page-1 label {display: none;}
+form#views-exposed-form-search-page-1 input#edit-submit-search{margin-right: 0}
+form#views-exposed-form-search-page-1 .form--inline.clearfix div#edit-actions {position: relative;}
+form#views-exposed-form-search-page-1 .button.js-form-submit.form-submit {margin-right: 0;position: absolute;width: 28px!important;height: 36px;right: 0;font-size: 0;background: transparent;}
+div#block-exposedformsearchpage-1 {position: relative;}
+div#block-exposedformsearchpage-1 .content {position: absolute;right: 0;top: 47px;}
+form#views-exposed-form-search-page-1 .js-form-item.form-item.js-form-type-textfield.form-type-textfield.js-form-item-title.form-item-title {z-index: 1;}
+#views-exposed-form-search-page-1{display: none;}
+.region.region-primary-menu {position: relative;}
+div#block-exposedformsearchpage-1 {position: absolute;width: 94.6%;}
+form#views-exposed-form-search-page-1 .button.js-form-submit.form-submit {z-index: 2;top: 0;}
+main#content .search-text a {font-size: 25px;color: #4d8631;font-weight: normal;border: 0px;text-transform: capitalize;font-family: 'Open Sans', sans-serif;margin-bottom: 0px;width: 100%;float: left;}
+main#content .search-text p {color: #6f7175;font-size: 12px;float: left;font-weight: 500;margin-bottom: 0;text-transform: capitalize;line-height: 19px;font-family: 'Open Sans', sans-serif;}
+form#views-exposed-form-search-page-1 input.form-text{position: relative;z-index: 1;}
+form#views-exposed-form-search-page-1 .js-form-item.form-item.js-form-type-textfield.form-type-textfield.js-form-item-title.form-item-title {
+background-color: #fff;}
+.layout-one-sidebar.layout-sidebar-first.path-search .region.region-content {overflow-y: hidden;}
+#block-bartikcustomgary-content .view.view-search.view-id-search .views-row .views-field.views-field-field-image {float: left;width: 17%;}
+#block-bartikcustomgary-content .view.view-search.view-id-search .views-row .views-field.views-field-body {float: right;width: 81%;clear: right;padding-left: 8px;}
+#block-bartikcustomgary-content .view.view-search.view-id-search .views-row .field-content img {width: 100%;}
+main#content .search-text .search-read a {color: green;font-size: 13px!important;border: 0px;}
+/*main#content .search-text .search-read {display: inline-block;}*/
+.region-primary-menu .block-block-content a {position: relative;z-index: 2;}
+.path-node .highlighted .messages--error{display:none;}
+
+.path-event-detail-view .view-detail-view a.advertising-class, .path-event-detail-view .view-detail-view div#edit-actions input, .path-event-detail-view .view-detail-view div#edit-actions,
+.path-teacher-detail-vieww .view-detail-view a.advertising-class, .path-teacher-detail-view .view-detail-view div#edit-actions input, .path-teacher-detail-view .view-detail-view div#edit-actions,
+.path-detail-view .view-detail-view a.advertising-class,.path-detail-view .view-detail-view div#edit-actions input,.path-detail-view .view-detail-view div#edit-actions{
+max-width: 240px!important;width: 100%!important;}/*
+form#views-exposed-form-search-page-1 input.form-text {padding-right: 27px;position: relative;z-index: 1;background: url(../images/icons8-search-48.png) no-repeat right;background-size: 20px;height: 100%;right: 0;background-position: 97%;background-color: #fff;}
+*/
+
+.view-subscriptions .views-row .views-col {
+	border: 1px solid #dee2e6;
+	padding: 20px;
+	width: 50% !important;
+	clear: both;
+	transition: all 0.3s;
+	margin-right: 30px;
+	cursor: pointer;
+}
+
+.view-subscriptions .views-row .views-col .views-field-title {
+	margin-bottom: 10px !important;
+}
+
+.view-subscriptions .views-row .views-col .views-field-title span.field-content {
+	font-size: 18px !important;
+	font-weight: 500;
+}
+
+.view-subscriptions .views-row .views-col .views-field-price__number {
+	border-bottom: 1px solid #dee2e6;
+	margin-bottom: 15px;
+}
+
+.view-subscriptions .views-row .views-col .views-field-price__number .field-content {
+	font-style: normal;
+	font-weight: 600;
+	font-size: 36px;
+	line-height: 54px;
+	color: #4d8631;
+}
+
+.view-subscriptions .views-row .views-col .views-field-body {
+	font-size: 15px;
+	font-weight: 500;
+}
+
+.view-subscriptions .views-row .views-col .views-field-variations-target-id form .form-actions {
+	position: relative !important;
+	left: 0 !important;
+}
+
+.view-subscriptions .views-row {
+	display: inline-flex;
+	margin-bottom: 0 !important;
+	border: 0 !important;
+	padding-bottom: 0 !important;
+}
+
+@media only screen and (min-width: 1200px) {
+	.view-subscriptions .views-row {
+		padding: 0 35px 0 60px;
+	}
+}
+
+.path-pricing .layout-main #sidebar-first {
+	padding-bottom: 15px;
+}
+
+.view-subscriptions .views-field-title .field-content {
+	color: #676767;
+	font-weight: 300;
+	text-transform: capitalize;
+	font-family: 'Open Sans', sans-serif;
+	line-height: 1.2;
+	margin: 1em 0 0.5em;
+	display: block;
+}
+
+.view-subscriptions .views-field-body .field-content p,
+.view-subscriptions .views-field-price__number .field-content {
+	color: grey;
+	font-size: 14px;
+	font-weight: 300;
+	font-family: 'Open Sans', sans-serif;
+}
+
+.view-subscriptions form .form-actions input {
+	border-radius: 0;
+	margin-bottom: 15px;
+}
+
+
+/*30-06-2021*/
+
+.moderations form ul.entity-moderation-form {
+	margin: 2em 0;
+	padding-left: 1em;
+	border: 0;
+	background: #f2f2f2;
+}
+
+.moderations form ul.entity-moderation-form select {
+	border: 1px solid #ccc;
+	height: 35px;
+	margin-top: 2px;
+	width: 200px;
+	padding: 0 5px;
+}
+
+.moderations form ul.entity-moderation-form li.entity-moderation-form__item input[type="submit"] {
+	margin-bottom: 0;
+	background: #4d8631;
+	float: left;
+	margin: 0px;
+	padding: 4px 10px;
+	color: #fff;
+	border-radius: 0px;
+	width: 100px;
+}
+.entity-moderation-form {
+    margin: 2em 0;
+    padding-left: 1em;
+    border: 1px dashed #bbb;
+    background: #fff;
+    display: none;
+}
+
+.moderations form ul.entity-moderation-form {
+	padding: 25px 30px 30px 30px;
+	margin-top: 5px;
+}
+
+.moderations form ul.entity-moderation-form input {
+	margin-bottom: 0;
+	height: 35px;
+	width: 200px;
+	padding: 0 10px;
+}
+
+.moderations form ul.entity-moderation-form li.entity-moderation-form__item input[type="submit"]:hover {
+	background: #418635;
+}
+
+#content #edit-actions--3 {
+	position: relative;
+	left: 0;
+	padding-top: 10px;
+	margin-top: 1em;
+	margin-bottom: 1em;
+	float: none;
+}
+
+article.node--unpublished {
+	padding-left: 0;
+	padding-right: 0;
+	float: left;
+	width: 100%;
+	z-index: 99;
+}
+
+article.node--unpublished .node__content h1.page_title {
+	margin-top: 0;
+}
+
+.views-field.views-field-price__number {
+	clear: both;
+}
+
+.view-new-listings .views-row,
+.view-what-s-on- .views-row,
+.view-tour-listing .views-row {
+	margin-bottom: 25px;
+}
+
+.view-new-listings .views-row .views-field-title,
+.view-what-s-on- .views-row .views-field-title,
+.view-tour-listing .views-row .views-field-title {
+	margin-bottom: 4px;
+	margin-top: 5px;
+}
+
+.view-new-listings .views-row .views-field-field-venue-street-address,
+.view-what-s-on- .views-row .views-field-field-venue-street-address,
+.view-tour-listing .views-row .views-field-field-venue-street-address {
+	margin-bottom: 10px;
+}
+
+.view-new-listings .views-row .views-field-title span.field-content,
+.view-what-s-on- .views-row .views-field-title span.field-content,
+.view-tour-listing .views-row .views-field-title span.field-content,
+.view-what-s-on- .views-row .views-field-field-banner-ad-state .field-content {
+	font-size: 16px;
+	font-weight: 600;
+	color: #444;
+	text-transform: capitalize;
+}
+
+.view-new-listings .views-row .views-field-field-event-date .field-content,
+.view-what-s-on- .views-row .views-field-field-event-date .field-content,
+.view-tour-listing .views-row .views-field-field-event-date .field-content,
+.view-new-listings .views-row .views-field-field-event-date .field-content time,
+.view-what-s-on- .views-row .views-field-field-event-date .field-content time,
+.view-tour-listing .views-row .views-field-field-event-date .field-content time {
+	padding: 6px 0px;
+	margin-bottom: 5px;
+	font-size: 12px;
+	color: #989797;
+}
+
+.view-new-listings .views-row .views-field-field-venue-street-address .field-content,
+.view-what-s-on- .views-row .views-field-field-venue-street-address .field-content,
+.view-tour-listing .views-row .views-field-field-venue-street-address .field-content {
+	color: #989797
+}
+
+.view-new-listings .views-row p,
+.view-what-s-on- .views-row p,
+.view-tour-listing .views-row p {
+	font-size: 15px;
+	color: #aaa;
+}
+
+.view-new-listings .views-row .views-field-field-image .field-content img,
+.view-what-s-on- .views-row .views-field-field-image .field-content img,
+.view-tour-listing .views-row .views-field-field-image .field-content img,
+.view-what-s-on- .views-row .views-field-field-image {
+	margin-top: 5px;
+	width: 100%;
+}
+
+.view-what-s-on- .attachment.attachment-before .views-element-container:nth-child(even) .views-field-field-image {
+	margin-top: 0;
+}
+
+
+.view-what-s-on- .views-row .views-field-field-image img {
+	height: 160px;
+	object-fit: cover;
+	margin-bottom: 5px;
+}
+
+.view-what-s-on- .views-row .views-field-field-image .field-content {
+	margin-bottom: 0;
+}
+
+.sidebar nav ul.menu li.menu-item.menu-item--expanded>span {
+	font-weight: 700;
+	text-transform: uppercase;
+	color: #4d8631;
+	margin: 0px 0 0;
+	font-size: 13px;
+	margin: 0px 0px 15px;
+	border: 1px solid #ccc;
+	padding: 0px;
+	cursor: pointer;
+	float: left;
+	width: 100%;
+	position: relative;
+	padding: 8px 5px 5px 5px;
+	border-radius: 5px;
+	margin-bottom: 0;
+}
+
+.sidebar nav ul.menu li.menu-item.menu-item--expanded>span:after {
+	content: "";
+	width: 0;
+	height: 0;
+	border-left: 4px solid transparent;
+	border-right: 4px solid transparent;
+	border-top: 4px solid #666;
+	position: absolute;
+	right: 10px;
+	top: 13px;
+}
+
+.sidebar nav ul.menu li.menu-item.menu-item--expanded {
+	list-style-type: none;
+	list-style-image: none !important;
+	padding-top: 0;
+}
+
+.region-sidebar-second nav.block .content ul.menu {
+	padding-right: 13px;	
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.region-sidebar-second nav.block {
+	margin-bottom: 0 !important;
+}
+
+.view-what-s-on- .attachment.attachment-before .views-element-container {
+	width: 50%;
+	display: inline-block;
+	float: left;
+	padding: 15px 15px;
+}
+
+.view-what-s-on- .attachment.attachment-before {
+	float: left;
+	margin-left: -15px;
+	margin-right: -15px;
+	width: 100%;
+}
+
+.view-what-s-on- .attachment.attachment-before+.view-content {
+	margin: 0 -15px;
+}
+
+.view-what-s-on- .attachment.attachment-before+.view-content .views-row {
+	display: inline-block;
+	width: 50%;
+	float: left;
+	padding: 0 15px;
+}
+
+.view-what-s-on- .view-filters form .form--inline .form-type-select {
+	width: calc(100% - 42px);
+}
+
+.view-what-s-on- .view-filters form .form--inline .form-actions {
+	padding-top: 0;
+}
+
+.view-what-s-on- .view-filters form .form--inline .form-type-select select {
+	width: 100%;
+	height: 32px;
+	border-color: #ccc;
+}
+
+.view-what-s-on- .view-filters form .form--inline .form-actions input {
+	margin: 0 !important;
+}
+
+.views_slideshow_cycle_main .slider-state,
+.views_slideshow_cycle_main .slider-date {
+	font-size: 15px;
+}
+
+.region-sidebar-second nav.block .content ul.menu li.menu-item--expanded ul.menu li.menu-item a:hover {
+	background: #f0f0f0;
+}
+
+.region-sidebar-second nav.block .content ul.menu li.menu-item--expanded ul.menu li.menu-item a {
+	color: #333;
+    text-transform: capitalize;
+    padding: 8px 10px;
+    margin: 0px;
+    width: 100%;
+    background: transparent;
+    font-size: 12px;
+    font-weight: 700;
+    display: block;
+    transition: all 0.3s;
+}
+
+.sidebar .region-sidebar-second nav ul.menu li.menu-item.menu-item--expanded span{
+	border-radius: 0;
+    border-right: 0;
+    border-left: 0;
+    border-top: 0;
+}
+.region-sidebar-second nav.block .content ul.menu li.menu-item--expanded ul.menu li.menu-item {
+	padding: 0 !important;
+    border: 1px solid #ccc;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;		
+}
+
+.region-sidebar-second nav.block .content ul.menu li.menu-item--expanded ul.menu {
+	padding: 0;
+    clear: both;
+    border-radius: 4px;
+    border: 0;
+}
+
+.view-what-s-on- .views-row .views-field-field-banner-ad-phone .field-content,
+.view-what-s-on- .views-row .views-field-field-banner-ad-email .field-content {
+	margin-bottom: 0;
+}
+
+.mailchimp-signup-subscribe-form {
+	/*display: inline-flex;*/
+	width: 100%;
+	background: #f6f7f9;
+	justify-content: center;
+	padding: 15px !important;
+	border: 1px solid #eee !important;
+}
+
+.mailchimp-signup-subscribe-form h2 {
+	float: left;
+	font-size: 14px;
+	font-weight: 700;
+	padding: 12px 0;
+}
+
+.mailchimp-signup-subscribe-form .content {
+	float: left;
+	margin-left: 70px;
+}
+
+.mailchimp-signup-subscribe-form .content form {
+	clear: both;
+	width: 100%;
+	float: left;
+	/*display: inline-flex;*/
+}
+
+.mailchimp-signup-subscribe-form .content form .mailchimp-newsletter-mergefields .form-type-email {
+	margin: 0;
+}
+
+/*.mailchimp-signup-subscribe-form .content form .mailchimp-newsletter-mergefields label {
+	display: none;
+}*/
+
+.mailchimp-signup-subscribe-form .content form .mailchimp-newsletter-mergefields .form-type-email input {
+	margin: 0;
+	padding: 5px;
+	/*min-width: 400px;*/
+	height: 32px;
+}
+
+.mailchimp-signup-subscribe-form .content form .form-actions[data-drupal-selector="edit-actions"] {
+	margin: 0 !important;
+	padding: 0;
+}
+
+.mailchimp-signup-subscribe-form .content form #edit-actions {
+	margin: 0 !important;
+}
+
+.mailchimp-signup-subscribe-form .content form .form-actions input {
+	margin: 0;
+}
+
+.site-footer__bottom .block-views-blockvideos-block-block-1 a {
+	font-weight: 500;
+	font-size: 12px !important;
+}
+
+.site-footer__bottom .views-element-container h2 {
+	text-transform: uppercase;
+	font-size: 14px;
+	font-weight: 700;
+	padding: 8px 10px;
+}
+.whatsonwrap {
+    width: 100%;
+    float: left;
+}
+
+.whatsonwrap .leftpanel {
+    width: 50%;
+    float: left;
+}
+.whatsonwrap .rightpanel {
+    width: 50%;
+    float: left;
+    padding-top: 10px;
+}
+.whatsonwrap .leftpanel .views_slideshow_cycle_teaser_section {
+    width: 100% !important;
+    border: 0;
+}
+.whatsonwrap .leftpanel .views_slideshow_cycle_teaser_section .views_slideshow_cycle_slide {
+    width: 100% !important;
+}
+.whatsonwrap .rightpanel .item-list ul li {
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+}
+.whatsonwrap .rightpanel .item-list {
+    padding-left: 15px;
+}
+.whatsonwrap .rightpanel .item-list ul li .views-field-title a {
+    font-size: 16px;
+    font-weight: 600;
+    color: #444;
+    text-transform: capitalize;
+    padding-bottom: 8px;
+    display: block;
+}
+.whatsonwrap .rightpanel .item-list ul li .views-field-field-event-date .field-content {
+    font-size: 12px;
+    color: #989797;
+}
+body .views_slideshow_cycle_teaser_section .views_slideshow_cycle_slide .views-field-title a {
+    font-size: 16px;
+    font-weight: 600;
+    color: #444;
+    text-transform: capitalize;
+    padding-bottom: 0;
+    display: block;
+    border: 0;
+}
+.whatsonwrap .leftpanel .views_slideshow_cycle_teaser_section .views_slideshow_cycle_slide img {
+    height: 185px;
+    margin-bottom: 0;
+}
+.whatsonwrap .leftpanel .views_slideshow_cycle_teaser_section .views_slideshow_cycle_slide .views-field-title{
+	margin-bottom: 0;
+    margin-top: 0;
+}
+.whatsonwrap .leftpanel .views_slideshow_cycle_teaser_section .views_slideshow_cycle_slide .views-field-field-event-date .field-content {
+    margin-bottom: 0;
+}
+.workshopview .views-row .views-col {
+    width: 50% !important;
+    margin: 0;
+    padding: 0 15px;
+}
+.workshopview .views-row .views-col:nth-child(even) {
+    padding-right: 0;
+}
+.workshopview .views-row .views-col:nth-child(odd) {
+    padding-left: 0;
+}
+.teacherview .views-row .views-field-nothing {
+    float: left;
+    width: 80%;
+    margin: 0;
+    padding: 10px 0 0 0px;
+}
+.teacherview .views-row {
+    margin-bottom: 10px;
+}
+.teacherview .views-row .views-field-field-image {
+    width: 20%;
+    float: left;
+}
+.teacherview .views-row .views-field-field-image img {
+    margin-bottom: 0;
+}
+
+.workshopview .views-row .views-col img {
+    margin-bottom: 0;
+}
+.workshopview .views-row .views-field-title {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.workshopview .views-row .views-field-field-event-date .field-content {
+    margin-bottom: 0;
+}
+.region-sidebar-second nav.block .content ul.menu li.menu-item--expanded ul.menu li.menu-item:last-child {
+    border-bottom: 0;
+}
+.sidebar nav ul.menu li.menu-item.menu-item--expanded span {
+    border-radius: 0;
+    border-right: 0;
+    border-left: 0;
+    border-top: 0;
+    background: #f2f2f2;
+    padding-left: 10px;
+}
+
+
+.layout-checkout-form .field--name-field-location .form-radios .form-type-radio input {
+    position: relative;
+    top: 25px;
+    cursor: pointer;
+}
+
+@media(min-width: 769px) {
+	/* #sidebar-first.column.sidebar {
+		max-height: 790px;
+		overflow-y: scroll;
+	} */
+	.column.sidebar::-webkit-scrollbar {
+		width: 10px;
+	}
+	.column.sidebar::-webkit-scrollbar-track {
+		box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+	}
+	.column.sidebar::-webkit-scrollbar-thumb {
+		background-color: #51ac40;
+		outline: 1px solid slategrey;
+	}
+	.column.sidebar .view-new-listings .views-row .views-field-field-image .field-content img,
+	.column.sidebar .view-what-s-on- .views-row .views-field-field-image .field-content img,
+	.column.sidebar .view-tour-listing .views-row .views-field-field-image .field-content img {
+		height: 160px;
+		object-fit: cover;
+	}
+	.region-sidebar-second nav.block .content ul.menu {
+		padding: 0;
+	}
+}
+
+@media only screen and (min-width: 768px) {
+	form#views-exposed-form-search-page-1 .button.js-form-submit.form-submit {
+		margin-right: 0;
+		position: absolute;
+		width: 28px!important;
+		height: 33px;
+		right: 1px;
+		font-size: 0;
+		background-color: #fff!important;
+		top: 2px;
+		background: url(../images/icons8-search-48.png) no-repeat right;
+		background-position: center;
+		background-size: 22px;
+	}
+}
+
+@media only screen and (max-width: 1200px) {
+	div#block-exposedformsearchpage-1 {
+		top: 78px;
+	}
+	.view-hero-banner .views_slideshow_cycle_main .views_slideshow_cycle_slide {
+		width: 100% !important;
+	}
+}
+
+@media only screen and (max-width: 1029px) {
+	#block-bartikcustomgary-mainnavigation ul li a {
+		padding: 15px 12px;
+		font-size: 11px;
+	}
+	div#block-exposedformsearchpage-1 h2 {
+		margin-top: 5px;
+	}
+}
+
+@media only screen and (max-width: 980px) {
+	div#block-exposedformsearchpage-1 h2 {
+		margin-top: 1px;
+	}
+}
+
+@media only screen and (max-width: 768px) {
+	div#block-exposedformsearchpage-1 {
+		top: 66px;
+	}
+	.view-filters form .form--inline .form-actions {
+		position: relative !important;
+		bottom: 0 !important;
+		width: 100% !important;
+		text-align: left !important;
+		left: 0 !important;
+	}
+	.mailchimp-signup-subscribe-form {
+		display: inline-block;
+	}
+	.mailchimp-signup-subscribe-form h2 {
+		width: 100%;
+		text-align: center;
+	}
+	.region.region-sidebar-first {
+		width: 100%;
+	}
+	.view-what-s-on- .view-filters form .form--inline .form-actions input {
+		margin-top: 15px !important;
+	}
+	.mailchimp-signup-subscribe-form .content form .form-actions input {
+		margin: 0 !important;
+		height: 32px;
+	}
+	.mailchimp-signup-subscribe-form .content form .mailchimp-newsletter-mergefields .form-type-email input {
+		width: 100%;
+		margin-bottom: 15px;
+		min-width: auto;
+	}
+	.mailchimp-signup-subscribe-form .content form {
+		display: inline-block;
+	}
+	.mailchimp-signup-subscribe-form .content {
+		width: 100%;
+		margin-left: 0;
+	}
+	.view-what-s-on- .view-filters form .form--inline {
+		display: inline-block;
+	}
+	.view-what-s-on- .view-filters form .form--inline .form-type-select,
+	.view-what-s-on- .attachment.attachment-before .views-element-container {
+		width: 100%;
+	}
+	.view-new-listings .views-row .views-field-field-image .field-content img,
+	.view-what-s-on- .views-row .views-field-field-image .field-content img,
+	.view-tour-listing .views-row .views-field-field-image .field-content img,
+	.view-what-s-on- .views-row .views-field-field-image {
+		height: auto;
+	}
+	.view-what-s-on- .attachment.attachment-before+.view-content .views-row {
+		width: 100%;
+	}
+	#sidebar-second h2 {
+		width: auto;
+	}
+	.region-sidebar-second nav.block .content ul.menu{
+		padding-left: 0;
+		padding-right: 0;
+	}
+}
+
+@media only screen and (max-width: 767px){
+	div#block-exposedformsearchpage-1 {position: relative;width: 100%;}
+	div#block-exposedformsearchpage-1 h2 {width: 100%; z-index: 1;}
+	div#block-exposedformsearchpage-1 .content,
+	form#views-exposed-form-search-page-1 input.form-text {width: 100%;}
+	form#views-exposed-form-search-page-1 .js-form-item.form-item.js-form-type-textfield.form-type-textfield.js-form-item-title.form-item-title {
+	width: 100%;float: none;max-width: 100%;}
+	form#views-exposed-form-search-page-1 .form--inline.clearfix {display: block;}
+	form#views-exposed-form-search-page-1 .button.js-form-submit.form-submit {margin-right: 0;position: absolute;width: 28px!important;height: 41px;right: 0;font-size: 0;background-color: transparent;top: -10px;background: url(../images/icons8-search-48.png) no-repeat right;background-position: center;background-size: 22px;}
+	div#block-exposedformsearchpage-1 {top: 14px;}
+	form#views-exposed-form-search-page-1 .form--inline.clearfix div#edit-actions {position: static;}
+	main#content .search-text a {line-height: 25px;font-size: 15px;margin-bottom: 0px;}
+	#block-bartikcustomgary-content .view.view-search.view-id-search .views-row .views-field.views-field-field-image {float: none;}
+	#block-bartikcustomgary-content .view.view-search.view-id-search .views-row .views-field.views-field-body {float: none;padding-left: 0;}
+	form#views-exposed-form-search-page-1 .js-form-item.form-item.js-form-type-textfield.form-type-textfield.js-form-item-title.form-item-title {
+    overflow: hidden;}
+    form#views-exposed-form-search-page-1 .js-form-item.form-item.js-form-type-textfield.form-type-textfield.js-form-item-title.form-item-title {
+    position: relative;z-index: 9!important;}
+    .view-subscriptions .views-row .views-col{
+    	padding: 30px 20px;
+    }
+    .view-subscriptions .views-row .views-col .views-field-variations-target-id form .form-actions{
+    	bottom: 0 !important;
+    }
+    .whatsonwrap .leftpanel, .whatsonwrap .rightpanel{
+    	width: 100%;
+    }
+    .whatsonwrap .rightpanel{
+    	padding-top: 30px;
+    }
+    .whatsonwrap .rightpanel .item-list{
+    	padding-left: 0;
+    }
+    .workshopview .views-row .views-col{
+    	width: 100% !important;
+    }
+    .workshopview .views-row .views-col:nth-child(even){
+    	padding-left: 0;
+    }
+    .workshopview .views-row .views-col:nth-child(odd){
+    	padding-right: 0;
+    }
+    
+	body .teacherview .views-row .views-field-nothing {
+	    width: 74%;
+	}
+}
+
+@media only screen and (max-width: 580px){
+	#block-bartikcustomgary-content .view.view-search.view-id-search .views-row .views-field.views-field-body {width: 100%;}
+	#block-bartikcustomgary-content .view.view-search.view-id-search .views-row .views-field.views-field-field-image {width: 100%;}
+}
+
+@media(min-width: 576px){
+	.teacherview .views-row .views-field-field-image img {
+	    width: 122px !important;
+	    height: 150px;
+	}    
+}
+@media only screen and (max-width: 575px){
+	.view-subscriptions .views-row {
+	    display: block;
+	}
+	.view-subscriptions .views-row .views-col:last-child {
+	    margin-bottom: 0;
+	}
+	.view-subscriptions .views-row .views-col {
+	    width: 100% !important;
+	    text-align: center;
+	    margin-bottom: 15px;
+	}
+	.view-subscriptions .views-row .views-col .views-field-body .field-content p {
+	    text-align: center !important;
+	}
+	.view-subscriptions .views-row .views-col .views-field-variations-target-id form .form-actions input {
+	    margin: auto !important;
+	}
+	.moderations form ul.entity-moderation-form input {	    
+	    width: 100%;
+	}
+}
+@media(min-width: 537px){
+	.moderations form ul.entity-moderation-form li .form-item {
+	    margin-top: 0;
+	}
+}
+@media(max-width: 536px){
+	.moderations form ul.entity-moderation-form input {	   
+	    margin-bottom: 15px;
+	}
+	.moderations form ul.entity-moderation-form{
+		padding: 14px 15px 18px 15px;
+	}
+	.moderations form ul.entity-moderation-form li {
+	    width: 100%;
+	}
+	.moderations form ul.entity-moderation-form li {
+	    margin: 0;
+	}
+	.moderations form ul.entity-moderation-form select{
+		width: 100%;
+	}
+	.moderations form ul.entity-moderation-form li #edit-current.form-item {
+	    margin-top: 0;
+	}
+}
+.Approved.-btn {
+    background: #4d8631 none repeat scroll 0 0;
+    color: #ffffff;
+    display: inline-block;
+    float: right;
+    font-size: 15px;
+    padding: 5px 22px;
+    font-family: 'Open Sans', sans-serif;
+}
+div#block-nodelimitblock .field--type-text-with-summary p {
+    background: #4d8631;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 2px;
+    display: inline-block;
+}
+    
+#block-bartikcustomgary-content .node-type-list dd {
+    margin-left: 0;
+}

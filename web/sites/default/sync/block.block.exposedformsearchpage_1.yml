@@ -1,0 +1,23 @@
+uuid: 9b105bee-c773-42ea-ae51-a93219c37c11
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.search
+  module:
+    - views
+  theme:
+    - bartikcustomgary
+id: exposedformsearchpage_1
+theme: bartikcustomgary
+region: primary_menu
+weight: -23
+provider: null
+plugin: 'views_exposed_filter_block:search-page_1'
+settings:
+  id: 'views_exposed_filter_block:search-page_1'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+visibility: {  }

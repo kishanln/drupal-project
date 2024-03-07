@@ -1,0 +1,47 @@
+uuid: 4ecc7aa6-db20-4c0b-bc90-7c4c36043d83
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.videos.body
+    - field.field.node.videos.field_video
+    - node.type.videos
+  module:
+    - text
+    - video_embed_field
+id: node.videos.default
+targetEntityType: node
+bundle: videos
+mode: default
+content:
+  body:
+    type: text_textarea_with_summary
+    weight: 1
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+      show_summary: false
+    third_party_settings: {  }
+    region: content
+  field_video:
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    type: video_embed_field_textfield
+    region: content
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  path: true
+  promote: true
+  status: true
+  sticky: true
+  uid: true

@@ -1,0 +1,69 @@
+uuid: d291c44b-25dd-486d-bde2-5f3c79982e58
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.ad_type.body
+    - field.field.node.ad_type.field_ad_paid
+    - field.field.node.ad_type.field_approved
+    - field.field.node.ad_type.field_banner_ad_images
+    - field.field.node.ad_type.field_banner_ad_state
+    - field.field.node.ad_type.field_contact_email
+    - field.field.node.ad_type.field_contact_phone
+    - field.field.node.ad_type.field_orderid
+    - field.field.node.ad_type.field_select_adtype
+    - field.field.node.ad_type.field_square_banner_ad_image_
+    - field.field.node.ad_type.field_url_including_http
+    - node.type.ad_type
+  module:
+    - text
+    - user
+id: node.ad_type.teaser
+targetEntityType: node
+bundle: ad_type
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 3
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  price:
+    type: uc_price
+    label: inline
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  weight:
+    type: uc_weight
+    label: inline
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  add_to_cart: true
+  cost: true
+  dimensions: true
+  display_price: true
+  field_ad_paid: true
+  field_approved: true
+  field_banner_ad_images: true
+  field_banner_ad_state: true
+  field_contact_email: true
+  field_contact_phone: true
+  field_orderid: true
+  field_select_adtype: true
+  field_square_banner_ad_image_: true
+  field_url_including_http: true
+  model: true

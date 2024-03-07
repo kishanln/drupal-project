@@ -1,0 +1,46 @@
+node_search:
+  path: node
+  search: true
+  advanced:
+    visibility: true
+    collapsible: true
+    collapsed: true
+    criteria:
+      or: or
+      phrase: phrase
+      negative: negative
+    types:
+      ad_type: ad_type
+      advertising_banner_ad: advertising_banner_ad
+      advertising_square_ad: advertising_square_ad
+      article: article
+      choir_or_group_listing: choir_or_group_listing
+      custom_payment: custom_payment
+      hero_banner: hero_banner
+      page: page
+      performance_listing: performance_listing
+      product: product
+      product_kit: product_kit
+      simplenews_issue: simplenews_issue
+      teacher: teacher
+      tours: tours
+      videos: videos
+      webform: webform
+      workshops: workshops
+    languages:
+      en: en
+      und: und
+      zxx: zxx
+  info:
+    type: type
+    user: user
+    date: date
+    comment: comment
+  filter:
+    position: disabled
+    label: 'Filter the results'
+    any: '- Any -'
+user_search:
+  advanced:
+    types:
+      product: product

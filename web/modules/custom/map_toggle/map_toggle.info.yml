@@ -1,0 +1,5 @@
+name: Map view switch toggle
+package: Custom
+type: module
+version: 1.0
+core_version_requirement: ^8 || ^9 || ^10

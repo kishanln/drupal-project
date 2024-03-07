@@ -1,0 +1,30 @@
+uuid: 81356f2b-6ff0-4c18-b2f2-56e903289ba0
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.add_on_product
+  module:
+    - system
+    - views
+  theme:
+    - bartikcustomgary
+id: views_block__add_on_product_block_1_2
+theme: bartikcustomgary
+region: content
+weight: -14
+provider: null
+plugin: 'views_block:add_on_product-block_1'
+settings:
+  id: 'views_block:add_on_product-block_1'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: "/tour-detail-view/title/*\r\n/teacher-detail-view/*\r\n/event-detail-view/title/*\r\n/detail-view/title/*"
+    negate: false
+    context_mapping: {  }

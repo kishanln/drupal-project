@@ -1,0 +1,19 @@
+uuid: d501ad0b-a3dd-4066-b97c-0034685af41b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_venue_street_address
+    - node.type.tours
+id: node.tours.field_venue_street_address
+field_name: field_venue_street_address
+entity_type: node
+bundle: tours
+label: 'Venue Street Address'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

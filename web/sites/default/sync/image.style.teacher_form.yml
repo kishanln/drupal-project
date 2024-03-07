@@ -1,0 +1,15 @@
+uuid: 7a5b256d-6960-4dd0-b062-131136f85b8a
+langcode: en
+status: true
+dependencies: {  }
+name: teacher_form
+label: 'teacher form'
+effects:
+  9aceca4f-19c1-4932-9517-68fd2b378113:
+    uuid: 9aceca4f-19c1-4932-9517-68fd2b378113
+    id: image_scale
+    weight: 1
+    data:
+      width: 260
+      height: 320
+      upscale: false

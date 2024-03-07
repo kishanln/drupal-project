@@ -1,0 +1,24 @@
+uuid: 4e4e255f-730d-4f0d-86af-36a35d1f25e8
+langcode: en
+status: true
+dependencies:
+  module:
+    - datetime_range
+    - field_permissions
+    - node
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: node.field_banner_ad_paid_duration
+field_name: field_banner_ad_paid_duration
+entity_type: node
+type: daterange
+settings:
+  datetime_type: datetime
+module: datetime_range
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

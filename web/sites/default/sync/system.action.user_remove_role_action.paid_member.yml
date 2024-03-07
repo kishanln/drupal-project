@@ -1,0 +1,14 @@
+uuid: 08b84c4a-36cb-45ec-8fd9-edd02ed9792a
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.paid_member
+  module:
+    - user
+id: user_remove_role_action.paid_member
+label: 'Remove the Paid Member role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: paid_member

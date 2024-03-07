@@ -1,0 +1,91 @@
+uuid: 1fd84fad-8bb4-403c-922e-7dd88f83ec5c
+langcode: en
+status: true
+dependencies: {  }
+id: teachers_listing_notifications
+label: 'Teachers listing Notifications'
+events:
+  -
+    event_name: 'rules_entity_insert:node'
+description: ''
+tags: {  }
+config_version: '3'
+expression:
+  id: rules_rule
+  uuid: 95474f72-8629-4584-906f-99294fb35d78
+  weight: 0
+  conditions:
+    id: rules_and
+    uuid: 5ae5b974-63c7-4f2b-be73-68ccc873bf82
+    weight: 0
+    conditions:
+      -
+        id: rules_condition
+        uuid: 4d4a8f54-29e1-4576-a730-17641d94a76c
+        weight: 0
+        context_values:
+          types:
+            - teacher
+        context_mapping:
+          node: node
+        context_processors:
+          types:
+            rules_tokens: {  }
+        provides_mapping: {  }
+        condition_id: rules_node_is_of_type
+        negate: false
+  actions:
+    id: rules_action_set
+    uuid: 0cda481d-133c-4bce-ae59-c7b42a20da27
+    weight: 0
+    actions:
+      -
+        id: rules_action
+        uuid: 727fa72c-e5ea-4575-a0a8-7cf97a44eed4
+        weight: 0
+        context_values:
+          to:
+            - info@choircentral.com.au
+          subject: 'A new teacher listing has been created and may need moderating.'
+          message: 'A new teacher listing has been created and may need moderating. https://choircentral.com.au/node/{{node.nid}}/edit'
+          reply: ''
+          language: ''
+        context_mapping: {  }
+        context_processors:
+          to:
+            rules_tokens: {  }
+          subject:
+            rules_tokens: {  }
+          message:
+            rules_tokens: {  }
+          reply:
+            rules_tokens: {  }
+          language:
+            rules_tokens: {  }
+        provides_mapping: {  }
+        action_id: rules_send_email
+      -
+        id: rules_action
+        uuid: 4d79478f-1519-4b5a-be08-e241b7ce04cd
+        weight: 0
+        context_values:
+          to:
+            - '{{node.uid.entity.mail.value}}'
+          subject: 'A new choir listing has been created and may need moderating.'
+          message: 'A new choir listing has been created and may need moderating.'
+          reply: ''
+          language: ''
+        context_mapping: {  }
+        context_processors:
+          to:
+            rules_tokens: {  }
+          subject:
+            rules_tokens: {  }
+          message:
+            rules_tokens: {  }
+          reply:
+            rules_tokens: {  }
+          language:
+            rules_tokens: {  }
+        provides_mapping: {  }
+        action_id: rules_send_email

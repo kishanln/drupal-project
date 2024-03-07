@@ -1,0 +1,24 @@
+uuid: 6e12fba3-190c-492e-80d1-8d3cdd69d982
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.banner_ad
+  module:
+    - views
+  theme:
+    - bartik
+id: views_block__banner_ad_block_1
+theme: bartik
+region: header
+weight: -10
+provider: null
+plugin: 'views_block:banner_ad-block_1'
+settings:
+  id: 'views_block:banner_ad-block_1'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+visibility: {  }

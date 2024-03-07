@@ -1,0 +1,23 @@
+uuid: b734cd0c-5675-4041-8bce-3172b00b0ddd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_approved
+    - node.type.advertising_square_ad
+id: node.advertising_square_ad.field_approved
+field_name: field_approved
+entity_type: node
+bundle: advertising_square_ad
+label: Approved
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

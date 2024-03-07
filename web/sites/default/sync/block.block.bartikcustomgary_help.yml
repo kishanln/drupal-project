@@ -1,0 +1,22 @@
+uuid: 62932a58-942c-4d03-88e8-740c36993eda
+langcode: en
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - bartikcustomgary
+_core:
+  default_config_hash: 8I8iACSa0sKO3k3jlvUG1ge52rfcKX7USJAQYnzuBgg
+id: bartikcustomgary_help
+theme: bartikcustomgary
+region: content
+weight: -25
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  provider: help
+  label_display: '0'
+visibility: {  }

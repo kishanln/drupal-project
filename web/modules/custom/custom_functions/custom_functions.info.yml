@@ -1,0 +1,7 @@
+name: custom_functions
+type: module
+description: this module will be used to make custom functions and blocks for the site
+core_version_requirement: ^8 || ^9 || ^10
+package: Custom
+libraries:
+  - custom_functions/report

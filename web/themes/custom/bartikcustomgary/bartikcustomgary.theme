@@ -1,0 +1,50 @@
+<?php
+
+/**
+ * Implements hook_form_alter().
+ */
+function bartikcustomgary_form_alter(&$form, &$form_state, $form_id) {
+   if (strpos($form_id ,'commerce_order_item_add_to_cart_form_commerce_product_') !== false ) {
+    	$form['#validate'][] = 'custom_message_alter';
+   }
+   if (strpos($form_id ,'user_register_form') !== false ) {
+	$form['#validate'][] = 'custom_restrictions_validate_registration';
+}
+} 
+
+
+/**
+ * Implements hook_preprocess_menu().
+ */
+function bartikcustomgary_preprocess_menu(&$variables) {
+
+
+	$current_user_roles = \Drupal::currentUser()->getRoles();
+    $query = \Drupal::database()->select('commerce_subscription','cs'); 
+    $query ->leftjoin('commerce_payment','cp','cp.order_id = cs.initial_order');
+    $query->fields('cp',['payment_gateway']);
+    $query->fields('cp',['remote_state']);
+    $query->fields('cs',['state']);
+    $query->condition('cs.type','product_variation','=');	
+    // $query->condition('cp.payment_gateway','paypal_test','=');
+    $query->condition('cs.uid',\Drupal::currentUser()->id(),'=');	
+    $results = $query->execute()->fetchAll();
+   
+    $states=[];
+    foreach($results as $value){
+      $states[]=$value->state;
+    }
+	if((in_array('active',$states) && empty($states)) || (in_array('active',$states)) || (empty($states))){
+
+		if (isset($variables['menu_name']) && $variables['menu_name'] === 'account') {
+			foreach($variables['items'] as $key => $item) {
+			  $path = $item['url']->toString();
+			  switch($path) {
+				case '/add/susbcription-product':
+				  unset($variables['items'][$key]); //Remove menu item
+				break;          
+			  }           
+			}
+		  }
+	}	
+} 

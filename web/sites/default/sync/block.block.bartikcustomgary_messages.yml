@@ -1,0 +1,22 @@
+uuid: 9450a9b8-2dc0-432e-9111-b7ed4f08933d
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - bartikcustomgary
+_core:
+  default_config_hash: KHQIJ7Vfl25lTjzIc7qIvnuistt-Mw2O0kG4jCofmkI
+id: bartikcustomgary_messages
+theme: bartikcustomgary
+region: highlighted
+weight: -15
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  provider: system
+  label_display: '0'
+visibility: {  }

@@ -1,0 +1,9 @@
+uuid: 7891d09b-b3e8-4759-86ff-a7de061ed910
+langcode: en
+status: true
+dependencies: {  }
+currencyCode: AUD
+name: 'Australian Dollar'
+numericCode: '036'
+symbol: $
+fractionDigits: 2

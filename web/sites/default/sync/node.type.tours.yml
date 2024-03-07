@@ -1,0 +1,18 @@
+uuid: ebe75c6a-fdbf-4282-a8b2-dd883ac6caba
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: Tours
+type: tours
+description: 'Create tours content'
+help: ''
+new_revision: false
+preview_mode: 0
+display_submitted: false

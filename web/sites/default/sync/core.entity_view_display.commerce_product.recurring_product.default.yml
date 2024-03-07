@@ -1,0 +1,42 @@
+uuid: ce74e12d-251c-44ef-9c15-2c2283a3ef1a
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.recurring_product
+    - field.field.commerce_product.recurring_product.body
+  module:
+    - commerce_product
+    - text
+id: commerce_product.recurring_product.default
+targetEntityType: commerce_product
+bundle: recurring_product
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  title:
+    label: hidden
+    type: string
+    weight: 0
+    region: content
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  variations:
+    type: commerce_add_to_cart
+    weight: 2
+    region: content
+    label: above
+    settings:
+      combine: true
+    third_party_settings: {  }
+hidden:
+  created: true
+  stores: true
+  uid: true

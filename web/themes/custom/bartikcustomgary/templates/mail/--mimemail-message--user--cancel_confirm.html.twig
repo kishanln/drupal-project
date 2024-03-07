@@ -1,0 +1,115 @@
+{#
+/**
+ * @file
+ * Default template to format a HTML email using the Mime Mail module.
+ *
+ * Copy this file in your default theme folder to create a custom themed email.
+ * If you modify this template you MUST be sure to keep the html, body, and
+ * header tags. This template should produce a fully-formed HTML document.
+ * Failure to include these will result in a malformed email and possibly
+ * errors shown to the user when sending email.
+ *
+ * To override this template for all emails sent by a given module,
+ * rename this template to mimemail-messages--[module].html.twig.
+ *
+ * To override this template for a specific email sent by a given module,
+ * rename this template to mimemail-messages--[module]--[key].html.twig.
+ *
+ * Available variables:
+ * - attributes: HTML attributes for the body element of the message.
+ * - key: The message identifier.
+ * - module: The machine name of the sending module.
+ * - css: Internal style sheets.
+ * - recipient: The recipient of the message.
+ * - subject: The message subject.
+ * - body: The message body.
+ *
+ * @see template_preprocess_mimemail_message()
+ *
+ * @ingroup themeable
+ */
+#}
+{% set classes = module ? (key ? module ~ '-' ~ key) %}
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Mime Mail message template</title>
+{% if css %}
+    <style type="text/css">
+    		table{
+			width:100%;
+			border-spacing: 0	;
+		}
+		.inner-table tr td {
+		  border-top: 1px solid #D9D9D9;
+		  border-bottom: 1px solid #D9D9D9;
+		}
+		h2{
+			font-family: 'Roboto';
+			font-style: normal;
+			font-weight: 700;
+			font-size: 24px;
+			line-height: 34px;
+			text-align: center;
+			letter-spacing: 0.01em;
+			color: #000000;
+			max-width: 400px;
+			margin: auto;
+			padding: 24px 0;
+		}
+		h5{
+			font-family: 'Roboto';
+			font-style: normal;
+			font-weight: 400;
+			font-size: 14px;
+			line-height: 20px;
+			text-align: center;
+			letter-spacing: 0.02em;
+			color: #000000;
+		}
+      {{ css }}
+    </style>
+{% endif %}
+  </head>
+  <body id="mimemail-body"{{ attributes.addClass(classes) }}>
+	<section >
+		<div style="max-width:700px; margin:0 auto; width:100%;">
+			<table class="main-sec" style="width:100%;" cellspacing="0" cellpadding="0">
+				<tr>
+					<td colspan="2">
+						<table class="main-table" style="background: white; margin-top: 100px; width:100%;"  cellspacing="0" cellpadding="0">
+							<tr>
+								<td style="border-top: 6px solid #4D8631;"></td>
+								<td style="border-top: 6px solid #4D8631;"></td>
+							</tr>
+							<tr>
+							
+									<td colspan="2" style="text-align: center; padding: 40px 0;"><a href="#"><img src="http://dev.choircentral.com.au/sites/default/files/logo-email.png"></a></td>
+							</tr>
+							<tr>
+								<td colspan="2">
+									<table class="inner-table" style="max-width: 500px; margin: auto; width:100%"  cellspacing="0" cellpadding="0">
+										<td colspan="2" style="padding: 40px 0 0;font-family:'Roboto';font-style: normal; font-weight: 400; font-size: 14px; line-height: 20px; text-align: center; letter-spacing: 0.02em; color: #000000; opacity:0.7;">
+              						{# <h3>{{ subject }}</h3> #}
+        							{{ body|raw }}
+      								</table>
+								</td>
+							</tr>
+							<tr>
+								<td colspan="2" style="padding: 40px 0;font-family:'Roboto';font-style: normal; font-weight: 400; font-size: 14px; line-height: 20px; text-align: center; letter-spacing: 0.02em; color: #000000;">Welcome and thanks! <br>The Choir Central Team</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+				<tr>
+					<td style="text-align: left; opacity:0.7; margin:20px 0 0; font-family:'Roboto';font-style: normal; font-weight: 400; font-size: 14px; line-height: 20px; letter-spacing: 0.02em; color: #000000;">Choir Central, Panania, NSW 2213 <br><a href="tel:(+61) 0414 869 352" style="color: #000000; text-decoration:none;">(+61) 0414 869 352</a></td>
+
+					<td style="text-align:left; float:right; margin:20px 0 0; font-family:'Roboto';font-style: normal; font-weight: 400; font-size: 14px; line-height: 20px; letter-spacing: 0.02em; color: #000000;">Follow us on: <br><a href="#"><img src="http://dev.choircentral.com.au/sites/default/files/facebook.png"></a></td>
+					
+				</tr>
+			</table>
+		</div>
+	</section>
+  </body>
+</html>

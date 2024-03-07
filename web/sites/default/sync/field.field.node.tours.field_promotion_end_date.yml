@@ -1,0 +1,21 @@
+uuid: 4ebae2bd-939b-4d99-b559-883eda87ba17
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_promotion_end_date
+    - node.type.tours
+  module:
+    - datetime
+id: node.tours.field_promotion_end_date
+field_name: field_promotion_end_date
+entity_type: node
+bundle: tours
+label: 'Promotion End Date'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

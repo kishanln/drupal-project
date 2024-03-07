@@ -1,0 +1,41 @@
+uuid: a3f74147-40ce-4900-8fd3-ad2d97a02ed7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.videos.body
+    - field.field.node.videos.field_video
+    - node.type.videos
+  module:
+    - text
+    - user
+    - video_embed_field
+id: node.videos.default
+targetEntityType: node
+bundle: videos
+mode: default
+content:
+  body:
+    label: above
+    type: text_default
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_video:
+    weight: 0
+    label: hidden
+    settings:
+      autoplay: true
+      responsive: true
+      width: 854
+      height: 480
+    third_party_settings: {  }
+    type: video_embed_field_video
+    region: content
+  links:
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

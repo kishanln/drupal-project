@@ -1,0 +1,19 @@
+uuid: 978c7de3-e813-4765-ab31-b290a3ea7524
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_venue_street_address
+    - node.type.workshops
+id: node.workshops.field_venue_street_address
+field_name: field_venue_street_address
+entity_type: node
+bundle: workshops
+label: 'Venue Address'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

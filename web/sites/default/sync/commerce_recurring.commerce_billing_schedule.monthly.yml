@@ -1,0 +1,21 @@
+uuid: 701b21d7-d55f-4e9b-bcd9-ac47aaac6930
+langcode: en
+status: true
+dependencies: {  }
+id: monthly
+label: Monthly
+displayLabel: Monthly
+billingType: prepaid
+retrySchedule:
+  - 1
+  - 3
+  - 5
+unpaidSubscriptionState: canceled
+plugin: rolling
+configuration:
+  trial_interval: {  }
+  interval:
+    number: 1
+    unit: month
+prorater: full_price
+proraterConfiguration: {  }

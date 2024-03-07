@@ -1,0 +1,137 @@
+uuid: 8773d802-8e9a-4426-aaac-6b4bcff9e755
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.full
+    - field.field.node.teacher.body
+    - field.field.node.teacher.field_ad_paid
+    - field.field.node.teacher.field_approved
+    - field.field.node.teacher.field_banner_ad_email
+    - field.field.node.teacher.field_banner_ad_image
+    - field.field.node.teacher.field_banner_ad_paid
+    - field.field.node.teacher.field_banner_ad_paid_duration
+    - field.field.node.teacher.field_banner_ad_phone
+    - field.field.node.teacher.field_banner_ad_state
+    - field.field.node.teacher.field_event_date
+    - field.field.node.teacher.field_image
+    - field.field.node.teacher.field_promotion_end_date
+    - field.field.node.teacher.field_promotion_start_date
+    - field.field.node.teacher.field_promotional_days
+    - field.field.node.teacher.field_qualifications
+    - field.field.node.teacher.field_teacher_name
+    - field.field.node.teacher.field_tour_venue_street_address
+    - field.field.node.teacher.field_url_including_http
+    - field.field.node.teacher.field_venue_street_address
+    - image.style.teachers_image
+    - node.type.teacher
+  module:
+    - image
+    - link
+    - text
+    - user
+id: node.teacher.full
+targetEntityType: node
+bundle: teacher
+mode: full
+content:
+  add_to_cart:
+    weight: 9
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  body:
+    label: hidden
+    type: text_default
+    weight: 7
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  content_moderation_control:
+    weight: -20
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_banner_ad_email:
+    weight: 3
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_banner_ad_phone:
+    weight: 2
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_banner_ad_state:
+    weight: 5
+    label: inline
+    settings:
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_image:
+    weight: 1
+    label: hidden
+    settings:
+      image_style: teachers_image
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_teacher_name:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_tour_venue_street_address:
+    weight: 4
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_url_including_http:
+    weight: 6
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  links:
+    weight: 8
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  cost: true
+  dimensions: true
+  display_price: true
+  field_ad_paid: true
+  field_approved: true
+  field_banner_ad_image: true
+  field_banner_ad_paid: true
+  field_banner_ad_paid_duration: true
+  field_event_date: true
+  field_promotion_end_date: true
+  field_promotion_start_date: true
+  field_promotional_days: true
+  field_qualifications: true
+  field_venue_street_address: true
+  model: true
+  price: true
+  weight: true

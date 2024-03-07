@@ -1,0 +1,19 @@
+uuid: 1d90d17e-15d8-4749-b6cd-7938affdcae9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_contact_phone
+    - node.type.workshops
+id: node.workshops.field_contact_phone
+field_name: field_contact_phone
+entity_type: node
+bundle: workshops
+label: 'Contact Phone'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

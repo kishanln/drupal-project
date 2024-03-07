@@ -1,0 +1,6 @@
+login_redirection:
+  anonymous: null
+  authenticated: /sign-up
+  administrator: /welcome-my-choir-central-1
+  paid_member: /welcome-my-choir-central-1
+exclude_urls: ''

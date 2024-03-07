@@ -1,0 +1,12 @@
+moderation_state_custom.moderate_state:
+  path: '/node/submit/{nid}'
+  defaults:
+    _controller: '\Drupal\moderation_state_custom\Controller\ModerateController::moderateState'
+  requirements:
+    _permission: 'access content'
+moderation_state_custom.moderate_state_draft:
+  path: '/node/draft/{nid}'
+  defaults:
+    _controller: '\Drupal\moderation_state_custom\Controller\DraftController::moderateStateDraft'
+  requirements:
+    _permission: 'access content'  

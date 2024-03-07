@@ -1,0 +1,185 @@
+uuid: fbd0fef2-723d-4ae9-8c04-961c8400a31b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.teacher.body
+    - field.field.node.teacher.field_ad_paid
+    - field.field.node.teacher.field_approved
+    - field.field.node.teacher.field_banner_ad_email
+    - field.field.node.teacher.field_banner_ad_image
+    - field.field.node.teacher.field_banner_ad_paid
+    - field.field.node.teacher.field_banner_ad_paid_duration
+    - field.field.node.teacher.field_banner_ad_phone
+    - field.field.node.teacher.field_banner_ad_state
+    - field.field.node.teacher.field_event_date
+    - field.field.node.teacher.field_image
+    - field.field.node.teacher.field_promotion_end_date
+    - field.field.node.teacher.field_promotion_start_date
+    - field.field.node.teacher.field_promotional_days
+    - field.field.node.teacher.field_qualifications
+    - field.field.node.teacher.field_teacher_name
+    - field.field.node.teacher.field_tour_venue_street_address
+    - field.field.node.teacher.field_url_including_http
+    - field.field.node.teacher.field_venue_street_address
+    - image.style.teachers_image
+    - node.type.teacher
+  module:
+    - datetime
+    - datetime_range
+    - image
+    - link
+    - text
+    - user
+id: node.teacher.default
+targetEntityType: node
+bundle: teacher
+mode: default
+content:
+  add_to_cart:
+    weight: 9
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  body:
+    label: inline
+    type: text_default
+    weight: 8
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  content_moderation_control:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_ad_paid:
+    weight: 10
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_banner_ad_email:
+    weight: 6
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_banner_ad_phone:
+    weight: 5
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_banner_ad_state:
+    weight: 4
+    label: above
+    settings:
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_event_date:
+    weight: 14
+    label: above
+    settings:
+      separator: '-'
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: daterange_default
+    region: content
+  field_image:
+    weight: 2
+    label: hidden
+    settings:
+      image_style: teachers_image
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_promotion_end_date:
+    weight: 12
+    label: above
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_promotion_start_date:
+    weight: 11
+    label: above
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_qualifications:
+    weight: 15
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_teacher_name:
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_tour_venue_street_address:
+    weight: 3
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_url_including_http:
+    weight: 7
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_venue_street_address:
+    weight: 13
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  links:
+    weight: 9
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  cost: true
+  dimensions: true
+  display_price: true
+  field_approved: true
+  field_banner_ad_image: true
+  field_banner_ad_paid: true
+  field_banner_ad_paid_duration: true
+  field_promotional_days: true
+  model: true
+  price: true
+  weight: true

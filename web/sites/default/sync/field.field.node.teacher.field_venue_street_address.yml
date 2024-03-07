@@ -1,0 +1,19 @@
+uuid: e480ff5a-eba0-4158-aae9-7d328ccdc55c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_venue_street_address
+    - node.type.teacher
+id: node.teacher.field_venue_street_address
+field_name: field_venue_street_address
+entity_type: node
+bundle: teacher
+label: 'Venue Street Address'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

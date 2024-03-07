@@ -1,0 +1,236 @@
+uuid: a365032a-c974-44db-bdbf-45a6dd413778
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.choir_or_group_listing.body
+    - field.field.node.choir_or_group_listing.field_ad_paid
+    - field.field.node.choir_or_group_listing.field_approved
+    - field.field.node.choir_or_group_listing.field_audition_required
+    - field.field.node.choir_or_group_listing.field_banner_ad_email
+    - field.field.node.choir_or_group_listing.field_banner_ad_phone
+    - field.field.node.choir_or_group_listing.field_banner_ad_state
+    - field.field.node.choir_or_group_listing.field_choir_listing_contact_name
+    - field.field.node.choir_or_group_listing.field_choir_or_group_name
+    - field.field.node.choir_or_group_listing.field_choir_paid
+    - field.field.node.choir_or_group_listing.field_choir_town_or_suburb
+    - field.field.node.choir_or_group_listing.field_choir_website
+    - field.field.node.choir_or_group_listing.field_contact_phone_no
+    - field.field.node.choir_or_group_listing.field_email_contact
+    - field.field.node.choir_or_group_listing.field_image
+    - field.field.node.choir_or_group_listing.field_music_style
+    - field.field.node.choir_or_group_listing.field_paid_duration
+    - field.field.node.choir_or_group_listing.field_promotion_end_date
+    - field.field.node.choir_or_group_listing.field_promotion_start_date
+    - field.field.node.choir_or_group_listing.field_promotional_days
+    - field.field.node.choir_or_group_listing.field_url_including_http
+    - image.style.choir_listing_image
+    - node.type.choir_or_group_listing
+  module:
+    - datetime
+    - datetime_range
+    - field_group
+    - image
+    - link
+    - text
+    - user
+third_party_settings:
+  field_group:
+    group_choir_details:
+      children: {  }
+      label: 'Choir details'
+      parent_name: ''
+      region: hidden
+      weight: 19
+      format_type: fieldset
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        description: ''
+id: node.choir_or_group_listing.default
+targetEntityType: node
+bundle: choir_or_group_listing
+mode: default
+content:
+  add_to_cart:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 9
+    region: content
+  body:
+    type: text_default
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  content_moderation_control:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_ad_paid:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 17
+    region: content
+  field_audition_required:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_banner_ad_email:
+    type: basic_string
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_banner_ad_phone:
+    type: string
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 7
+    region: content
+  field_banner_ad_state:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 9
+    region: content
+  field_choir_or_group_name:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_choir_paid:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 12
+    region: content
+  field_choir_town_or_suburb:
+    type: string
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_choir_website:
+    type: string
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 8
+    region: content
+  field_contact_phone_no:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 14
+    region: content
+  field_email_contact:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 15
+    region: content
+  field_image:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: choir_listing_image
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_music_style:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 13
+    region: content
+  field_paid_duration:
+    type: daterange_default
+    label: above
+    settings:
+      timezone_override: ''
+      format_type: medium
+      separator: '-'
+    third_party_settings: {  }
+    weight: 11
+    region: content
+  field_promotion_end_date:
+    type: datetime_default
+    label: above
+    settings:
+      timezone_override: ''
+      format_type: medium
+    third_party_settings: {  }
+    weight: 18
+    region: content
+  field_promotion_start_date:
+    type: datetime_default
+    label: above
+    settings:
+      timezone_override: ''
+      format_type: medium
+    third_party_settings: {  }
+    weight: 20
+    region: content
+  field_url_including_http:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 16
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
+hidden:
+  cost: true
+  dimensions: true
+  display_price: true
+  field_approved: true
+  field_choir_listing_contact_name: true
+  field_promotional_days: true
+  model: true
+  price: true
+  weight: true

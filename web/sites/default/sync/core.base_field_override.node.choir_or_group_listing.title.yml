@@ -1,0 +1,18 @@
+uuid: 012784c2-18b4-4f77-a06a-f9c0e18594e3
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.choir_or_group_listing
+id: node.choir_or_group_listing.title
+field_name: title
+entity_type: node
+bundle: choir_or_group_listing
+label: 'Name of group of choir'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

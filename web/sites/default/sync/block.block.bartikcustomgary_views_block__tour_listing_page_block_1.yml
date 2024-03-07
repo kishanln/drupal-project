@@ -1,0 +1,30 @@
+uuid: ca20faed-2f71-45df-84be-40a67ec37ab1
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.tour_listing_page
+  module:
+    - system
+    - views
+  theme:
+    - bartikcustomgary
+id: bartikcustomgary_views_block__tour_listing_page_block_1
+theme: bartikcustomgary
+region: sidebar_second
+weight: -25
+provider: null
+plugin: 'views_block:tour_listing_page-block_1'
+settings:
+  id: 'views_block:tour_listing_page-block_1'
+  label: 'TOUR LISTINGS'
+  provider: views
+  label_display: visible
+  views_label: 'TOUR LISTINGS'
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: "<front>\r\n/choirs-and-groups\r\n/whats-on-in-your-state\r\n/workshops\r\n/voice-teachers"
+    negate: false
+    context_mapping: {  }

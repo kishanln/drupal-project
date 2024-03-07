@@ -1,0 +1,8 @@
+uuid: bd91f9cf-5832-45e5-ad21-e11c9f09a252
+langcode: en
+status: true
+dependencies: {  }
+name: State
+vid: state
+description: 'A list of States'
+weight: 0

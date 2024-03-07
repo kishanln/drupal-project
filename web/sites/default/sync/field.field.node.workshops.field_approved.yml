@@ -1,0 +1,23 @@
+uuid: 893991b8-51a7-43b1-ac90-25d3a725d683
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_approved
+    - node.type.workshops
+id: node.workshops.field_approved
+field_name: field_approved
+entity_type: node
+bundle: workshops
+label: Approved
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

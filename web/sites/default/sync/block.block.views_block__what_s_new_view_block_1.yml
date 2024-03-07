@@ -1,0 +1,30 @@
+uuid: eda90ee6-8ac0-4520-8b30-a2c4a7566b32
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.what_s_new_view
+  module:
+    - system
+    - views
+  theme:
+    - bartikcustomgary
+id: views_block__what_s_new_view_block_1
+theme: bartikcustomgary
+region: content
+weight: -27
+provider: null
+plugin: 'views_block:what_s_new_view-block_1'
+settings:
+  id: 'views_block:what_s_new_view-block_1'
+  label: "What's on"
+  provider: views
+  label_display: visible
+  views_label: "What's on"
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

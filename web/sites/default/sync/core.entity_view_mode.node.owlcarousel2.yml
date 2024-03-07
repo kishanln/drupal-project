@@ -1,0 +1,13 @@
+uuid: 5fc68ce5-7121-4036-90cf-f6a93aaf6299
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: _u8y1kyhQifHrX_RQKBIhaa5oAZzb9VCzFVk4OvDDcg
+id: node.owlcarousel2
+label: Carousel
+description: ''
+targetEntityType: node
+cache: true

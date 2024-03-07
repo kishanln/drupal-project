@@ -1,0 +1,18 @@
+uuid: fa7976f7-26d0-4b8f-b3d6-76acc9f83bab
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: 'custom price'
+type: custom_payment
+description: ''
+help: ''
+new_revision: false
+preview_mode: 0
+display_submitted: true

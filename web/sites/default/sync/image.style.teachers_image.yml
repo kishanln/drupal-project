@@ -1,0 +1,25 @@
+uuid: 369ea9ad-49e1-4170-8237-9f28619fba1b
+langcode: en
+status: true
+dependencies:
+  config:
+    - crop.type.teachers_crop
+  module:
+    - crop
+name: teachers_image
+label: 'Teachers Full Image'
+effects:
+  a3c1fa01-9ef0-46a8-8d9f-a1de1147014d:
+    uuid: a3c1fa01-9ef0-46a8-8d9f-a1de1147014d
+    id: crop_crop
+    weight: -10
+    data:
+      crop_type: teachers_crop
+  a703d06d-68ed-408f-b0dd-8785f6198ddc:
+    uuid: a703d06d-68ed-408f-b0dd-8785f6198ddc
+    id: image_scale_and_crop
+    weight: -9
+    data:
+      width: 260
+      height: 320
+      anchor: center-center

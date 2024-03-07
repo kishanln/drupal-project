@@ -1,0 +1,782 @@
+uuid: 5f1042fb-02ef-4568-84d4-4452e13f76cb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.tours.body
+    - field.field.node.tours.field_ad_paid
+    - field.field.node.tours.field_add_date_10
+    - field.field.node.tours.field_add_date_2
+    - field.field.node.tours.field_add_date_4
+    - field.field.node.tours.field_add_date_5
+    - field.field.node.tours.field_add_date_6
+    - field.field.node.tours.field_add_date_7
+    - field.field.node.tours.field_add_date_8
+    - field.field.node.tours.field_add_date_9
+    - field.field.node.tours.field_add_datee_3
+    - field.field.node.tours.field_approved
+    - field.field.node.tours.field_banner_ad_image
+    - field.field.node.tours.field_banner_ad_state
+    - field.field.node.tours.field_date_10
+    - field.field.node.tours.field_date_4
+    - field.field.node.tours.field_date_5
+    - field.field.node.tours.field_date_6
+    - field.field.node.tours.field_date_7
+    - field.field.node.tours.field_date_8
+    - field.field.node.tours.field_date_9
+    - field.field.node.tours.field_date_date_2
+    - field.field.node.tours.field_date_date_3
+    - field.field.node.tours.field_event_date
+    - field.field.node.tours.field_image
+    - field.field.node.tours.field_promotion_end_date
+    - field.field.node.tours.field_promotion_start_date
+    - field.field.node.tours.field_promotional_days
+    - field.field.node.tours.field_state_10
+    - field.field.node.tours.field_state_4
+    - field.field.node.tours.field_state_5
+    - field.field.node.tours.field_state_6
+    - field.field.node.tours.field_state_7
+    - field.field.node.tours.field_state_8
+    - field.field.node.tours.field_state_9
+    - field.field.node.tours.field_state_date_2
+    - field.field.node.tours.field_state_date_3
+    - field.field.node.tours.field_tour_duration
+    - field.field.node.tours.field_tour_name
+    - field.field.node.tours.field_tour_venue_name
+    - field.field.node.tours.field_tour_venue_street_address
+    - field.field.node.tours.field_tour_website
+    - field.field.node.tours.field_tours_categories
+    - field.field.node.tours.field_tours_date
+    - field.field.node.tours.field_town_or_suburb
+    - field.field.node.tours.field_town_or_suburb_10
+    - field.field.node.tours.field_town_or_suburb_2
+    - field.field.node.tours.field_town_or_suburb_3
+    - field.field.node.tours.field_town_or_suburb_4
+    - field.field.node.tours.field_town_or_suburb_5
+    - field.field.node.tours.field_town_or_suburb_6
+    - field.field.node.tours.field_town_or_suburb_7
+    - field.field.node.tours.field_town_or_suburb_8
+    - field.field.node.tours.field_town_or_suburb_9
+    - field.field.node.tours.field_url_including_http
+    - field.field.node.tours.field_venue_name
+    - field.field.node.tours.field_venue_name_10
+    - field.field.node.tours.field_venue_name_4
+    - field.field.node.tours.field_venue_name_5
+    - field.field.node.tours.field_venue_name_6
+    - field.field.node.tours.field_venue_name_7
+    - field.field.node.tours.field_venue_name_8
+    - field.field.node.tours.field_venue_name_9
+    - field.field.node.tours.field_venue_name_date_2
+    - field.field.node.tours.field_venue_name_date_3
+    - field.field.node.tours.field_venue_street_add_date_2
+    - field.field.node.tours.field_venue_street_add_date_3
+    - field.field.node.tours.field_venue_street_address
+    - field.field.node.tours.field_venue_street_address_10
+    - field.field.node.tours.field_venue_street_address_4
+    - field.field.node.tours.field_venue_street_address_5
+    - field.field.node.tours.field_venue_street_address_6
+    - field.field.node.tours.field_venue_street_address_7
+    - field.field.node.tours.field_venue_street_address_8
+    - field.field.node.tours.field_venue_street_address_9
+    - image.style.choir_listing_image
+    - node.type.tours
+  module:
+    - datetime
+    - datetime_range
+    - field_group
+    - image
+    - link
+    - text
+    - user
+third_party_settings:
+  field_group:
+    group_sessions:
+      children:
+        - field_venue_name
+        - field_venue_street_address
+        - field_town_or_suburb
+        - field_banner_ad_state
+        - field_tour_duration
+        - field_url_including_http
+      parent_name: ''
+      weight: 4
+      format_type: fieldset
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+      label: 'Sessions 1'
+      region: content
+    group_sessions_1:
+      children:
+        - field_venue_name_date_2
+        - field_venue_street_add_date_2
+        - field_town_or_suburb_2
+        - field_state_date_2
+        - field_date_date_2
+      parent_name: ''
+      weight: 5
+      format_type: fieldset
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+      label: 'Sessions 2'
+      region: content
+    group_sessions_3:
+      children:
+        - field_venue_name_date_3
+        - field_venue_street_add_date_3
+        - field_town_or_suburb_3
+        - field_state_date_3
+        - field_date_date_3
+      parent_name: ''
+      weight: 6
+      format_type: fieldset
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+      label: 'Sessions 3'
+      region: content
+    group_sessions_4:
+      children:
+        - field_venue_name_4
+        - field_venue_street_address_4
+        - field_town_or_suburb_4
+        - field_state_4
+        - field_date_4
+      parent_name: ''
+      weight: 7
+      format_type: fieldset
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+      label: 'Sessions 4'
+      region: content
+    group_sessions_5:
+      children:
+        - field_venue_name_5
+        - field_venue_street_address_5
+        - field_town_or_suburb_5
+        - field_state_5
+        - field_date_5
+      parent_name: ''
+      weight: 8
+      format_type: fieldset
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+      label: 'Sessions 5'
+      region: content
+    group_sessions_6:
+      children:
+        - field_venue_name_6
+        - field_venue_street_address_6
+        - field_town_or_suburb_6
+        - field_state_6
+        - field_date_6
+      parent_name: ''
+      weight: 9
+      format_type: fieldset
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+      label: 'Sessions 6'
+      region: content
+    group_sessions_7:
+      children:
+        - field_venue_name_7
+        - field_venue_street_address_7
+        - field_town_or_suburb_7
+        - field_state_7
+        - field_date_7
+      parent_name: ''
+      weight: 10
+      format_type: fieldset
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+      label: 'Sessions 7'
+      region: content
+    group_sessions_8:
+      children:
+        - field_venue_name_8
+        - field_venue_street_address_8
+        - field_town_or_suburb_8
+        - field_state_8
+        - field_date_8
+      parent_name: ''
+      weight: 11
+      format_type: fieldset
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+      label: 'Sessions 8'
+      region: content
+    group_sessions_9:
+      children:
+        - field_venue_name_9
+        - field_venue_street_address_9
+        - field_town_or_suburb_9
+        - field_state_9
+        - field_date_9
+      parent_name: ''
+      weight: 12
+      format_type: fieldset
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+      label: 'Sessions 9'
+      region: content
+    group_sessions_10:
+      children:
+        - field_venue_name_10
+        - field_venue_street_address_10
+        - field_town_or_suburb_10
+        - field_state_10
+        - field_date_10
+      parent_name: ''
+      weight: 13
+      format_type: fieldset
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+      label: 'Sessions 10'
+      region: content
+id: node.tours.default
+targetEntityType: node
+bundle: tours
+mode: default
+content:
+  add_to_cart:
+    weight: 16
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  body:
+    label: above
+    type: text_default
+    weight: 14
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  content_moderation_control:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_banner_ad_state:
+    weight: 6
+    label: above
+    settings:
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_date_10:
+    weight: 19
+    label: above
+    settings:
+      timezone_override: ''
+      date_format: 'D, m/d/Y - h:i a'
+      separator: '-'
+    third_party_settings: {  }
+    type: daterange_custom
+    region: content
+  field_date_4:
+    weight: 14
+    label: above
+    settings:
+      timezone_override: ''
+      date_format: 'D, m/d/Y - h:i a'
+      separator: '-'
+    third_party_settings: {  }
+    type: daterange_custom
+    region: content
+  field_date_5:
+    weight: 15
+    label: above
+    settings:
+      timezone_override: ''
+      date_format: 'D, m/d/Y - h:i a'
+      separator: '-'
+    third_party_settings: {  }
+    type: daterange_custom
+    region: content
+  field_date_6:
+    weight: 16
+    label: above
+    settings:
+      timezone_override: ''
+      date_format: 'D, m/d/Y - h:i a'
+      separator: '-'
+    third_party_settings: {  }
+    type: daterange_custom
+    region: content
+  field_date_7:
+    weight: 23
+    label: above
+    settings:
+      timezone_override: ''
+      date_format: 'D, m/d/Y - h:i a'
+      separator: '-'
+    third_party_settings: {  }
+    type: daterange_custom
+    region: content
+  field_date_8:
+    weight: 26
+    label: above
+    settings:
+      timezone_override: ''
+      date_format: 'D, m/d/Y - h:i a'
+      separator: '-'
+    third_party_settings: {  }
+    type: daterange_custom
+    region: content
+  field_date_9:
+    weight: 31
+    label: above
+    settings:
+      timezone_override: ''
+      date_format: 'D, m/d/Y - h:i a'
+      separator: '-'
+    third_party_settings: {  }
+    type: daterange_custom
+    region: content
+  field_date_date_2:
+    weight: 29
+    label: above
+    settings:
+      timezone_override: ''
+      date_format: 'D, m/d/Y - h:i a'
+      separator: '-'
+    third_party_settings: {  }
+    type: daterange_custom
+    region: content
+  field_date_date_3:
+    weight: 24
+    label: above
+    settings:
+      timezone_override: ''
+      date_format: 'D, m/d/Y - h:i a'
+      separator: '-'
+    third_party_settings: {  }
+    type: daterange_custom
+    region: content
+  field_event_date:
+    weight: 3
+    label: above
+    settings:
+      timezone_override: ''
+      date_format: 'D, m/d/Y - h:i a'
+      separator: '-'
+    third_party_settings: {  }
+    type: daterange_custom
+    region: content
+  field_image:
+    weight: 2
+    label: hidden
+    settings:
+      image_style: choir_listing_image
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_promotion_end_date:
+    weight: 17
+    label: above
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_promotion_start_date:
+    weight: 16
+    label: above
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_state_10:
+    weight: 18
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_state_4:
+    weight: 13
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_state_5:
+    weight: 14
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_state_6:
+    weight: 15
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_state_7:
+    weight: 22
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_state_8:
+    weight: 25
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_state_9:
+    weight: 30
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_state_date_2:
+    weight: 28
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_state_date_3:
+    weight: 23
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_tour_duration:
+    weight: 7
+    label: above
+    settings:
+      timezone_override: ''
+      date_format: 'D, m/d/Y - h:i a'
+      separator: '-'
+    third_party_settings: {  }
+    type: daterange_custom
+    region: content
+  field_tour_name:
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_town_or_suburb:
+    weight: 5
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_town_or_suburb_10:
+    weight: 17
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_town_or_suburb_2:
+    weight: 27
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_town_or_suburb_3:
+    weight: 22
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_town_or_suburb_4:
+    weight: 12
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_town_or_suburb_5:
+    weight: 13
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_town_or_suburb_6:
+    weight: 14
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_town_or_suburb_7:
+    weight: 21
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_town_or_suburb_8:
+    weight: 24
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_town_or_suburb_9:
+    weight: 29
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_url_including_http:
+    weight: 8
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_venue_name:
+    weight: 3
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_venue_name_10:
+    weight: 15
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_venue_name_4:
+    weight: 10
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_venue_name_5:
+    weight: 11
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_venue_name_6:
+    weight: 12
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_venue_name_7:
+    weight: 19
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_venue_name_8:
+    weight: 22
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_venue_name_9:
+    weight: 27
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_venue_name_date_2:
+    weight: 25
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_venue_name_date_3:
+    weight: 20
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_venue_street_add_date_2:
+    weight: 26
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_venue_street_add_date_3:
+    weight: 21
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_venue_street_address:
+    weight: 4
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_venue_street_address_10:
+    weight: 16
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_venue_street_address_4:
+    weight: 11
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_venue_street_address_5:
+    weight: 12
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_venue_street_address_6:
+    weight: 13
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_venue_street_address_7:
+    weight: 20
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_venue_street_address_8:
+    weight: 23
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_venue_street_address_9:
+    weight: 28
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  links:
+    weight: 15
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  cost: true
+  dimensions: true
+  display_price: true
+  field_ad_paid: true
+  field_add_date_10: true
+  field_add_date_2: true
+  field_add_date_4: true
+  field_add_date_5: true
+  field_add_date_6: true
+  field_add_date_7: true
+  field_add_date_8: true
+  field_add_date_9: true
+  field_add_datee_3: true
+  field_approved: true
+  field_banner_ad_image: true
+  field_promotional_days: true
+  field_tour_venue_name: true
+  field_tour_venue_street_address: true
+  field_tour_website: true
+  field_tours_categories: true
+  field_tours_date: true
+  model: true
+  price: true
+  weight: true

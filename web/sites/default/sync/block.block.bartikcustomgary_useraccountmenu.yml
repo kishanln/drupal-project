@@ -1,0 +1,33 @@
+uuid: 08431e0b-3beb-418d-9b1e-0b7f07ead36e
+langcode: en
+status: false
+dependencies:
+  config:
+    - system.menu.account
+  module:
+    - system
+    - user
+  theme:
+    - bartikcustomgary
+id: bartikcustomgary_useraccountmenu
+theme: bartikcustomgary
+region: sidebar_first
+weight: -24
+provider: null
+plugin: 'system_menu_block:account'
+settings:
+  id: 'system_menu_block:account'
+  label: 'MY CHOIR CENTRAL'
+  provider: system
+  label_display: visible
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility:
+  user_role:
+    id: user_role
+    roles:
+      authenticated: authenticated
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'

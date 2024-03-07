@@ -1,0 +1,25 @@
+uuid: 9e89191a-b209-4467-be60-007fe858d4d8
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:a5cf1560-579c-4777-8809-2dc82c0d3763'
+  module:
+    - block_content
+  theme:
+    - bartikcustomgary
+id: bartikcustomgary_acappellafooter1
+theme: bartikcustomgary
+region: footer_first
+weight: -16
+provider: null
+plugin: 'block_content:a5cf1560-579c-4777-8809-2dc82c0d3763'
+settings:
+  id: 'block_content:a5cf1560-579c-4777-8809-2dc82c0d3763'
+  label: 'Acappella Footer 1'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

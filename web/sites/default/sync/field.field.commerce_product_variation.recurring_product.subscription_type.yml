@@ -1,0 +1,21 @@
+uuid: 5f6ac36e-ffec-4191-9f1f-3da0db9a8131
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_variation_type.recurring_product
+    - field.storage.commerce_product_variation.subscription_type
+  module:
+    - commerce
+id: commerce_product_variation.recurring_product.subscription_type
+field_name: subscription_type
+entity_type: commerce_product_variation
+bundle: recurring_product
+label: 'Subscription type'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: null
+settings: {  }
+field_type: 'commerce_plugin_item:commerce_subscription_type'

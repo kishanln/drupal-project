@@ -1,0 +1,19 @@
+uuid: 3869e8bf-ed45-4464-98ff-15a6eab55b38
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_email_contact
+    - node.type.choir_or_group_listing
+id: node.choir_or_group_listing.field_email_contact
+field_name: field_email_contact
+entity_type: node
+bundle: choir_or_group_listing
+label: 'Contact email'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: email

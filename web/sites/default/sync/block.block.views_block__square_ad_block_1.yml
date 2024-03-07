@@ -1,0 +1,24 @@
+uuid: c3b3d277-8f2e-42bc-9fff-65d1d700cd0c
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.square_ad
+  module:
+    - views
+  theme:
+    - bartik
+id: views_block__square_ad_block_1
+theme: bartik
+region: sidebar_first
+weight: -7
+provider: null
+plugin: 'views_block:square_ad-block_1'
+settings:
+  id: 'views_block:square_ad-block_1'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+visibility: {  }

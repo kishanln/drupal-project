@@ -1,0 +1,14 @@
+uuid: c19eb65a-69d7-407a-be2b-34d5e259c5cc
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.paid_member
+  module:
+    - user
+id: user_add_role_action.paid_member
+label: 'Add the Paid Member role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: paid_member

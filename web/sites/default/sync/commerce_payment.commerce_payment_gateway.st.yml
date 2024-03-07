@@ -1,0 +1,21 @@
+uuid: 87e16488-269e-4f6a-a524-833447109bd3
+langcode: en
+status: false
+dependencies:
+  module:
+    - commerce_stripe
+id: st
+label: stripe
+weight: -10
+plugin: stripe
+configuration:
+  display_label: Stripe
+  mode: test
+  payment_method_types:
+    - credit_card
+  collect_billing_information: true
+  publishable_key: pk_test_51J0PuiSCvmBYIuGaqcp9l9Ibr0TL5RlKXWcbMYH0eykzx8FA8VrM5KmqoXHBVJ9Ig836xcgawK51aesfeUhBfX4X00IeAAJGST
+  secret_key: sk_test_51J0PuiSCvmBYIuGaklHQVX4ZrMAB6gyjZbKhtzxg1gIZkw02cwCCPB95N6Vz3b9iH2AKuPhOCHmZLfX7xG8QBSku00rZOUNAAA
+  enable_credit_card_icons: false
+conditions: {  }
+conditionOperator: AND

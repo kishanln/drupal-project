@@ -1,0 +1,31 @@
+uuid: afe3917e-df12-4e4a-bd38-a94eea5406ac
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:27e76f5f-d825-49be-aabd-4cabd6274092'
+  module:
+    - block_content
+    - system
+  theme:
+    - bartikcustomgary
+id: teacherstep3image
+theme: bartikcustomgary
+region: content
+weight: -22
+provider: null
+plugin: 'block_content:27e76f5f-d825-49be-aabd-4cabd6274092'
+settings:
+  id: 'block_content:27e76f5f-d825-49be-aabd-4cabd6274092'
+  label: 'teacher step3 image'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: '/teacher/*'
+    negate: false
+    context_mapping: {  }

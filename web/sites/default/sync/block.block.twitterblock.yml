@@ -1,0 +1,36 @@
+uuid: 5c567d64-a600-4787-942f-7fe5920e18f0
+langcode: en
+status: false
+dependencies:
+  module:
+    - twitter_block
+  theme:
+    - bartikcustomgary
+id: twitterblock
+theme: bartikcustomgary
+region: sidebar_first
+weight: -23
+provider: null
+plugin: twitter_block
+settings:
+  id: twitter_block
+  label: 'Twitter Feed'
+  provider: twitter_block
+  label_display: visible
+  username: test91172
+  theme: ''
+  link_color: 4d8631
+  width: '280'
+  height: '500'
+  chrome:
+    noheader: '0'
+    nofooter: '0'
+    noborders: '0'
+    noscrollbar: '0'
+    transparent: '0'
+  border_color: ccc
+  language: ''
+  tweet_limit: '2'
+  related: ''
+  polite: polite
+visibility: {  }

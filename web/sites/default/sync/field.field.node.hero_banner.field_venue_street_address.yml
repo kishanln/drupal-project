@@ -1,0 +1,19 @@
+uuid: 77ff8dff-252c-4da2-8bad-25a3545db6d6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_venue_street_address
+    - node.type.hero_banner
+id: node.hero_banner.field_venue_street_address
+field_name: field_venue_street_address
+entity_type: node
+bundle: hero_banner
+label: 'Venue Street Address'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

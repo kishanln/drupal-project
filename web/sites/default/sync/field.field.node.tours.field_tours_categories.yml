@@ -1,0 +1,29 @@
+uuid: d845f8e0-0020-4f4a-9d94-d06d1d3f37f0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_tours_categories
+    - node.type.tours
+    - taxonomy.vocabulary.tours_categories
+id: node.tours.field_tours_categories
+field_name: field_tours_categories
+entity_type: node
+bundle: tours
+label: 'Tours Categories'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      tours_categories: tours_categories
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

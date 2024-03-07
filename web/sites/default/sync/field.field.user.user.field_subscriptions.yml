@@ -1,0 +1,38 @@
+uuid: 70a92089-944e-47a1-9643-d3c5e4401b1f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_subscriptions
+  module:
+    - mailchimp_lists
+    - user
+id: user.user.field_subscriptions
+field_name: field_subscriptions
+entity_type: user
+bundle: user
+label: Subscriptions
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value:
+      subscribe: false
+      allow_unsubscribe: true
+    subscribe: null
+    interest_groups: null
+default_value_callback: ''
+settings:
+  subscribe_checkbox_label: 'Sign Me Up for The Choir Central Newsletter'
+  show_interest_groups: false
+  hide_subscribe_checkbox: false
+  interest_groups_hidden: false
+  interest_groups_label: 'Interest Groups'
+  merge_fields:
+    EMAIL: mail
+    FNAME: field_first_name
+    LNAME: field_last_name
+    STATE: 'field_location:entity:name'
+  unsubscribe_on_delete: false
+field_type: mailchimp_lists_subscription

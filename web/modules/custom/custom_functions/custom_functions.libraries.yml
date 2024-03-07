@@ -1,0 +1,6 @@
+report:
+  custom_functions.theme:
+  version: VERSION
+  
+  js:
+    js/custom_functions.js: {}

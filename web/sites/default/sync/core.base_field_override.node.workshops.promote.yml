@@ -1,0 +1,22 @@
+uuid: 04d737cc-efa6-404a-ab85-6719c2c0bb8c
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.workshops
+id: node.workshops.promote
+field_name: promote
+entity_type: node
+bundle: workshops
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

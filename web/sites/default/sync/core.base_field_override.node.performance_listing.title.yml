@@ -1,0 +1,18 @@
+uuid: 11093a6f-7ebf-434d-a99b-65dda980224c
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.performance_listing
+id: node.performance_listing.title
+field_name: title
+entity_type: node
+bundle: performance_listing
+label: 'Event Title'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

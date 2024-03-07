@@ -1,0 +1,24 @@
+uuid: 7b8ac7d9-85a9-4e05-970f-4bd741ab2bc9
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.new_listings
+  module:
+    - views
+  theme:
+    - bartikcustomgary
+id: views_block__new_listings_block_1
+theme: bartikcustomgary
+region: sidebar_first
+weight: -27
+provider: null
+plugin: 'views_block:new_listings-block_1'
+settings:
+  id: 'views_block:new_listings-block_1'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+visibility: {  }

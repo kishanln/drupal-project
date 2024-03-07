@@ -1,0 +1,27 @@
+uuid: 8db0f72c-31da-4694-ba72-ca8285d97cfd
+langcode: en
+status: true
+dependencies:
+  module:
+    - commerce_cart
+    - commerce_checkout
+    - commerce_recurring
+third_party_settings:
+  commerce_cart:
+    cart_form_view: commerce_cart_form
+    cart_block_view: commerce_cart_block
+    cart_expiration: {  }
+  commerce_checkout:
+    checkout_flow: subscriptions_checkout
+_core:
+  default_config_hash: alBtcl93cZUqOuWKBA9ltV1C-XnMEvXgiagdjOkpj2Y
+label: Recurring
+id: recurring
+workflow: order_recurring
+numberPattern: null
+refresh_mode: customer
+refresh_frequency: 300
+sendReceipt: true
+receiptBcc: ''
+traits: {  }
+locked: true

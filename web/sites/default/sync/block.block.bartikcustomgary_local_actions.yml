@@ -1,0 +1,20 @@
+uuid: d95ebe79-805b-4778-840b-dfcd06964f2d
+langcode: en
+status: true
+dependencies:
+  theme:
+    - bartikcustomgary
+_core:
+  default_config_hash: 13GQpeITIJsp1kyPniXtWZfyFH87vb1xxJCHifL4UeE
+id: bartikcustomgary_local_actions
+theme: bartikcustomgary
+region: content
+weight: -24
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  provider: core
+  label_display: '0'
+visibility: {  }

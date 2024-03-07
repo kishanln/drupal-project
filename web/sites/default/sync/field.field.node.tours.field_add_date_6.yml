@@ -1,0 +1,23 @@
+uuid: 7c5d1a3e-7204-492d-b57b-a96a78bdcf8e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_add_date_6
+    - node.type.tours
+id: node.tours.field_add_date_6
+field_name: field_add_date_6
+entity_type: node
+bundle: tours
+label: 'add date 6'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

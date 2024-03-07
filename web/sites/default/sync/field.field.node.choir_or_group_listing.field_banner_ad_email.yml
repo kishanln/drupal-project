@@ -1,0 +1,19 @@
+uuid: 499b4ddc-8a80-4614-a7eb-7e8774065b68
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_banner_ad_email
+    - node.type.choir_or_group_listing
+id: node.choir_or_group_listing.field_banner_ad_email
+field_name: field_banner_ad_email
+entity_type: node
+bundle: choir_or_group_listing
+label: 'Choir email'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: email

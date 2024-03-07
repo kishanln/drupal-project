@@ -1,0 +1,12 @@
+uuid: 1a254dfc-cea7-43aa-9241-ee99a7dd9c74
+langcode: en
+status: true
+dependencies: {  }
+label: 'Tour listing'
+id: tour_listing
+description: ''
+aspect_ratio: '136:75'
+soft_limit_width: null
+soft_limit_height: null
+hard_limit_width: 680
+hard_limit_height: 375

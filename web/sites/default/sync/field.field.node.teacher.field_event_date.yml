@@ -1,0 +1,21 @@
+uuid: f0198583-27dc-4a69-93e7-004de198abbe
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_event_date
+    - node.type.teacher
+  module:
+    - datetime_range
+id: node.teacher.field_event_date
+field_name: field_event_date
+entity_type: node
+bundle: teacher
+label: 'Teacher date'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: daterange

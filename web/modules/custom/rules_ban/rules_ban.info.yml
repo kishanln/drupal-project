@@ -1,0 +1,4 @@
+name: Rules Ban
+type: module
+description: 'Dummy'
+core_version_requirement: ^8 || ^9 || ^10

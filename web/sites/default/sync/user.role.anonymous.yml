@@ -1,0 +1,30 @@
+uuid: b08dccf4-4ecf-4541-b758-c7606e7b9d22
+langcode: en
+status: true
+dependencies:
+  module:
+    - commerce_checkout
+    - commerce_product
+    - contact
+    - field_permissions
+    - mailchimp_signup
+    - media
+    - search
+    - system
+_core:
+  default_config_hash: j5zLMOdJBqC0bMvSdth5UebkprJB8g_2FXHqhfpJzow
+id: anonymous
+label: 'Anonymous user'
+weight: 0
+is_admin: false
+permissions:
+  - 'access checkout'
+  - 'access content'
+  - 'access mailchimp signup pages'
+  - 'access site-wide contact form'
+  - 'create field_subscriptions'
+  - 'edit own field_subscriptions'
+  - 'search content'
+  - 'use advanced search'
+  - 'view commerce_product'
+  - 'view media'

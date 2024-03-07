@@ -1,0 +1,138 @@
+uuid: 4ec3d1d0-65d3-4b44-b950-09f8881510c9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.hero_banner.body
+    - field.field.node.hero_banner.field_approved
+    - field.field.node.hero_banner.field_banner_ad_paid
+    - field.field.node.hero_banner.field_banner_ad_paid_duration
+    - field.field.node.hero_banner.field_banner_ad_state
+    - field.field.node.hero_banner.field_hero_banner_booking_site
+    - field.field.node.hero_banner.field_image
+    - field.field.node.hero_banner.field_paid_duration
+    - field.field.node.hero_banner.field_venue_name
+    - field.field.node.hero_banner.field_venue_street_address
+    - image.style.thumbnail
+    - node.type.hero_banner
+  module:
+    - datetime_range
+    - image
+    - link
+    - path
+id: node.hero_banner.default
+targetEntityType: node
+bundle: hero_banner
+mode: default
+content:
+  created:
+    type: datetime_timestamp
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_approved:
+    weight: 10
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_banner_ad_paid_duration:
+    weight: 8
+    settings: {  }
+    third_party_settings: {  }
+    type: daterange_default
+    region: content
+  field_banner_ad_state:
+    weight: 27
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_hero_banner_booking_site:
+    weight: 9
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_image:
+    weight: 7
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_paid_duration:
+    weight: 26
+    settings: {  }
+    third_party_settings: {  }
+    type: daterange_default
+    region: content
+  field_venue_name:
+    weight: 28
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_venue_street_address:
+    weight: 29
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  path:
+    type: path
+    weight: 5
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  promote:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 3
+    region: content
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 6
+    region: content
+    third_party_settings: {  }
+  sticky:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 4
+    region: content
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 1
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+      match_limit: 10
+    region: content
+    third_party_settings: {  }
+hidden:
+  body: true
+  field_banner_ad_paid: true

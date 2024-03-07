@@ -1,0 +1,9 @@
+name: 'My Map Module'
+type: module
+description: 'Custom module for handling location data.'
+core_version_requirement: ^9 || ^10
+package: Custom
+version: 1.0
+
+libraries:
+  - custom_map/custom_map

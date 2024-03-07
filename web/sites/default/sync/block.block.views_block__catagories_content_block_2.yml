@@ -1,0 +1,30 @@
+uuid: 6837e114-9696-41a6-8148-7feb42175343
+langcode: en
+status: false
+dependencies:
+  config:
+    - views.view.catagories_content
+  module:
+    - system
+    - views
+  theme:
+    - bartikcustomgary
+id: views_block__catagories_content_block_2
+theme: bartikcustomgary
+region: content
+weight: -11
+provider: null
+plugin: 'views_block:catagories_content-block_2'
+settings:
+  id: 'views_block:catagories_content-block_2'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

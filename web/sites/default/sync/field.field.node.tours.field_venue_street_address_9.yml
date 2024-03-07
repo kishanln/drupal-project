@@ -1,0 +1,19 @@
+uuid: 04c47f7d-bf13-4b08-b60a-185cff84f532
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_venue_street_address_9
+    - node.type.tours
+id: node.tours.field_venue_street_address_9
+field_name: field_venue_street_address_9
+entity_type: node
+bundle: tours
+label: 'Venue Street Address 9'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

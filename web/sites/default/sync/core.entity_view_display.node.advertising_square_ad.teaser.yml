@@ -1,0 +1,46 @@
+uuid: f8354183-0c51-4f76-83be-4fb3a5336e85
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.advertising_square_ad.body
+    - field.field.node.advertising_square_ad.field_approved
+    - field.field.node.advertising_square_ad.field_banner_ad_email
+    - field.field.node.advertising_square_ad.field_banner_ad_image
+    - field.field.node.advertising_square_ad.field_banner_ad_paid
+    - field.field.node.advertising_square_ad.field_banner_ad_paid_duration
+    - field.field.node.advertising_square_ad.field_banner_ad_phone
+    - field.field.node.advertising_square_ad.field_banner_ad_state
+    - field.field.node.advertising_square_ad.field_banner_ad_url_link
+    - node.type.advertising_square_ad
+  module:
+    - text
+    - user
+id: node.advertising_square_ad.teaser
+targetEntityType: node
+bundle: advertising_square_ad
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_approved: true
+  field_banner_ad_email: true
+  field_banner_ad_image: true
+  field_banner_ad_paid: true
+  field_banner_ad_paid_duration: true
+  field_banner_ad_phone: true
+  field_banner_ad_state: true
+  field_banner_ad_url_link: true

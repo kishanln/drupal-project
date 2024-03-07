@@ -1,0 +1,17 @@
+uuid: 4cf68ff7-b4c0-4a81-94cc-233160a9ffbd
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Advertising - Banner Ad'
+type: advertising_banner_ad
+description: 'Create your own banner ad'
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: false

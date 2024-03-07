@@ -1,0 +1,149 @@
+uuid: 743ffc20-7959-4739-a33a-d61c79f21582
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.full
+    - field.field.node.performance_listing.body
+    - field.field.node.performance_listing.field_ad_paid
+    - field.field.node.performance_listing.field_approved
+    - field.field.node.performance_listing.field_banner_ad_email
+    - field.field.node.performance_listing.field_banner_ad_image
+    - field.field.node.performance_listing.field_banner_ad_phone
+    - field.field.node.performance_listing.field_banner_ad_state
+    - field.field.node.performance_listing.field_ecategory
+    - field.field.node.performance_listing.field_event_date
+    - field.field.node.performance_listing.field_image
+    - field.field.node.performance_listing.field_paid_duration
+    - field.field.node.performance_listing.field_performance_listing_date
+    - field.field.node.performance_listing.field_performance_paid
+    - field.field.node.performance_listing.field_promotion_end_date
+    - field.field.node.performance_listing.field_promotion_start_date
+    - field.field.node.performance_listing.field_promotional_days
+    - field.field.node.performance_listing.field_town_or_suburb
+    - field.field.node.performance_listing.field_url_including
+    - field.field.node.performance_listing.field_venue_name
+    - field.field.node.performance_listing.field_venue_street_address
+    - field.field.node.performance_listing.field_website_name
+    - field.field.node.performance_listing.field_website_url
+    - image.style.choir_listing_image
+    - node.type.performance_listing
+  module:
+    - datetime
+    - datetime_range
+    - image
+    - link
+    - text
+    - user
+id: node.performance_listing.full
+targetEntityType: node
+bundle: performance_listing
+mode: full
+content:
+  add_to_cart:
+    weight: 9
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  body:
+    label: above
+    type: text_default
+    weight: 7
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  content_moderation_control:
+    weight: -20
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_banner_ad_state:
+    type: entity_reference_label
+    weight: 4
+    region: content
+    label: above
+    settings:
+      link: false
+    third_party_settings: {  }
+  field_event_date:
+    type: daterange_default
+    weight: 5
+    region: content
+    label: above
+    settings:
+      separator: '-'
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+  field_image:
+    type: image
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      image_style: choir_listing_image
+      image_link: ''
+    third_party_settings: {  }
+  field_performance_listing_date:
+    weight: 3
+    label: hidden
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_url_including:
+    type: link
+    weight: 6
+    region: content
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+  field_venue_name:
+    weight: 1
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_venue_street_address:
+    type: string
+    weight: 2
+    region: content
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  links:
+    weight: 8
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  cost: true
+  dimensions: true
+  display_price: true
+  field_ad_paid: true
+  field_approved: true
+  field_banner_ad_email: true
+  field_banner_ad_image: true
+  field_banner_ad_phone: true
+  field_ecategory: true
+  field_paid_duration: true
+  field_performance_paid: true
+  field_promotion_end_date: true
+  field_promotion_start_date: true
+  field_promotional_days: true
+  field_town_or_suburb: true
+  field_website_name: true
+  field_website_url: true
+  model: true
+  price: true
+  weight: true

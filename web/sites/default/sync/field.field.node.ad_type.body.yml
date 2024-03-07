@@ -1,0 +1,27 @@
+uuid: 8f4f27bf-577b-41c3-a9b6-37dc48afcd94
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.ad_type
+  module:
+    - text
+id: node.ad_type.body
+field_name: body
+entity_type: node
+bundle: ad_type
+label: Body
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    summary: ''
+    value: "<h1>Great! Your Ad has been submitted.</h1>\r\n\r\n<h2>Processing Takes 1 to 2 days.</h2>\r\n\r\n<h2>Click “Next” to proceed to the payment section.</h2>\r\n"
+    format: full_html
+default_value_callback: ''
+settings:
+  display_summary: false
+  required_summary: false
+field_type: text_with_summary

@@ -1,0 +1,14 @@
+uuid: 61db89ba-57c0-46e1-96cf-4ee397c631c7
+langcode: en
+status: true
+dependencies: {  }
+name: slider
+label: slider
+effects:
+  d3e65133-5981-45b7-9b88-839d77f1e9ac:
+    uuid: d3e65133-5981-45b7-9b88-839d77f1e9ac
+    id: image_resize
+    weight: 2
+    data:
+      width: 730
+      height: 428

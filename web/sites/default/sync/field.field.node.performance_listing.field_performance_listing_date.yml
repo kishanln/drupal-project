@@ -1,0 +1,21 @@
+uuid: 80bd36aa-e4f6-49fd-be62-c4c739413491
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_performance_listing_date
+    - node.type.performance_listing
+  module:
+    - datetime
+id: node.performance_listing.field_performance_listing_date
+field_name: field_performance_listing_date
+entity_type: node
+bundle: performance_listing
+label: 'Performance Listing Date'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

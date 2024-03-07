@@ -1,0 +1,12 @@
+uuid: 67a74af2-d840-42a4-b917-adaf7ea5c01d
+langcode: en
+status: true
+dependencies: {  }
+id: recurring_product
+label: 'Recurring Product'
+orderItemType: default
+generateTitle: false
+traits:
+  - maximum_order_quantity
+  - purchasable_entity_subscription
+locked: false

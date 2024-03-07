@@ -1,0 +1,19 @@
+uuid: bbefa4d4-fb25-49ed-b773-7454c78eac76
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.custom_payment
+  module:
+    - user
+id: node.custom_payment.default
+targetEntityType: node
+bundle: custom_payment
+mode: default
+content:
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }

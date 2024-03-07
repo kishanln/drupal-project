@@ -1,0 +1,24 @@
+uuid: 4a82a4e0-308c-4690-95ac-c8185b18c9ea
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.videos_block
+  module:
+    - views
+  theme:
+    - bartik
+id: views_block__videos_block_block_1
+theme: bartik
+region: footer_fifth
+weight: -4
+provider: null
+plugin: 'views_block:videos_block-block_1'
+settings:
+  id: 'views_block:videos_block-block_1'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+visibility: {  }

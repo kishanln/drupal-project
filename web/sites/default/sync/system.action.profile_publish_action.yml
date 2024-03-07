@@ -1,0 +1,16 @@
+uuid: 6b5959ce-ef8c-4297-bfa7-8efabefbf693
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - profile
+  module:
+    - profile
+_core:
+  default_config_hash: IacX_1ie8wyjog58jxPOmgTbybUwuJhv8Vjhs-Ttx-A
+id: profile_publish_action
+label: 'Publish selected profile'
+type: profile
+plugin: 'entity:publish_action:profile'
+configuration: {  }

@@ -1,0 +1,129 @@
+uuid: ce170787-4e1b-4957-a20e-a759d9ad82aa
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.full
+    - field.field.node.choir_or_group_listing.body
+    - field.field.node.choir_or_group_listing.field_ad_paid
+    - field.field.node.choir_or_group_listing.field_approved
+    - field.field.node.choir_or_group_listing.field_audition_required
+    - field.field.node.choir_or_group_listing.field_banner_ad_email
+    - field.field.node.choir_or_group_listing.field_banner_ad_phone
+    - field.field.node.choir_or_group_listing.field_banner_ad_state
+    - field.field.node.choir_or_group_listing.field_choir_listing_contact_name
+    - field.field.node.choir_or_group_listing.field_choir_or_group_name
+    - field.field.node.choir_or_group_listing.field_choir_paid
+    - field.field.node.choir_or_group_listing.field_choir_town_or_suburb
+    - field.field.node.choir_or_group_listing.field_choir_website
+    - field.field.node.choir_or_group_listing.field_contact_phone_no
+    - field.field.node.choir_or_group_listing.field_email_contact
+    - field.field.node.choir_or_group_listing.field_image
+    - field.field.node.choir_or_group_listing.field_music_style
+    - field.field.node.choir_or_group_listing.field_paid_duration
+    - field.field.node.choir_or_group_listing.field_promotion_end_date
+    - field.field.node.choir_or_group_listing.field_promotion_start_date
+    - field.field.node.choir_or_group_listing.field_promotional_days
+    - field.field.node.choir_or_group_listing.field_url_including_http
+    - image.style.choir_listing_image
+    - node.type.choir_or_group_listing
+  module:
+    - image
+    - text
+    - user
+id: node.choir_or_group_listing.full
+targetEntityType: node
+bundle: choir_or_group_listing
+mode: full
+content:
+  add_to_cart:
+    weight: 8
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  body:
+    type: text_default
+    weight: 6
+    region: content
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+  content_moderation_control:
+    weight: -20
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_banner_ad_email:
+    weight: 4
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_banner_ad_phone:
+    type: string
+    weight: 3
+    region: content
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  field_banner_ad_state:
+    weight: 2
+    label: inline
+    settings:
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_choir_town_or_suburb:
+    weight: 1
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_choir_website:
+    weight: 5
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_image:
+    weight: 0
+    label: hidden
+    settings:
+      image_style: choir_listing_image
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  links:
+    weight: 7
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  cost: true
+  dimensions: true
+  display_price: true
+  field_ad_paid: true
+  field_approved: true
+  field_audition_required: true
+  field_choir_listing_contact_name: true
+  field_choir_or_group_name: true
+  field_choir_paid: true
+  field_contact_phone_no: true
+  field_email_contact: true
+  field_music_style: true
+  field_paid_duration: true
+  field_promotion_end_date: true
+  field_promotion_start_date: true
+  field_promotional_days: true
+  field_url_including_http: true
+  model: true
+  price: true
+  weight: true

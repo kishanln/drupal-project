@@ -1,0 +1,38 @@
+uuid: a16905b3-8f01-4422-a100-064c9aa1c162
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.manage_under_review_content
+  module:
+    - system
+    - user
+    - views
+  theme:
+    - bartikcustomgary
+id: views_block__manage_under_review_content_block_1
+theme: bartikcustomgary
+region: content
+weight: -15
+provider: null
+plugin: 'views_block:manage_under_review_content-block_1'
+settings:
+  id: 'views_block:manage_under_review_content-block_1'
+  label: 'Manage Under Review Content'
+  provider: views
+  label_display: visible
+  views_label: 'Manage Under Review Content'
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: "/user/%\r\n!/user/user-content"
+    negate: false
+    context_mapping: {  }
+  user_role:
+    id: user_role
+    roles:
+      administrator: administrator
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'

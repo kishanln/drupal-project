@@ -1,0 +1,23 @@
+uuid: 73610359-e5c5-4f69-8311-a16f6c9357ed
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_promotional_days
+    - node.type.choir_or_group_listing
+id: node.choir_or_group_listing.field_promotional_days
+field_name: field_promotional_days
+entity_type: node
+bundle: choir_or_group_listing
+label: 'Promotional Days'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

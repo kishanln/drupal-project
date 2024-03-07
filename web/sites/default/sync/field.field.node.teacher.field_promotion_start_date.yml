@@ -1,0 +1,21 @@
+uuid: 54c89137-f8f3-4d74-86a5-39df3bd6929d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_promotion_start_date
+    - node.type.teacher
+  module:
+    - datetime
+id: node.teacher.field_promotion_start_date
+field_name: field_promotion_start_date
+entity_type: node
+bundle: teacher
+label: 'Promotion Start Date'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

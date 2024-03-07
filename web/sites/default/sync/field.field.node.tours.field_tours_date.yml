@@ -1,0 +1,26 @@
+uuid: 06878c1b-f3e2-482a-a1c5-db6d4261ead9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_tours_date
+    - node.type.tours
+  module:
+    - datetime_range
+id: node.tours.field_tours_date
+field_name: field_tours_date
+entity_type: node
+bundle: tours
+label: 'Tours date'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    default_date_type: now
+    default_date: now
+    default_end_date_type: now
+    default_end_date: now
+default_value_callback: ''
+settings: {  }
+field_type: daterange

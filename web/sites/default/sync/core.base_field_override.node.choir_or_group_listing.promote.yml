@@ -1,0 +1,22 @@
+uuid: ffa741b7-2e58-4afc-ae23-36c06ed185f7
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.choir_or_group_listing
+id: node.choir_or_group_listing.promote
+field_name: promote
+entity_type: node
+bundle: choir_or_group_listing
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

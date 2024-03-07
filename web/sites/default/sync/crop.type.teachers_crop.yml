@@ -1,0 +1,12 @@
+uuid: d9e4a16c-67de-4a95-8f55-63d82aea7183
+langcode: en
+status: true
+dependencies: {  }
+label: 'Teachers Crop'
+id: teachers_crop
+description: 'Crop type for Teachers Images'
+aspect_ratio: '13:16'
+soft_limit_width: null
+soft_limit_height: null
+hard_limit_width: 260
+hard_limit_height: 320

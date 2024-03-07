@@ -1,0 +1,21 @@
+uuid: f3c05f79-4804-458d-806f-87f2097d43da
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ecategory
+    - node.type.performance_listing
+  module:
+    - options
+id: node.performance_listing.field_ecategory
+field_name: field_ecategory
+entity_type: node
+bundle: performance_listing
+label: 'Event category'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

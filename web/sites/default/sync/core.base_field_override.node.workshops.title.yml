@@ -1,0 +1,18 @@
+uuid: 543544e0-ff82-4cba-a7d9-00ecc8242f01
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.workshops
+id: node.workshops.title
+field_name: title
+entity_type: node
+bundle: workshops
+label: 'Workshops Name'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

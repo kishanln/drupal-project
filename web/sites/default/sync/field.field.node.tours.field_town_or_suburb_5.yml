@@ -1,0 +1,19 @@
+uuid: 04042432-95e7-458b-953e-6102c200158f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_town_or_suburb_5
+    - node.type.tours
+id: node.tours.field_town_or_suburb_5
+field_name: field_town_or_suburb_5
+entity_type: node
+bundle: tours
+label: 'Town or Suburb 5'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,21 @@
+uuid: 2e7dd0c2-4023-4d66-81f7-5fc53bb53ab0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_promotion_start_date
+    - node.type.workshops
+  module:
+    - datetime
+id: node.workshops.field_promotion_start_date
+field_name: field_promotion_start_date
+entity_type: node
+bundle: workshops
+label: 'Promotion Start Date'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

@@ -1,0 +1,24 @@
+uuid: f44bdf83-7ffd-4d8a-91dd-c706ffd8252e
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.banner_ad
+  module:
+    - views
+  theme:
+    - bartikcustomgary
+id: bartikcustomgary_views_block__banner_ad_block_1
+theme: bartikcustomgary
+region: header
+weight: -15
+provider: null
+plugin: 'views_block:banner_ad-block_1'
+settings:
+  id: 'views_block:banner_ad-block_1'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+visibility: {  }

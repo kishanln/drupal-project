@@ -1,0 +1,20 @@
+uuid: 756862f4-ea69-48cd-afe0-e1c94bcb4ea0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_phone_including_state_pref
+  module:
+    - user
+id: user.user.field_phone_including_state_pref
+field_name: field_phone_including_state_pref
+entity_type: user
+bundle: user
+label: 'Phone Including state prefix. Eg. NSW (02), VIC (03)'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

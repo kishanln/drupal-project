@@ -1,0 +1,31 @@
+uuid: 7d3bfd38-b79f-48bc-8ca8-0af0b1c8f32b
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:3a5ddee9-8616-4960-bbbc-76b7f7f7ac39'
+  module:
+    - block_content
+    - system
+  theme:
+    - bartikcustomgary
+id: choirstep3
+theme: bartikcustomgary
+region: content
+weight: -19
+provider: null
+plugin: 'block_content:3a5ddee9-8616-4960-bbbc-76b7f7f7ac39'
+settings:
+  id: 'block_content:3a5ddee9-8616-4960-bbbc-76b7f7f7ac39'
+  label: 'Choir step3'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: '/choir-or-group-listing/*'
+    negate: false
+    context_mapping: {  }

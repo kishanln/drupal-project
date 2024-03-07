@@ -1,0 +1,19 @@
+uuid: 8cc79345-bf1e-4683-8148-9e685852e2cf
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_contact_email
+    - node.type.workshops
+id: node.workshops.field_contact_email
+field_name: field_contact_email
+entity_type: node
+bundle: workshops
+label: 'Contact Email'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

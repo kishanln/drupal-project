@@ -1,0 +1,23 @@
+uuid: f4f4bfea-feea-47bd-aa84-7ab17640b8b7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_promotional_days
+    - node.type.tours
+id: node.tours.field_promotional_days
+field_name: field_promotional_days
+entity_type: node
+bundle: tours
+label: 'Promotional Days'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

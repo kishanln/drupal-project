@@ -1,0 +1,38 @@
+uuid: 0e16a3da-2405-4f10-8ca8-48925b40f384
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_banner_ad_image
+    - node.type.performance_listing
+  module:
+    - image
+id: node.performance_listing.field_banner_ad_image
+field_name: field_banner_ad_image
+entity_type: node
+bundle: performance_listing
+label: 'Performance Listing Image old'
+description: 'Choose image and image crop before final submit.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'png gif jpg jpeg'
+  max_filesize: 2MB
+  max_resolution: ''
+  min_resolution: 320x240
+  alt_field: false
+  alt_field_required: false
+  title_field: false
+  title_field_required: false
+  default_image:
+    uuid: ''
+    alt: 'CHOOSE IMAGE'
+    title: 'choose image'
+    width: null
+    height: null
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: image

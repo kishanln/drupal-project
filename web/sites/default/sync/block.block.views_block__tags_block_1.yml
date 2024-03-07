@@ -1,0 +1,24 @@
+uuid: 8e5aced3-1da4-493e-9b39-210bd1f6a292
+langcode: en
+status: false
+dependencies:
+  config:
+    - views.view.tags
+  module:
+    - views
+  theme:
+    - bartikcustomgary
+id: views_block__tags_block_1
+theme: bartikcustomgary
+region: footer_second
+weight: -18
+provider: null
+plugin: 'views_block:tags-block_1'
+settings:
+  id: 'views_block:tags-block_1'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+visibility: {  }

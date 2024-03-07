@@ -1,0 +1,26 @@
+uuid: f68c35fe-989d-4c47-b940-e8b0504ae430
+langcode: en
+status: false
+dependencies:
+  module:
+    - addtoany
+    - system
+  theme:
+    - bartikcustomgary
+id: addtoanybuttons
+theme: bartikcustomgary
+region: content
+weight: -6
+provider: null
+plugin: addtoany_block
+settings:
+  id: addtoany_block
+  label: 'AddToAny buttons'
+  provider: addtoany
+  label_display: '0'
+visibility:
+  request_path:
+    id: request_path
+    pages: '/node-details/*'
+    negate: false
+    context_mapping: {  }

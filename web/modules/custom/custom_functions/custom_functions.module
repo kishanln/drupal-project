@@ -1,0 +1,966 @@
+<?php
+
+/**
+ * @file
+ * Contains custom_functions.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\tb_megamenu\TBMegaMenuBuilder;
+use Drupal\Core\Menu\MenuTreeParameters;
+use Drupal\Core\Template\Attribute;
+use Symfony\Component\HttpFoundation\RedirectResponse;
+use Drupal\node\Entity\Node;
+use Drupal\Component\Utility\SafeMarkup;
+use Drupal\user\Entity\User;
+use Drupal\Core\Database\Database;
+use Drupal\commerce_order\Entity\Order;
+use Drupal\Core\Entity\EntityInterface;
+use Drupal\commerce_product\Entity\Product;
+
+use Drupal\Core\Mail\MailManagerInterface;
+use Drupal\Component\Utility\Html;
+
+/**
+ * Implements hook_help(). 
+ */ 
+ 
+function custom_functions_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the custom_functions module.
+    case 'help.page.custom_functions':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('this module will be used to make custom functions and blocks for the site') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function custom_functions_theme() {
+  return [
+    'custom_functions' => [
+      'render element' => 'children',
+    ],
+  ];
+}
+/**
+ * Implements hook_form_alter().
+ */
+function custom_functions_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {	
+
+$current_year = date("Y");
+$current_date = date("m-d-Y");
+$roles = \Drupal::currentUser()->getRoles();
+
+if ( $form_id == "rules_expression_edit" ) {
+
+$form['context_definitions']['message']['setting']['#type'] = 'textarea';
+
+}
+ if ( $form_id == "user_login_form" ) { 
+
+
+  $product_id = 4;
+  $product = \Drupal\commerce_product\Entity\Product::load($product_id);
+
+  /*Load Product Variations*/
+  $entity_manager = \Drupal::entityTypeManager();
+  $product_variation = $entity_manager->getStorage('commerce_product_variation')->load((int)$product->getVariationIds()[0]);
+  $price_number = $product_variation->get('price')->getValue()[0]['number'];
+
+    $form['name']['#description'] = '';
+    $form['name']['#title'] = 'User name';
+    $form['pass']['#description'] = '';
+    $form['title']['#markup'] = '<div class="custom-text">
+    <span class="left">Already have an account?</span></div>';
+    $form['title']['#weight'] = '-5';
+    $form['middle']['#markup'] = '<div class="custom-text">
+    <span class="textOR">OR</span></div>';
+    $form['middle']['#weight'] = '99';
+    $form['bottom']['#markup'] = '<div class="custom-text login-popup-form"><a class="use-ajax login-popup-form reg-button" data-dialog-options="{&quot;width&quot;:550,&quot;title&quot;:&quot;Become a Member of Choir Central&quot;}" data-dialog-type="modal" href="/user/register"><h4>Become a Member of Choir Central</h4></a><p class="offering">Read all about our Membership offering.</p><span class="text">Annual membership - $'.number_format($price_number, 2).' <a href="/terms-use" target="_blank"><h4>Terms of Use.</h4></a></span></div>';
+    $form['bottom']['#weight'] = '99';
+	$form['button']['#markup'] = '<div class="forget-pass"><a href="/user/password" class="use-ajax login-popup-form" data-dialog-type="modal"><h4>Forget password?</h4></a></div>';
+	 $form['button']['#weight'] = '100';
+  } 
+
+	$user = \Drupal\user\Entity\User::load(\Drupal::currentUser()->id());
+	$id = $user->get('uid')->value;
+	$rol = $user->get('roles')->target_id; 
+	$name = $user->get('name')->value; 
+	$mail = $user->get('mail')->value; 
+    if ( $form_id == "user_form" && $rol != 'administrator') {
+		
+    // $form['actions']['submit']['#submit'][] = 'custom_functions_user_form_submit';
+    $form['title']['#markup'] = '<div class="custom-text user-custom-text"><h1>Welcome to <br>My Acappella Central</h1><div class="user_mark"><h3>Thank you for registering with Acappella Central.</h3><p>This is where you can:</p><ul><li><a href = "#">> Create a new listing</a></li><li><a href = "#">> Update your user details</a></li><li><a href = "#">> Sign up for newletters</a></li><li><a href = "#">> Book advertising</a></li>and more...</ul></div><h4>You just need to reset your password the first time you login</h4></div><div class="existuser"><h1>'.$name.'</h1></div>';
+    $form['title']['#weight'] = '-5';
+    $form['field_first_name']['#access'] = false;
+    $form['field_last_name']['#access'] = false;
+    $form['account']['mail']['#description'] = '<h3>'.$mail.'</h3><p>A valid email address. All emails from the system will be sent to this address. The email address is not made public and will only be used if you wish to receive a new password or wish to receive certain news  or notifications by email.</p>';
+    $form['account']['name']['#description'] = '';
+    $form['account']['name'] ['#access'] = false;
+    $form['account']['pass']['#description'] = '';
+    $form['account']['status']['#access'] = false;
+    $form['account']['roles']['#access'] = false;
+    $form['field_location']['#access'] = false;
+    $form['account']['mail']['#title'] = 'Your email address';
+    //$form['account']['pass']['#title'] = 'Create a Password';
+    $form['field_phone_including_state_pref'] ['#access'] = false;
+    $form['field_subscriptions']['#access'] = false;
+  }
+
+  /*************event listing**************/
+  
+  if ( $form_id == "node_performance_listing_form") {
+	 // $form['price']['widget'][0]['value']['#default_value'] = $event_Price;
+	  $form['field_event_date']['widget'][0]['value']['#date_year_range'] = $current_year.':+10';
+		$form['field_event_date']['widget'][0]['end_value']['#date_year_range'] = $current_year.':+10';
+
+	 if(in_array('paid_member', $roles)){
+    
+    if (isset($form_state->step) && !empty($form_state->step)) {
+      $form['#step'] = $form_state->step;
+    }
+    else{
+      $form['#step'] = '1';
+       }
+
+    if($form['#step'] == '1'){
+      $form['first_submit'] = array(
+       '#type' => 'submit',
+       '#value' => t('Next'),
+       '#submit' => array('my_event_form_builder_callback'),
+       '#weight' => 99,
+    );
+	//dump($form); die('here');
+	//$form['price']['widget'][0]['value']['#default_value'] = $event_Price;
+      $form['#attributes']['class'] = 'node-event-form node-form step1';
+      $form['field_image']['#attributes']['class'][]= 'hidden'; 
+     $form['title']['#markup'] = '<div class="custom-event"><h1>Create a new EVENT</h1><div class="imagebar"><img src="/themes/custom/bartikcustomgary/images/step1.png"></div><span class="text">Event Details</span></div>';
+      $form['middle']['#weight'] = '4';
+      //$form['middle1']['#markup'] = '<div class="custom-Optional"><h3>Optional details</h3></div>';
+      $form['middle1']['#weight'] = '5';
+      $form['actions']['preview']['#access'] = FALSE;
+
+	 $form['title']['widget'][0]['#placeholder'] = 'Please don’t use all capitals';
+      $form['body']['widget'][0]['#placeholder'] = 'Describe what is special about your event and any other important information. Please don’t use all capitals. There is no need to repeat the event title or dates.';
+	  $form['field_url_including']['widget'][0]['#placeholder'] = 'e.g www.myevent.com';
+	  $form['field_website_name']['widget'][0]['#placeholder'] = 'e.g Official website';
+	  $form['field_town_or_suburb']['widget'][0]['#placeholder'] = 'Town or Suburb'; 
+		 $form['field_venue_street_address']['widget'][0]['#placeholder'] = 'Address'; 
+		$form['field_event_date']['widget'][0]['value']['#date_year_range'] = $current_year.':+10';
+		$form['field_event_date']['widget'][0]['end_value']['#date_year_range'] = $current_year.':+10';
+    $form['actions']['submit']['#value'] = t('Review'); 
+    }
+	
+	    if($form['#step'] == '2'){
+			//$form['price']['widget'][0]['value']['#default_value'] = $event_Price;
+	      $form['#attributes']['class'] = 'node-event-form node-form step2';
+	     $form['header']['#markup'] = '<div class="custom-choir1"><h1>Upload EVENT image</h1><div class="imagebar1"><img src="/themes/custom/bartikcustomgary/images/step2.png"></div></div>'; 
+		  
+		  // $form['title']['#markup'] = '<div class="custom-choir1"><h1>Upload event images</h1><div class="imagebar1"><img src="/core/themes/bartikcustomgary/images/step2.png"></div></div>';
+		  
+	      $form['imagebar']['#weight'] = '-100';
+	      $form['field_image']['widget'][0]['#required']= true; 
+	      $form['title']['#attributes']['class'][]= 'hidden'; 
+	     // $form['title']['#prefix'] = '<div class="caption1">';
+	      $form['field_venue_name']['#attributes']['class'][]= 'hidden'; 
+	      $form['field_venue_street_address']['#attributes']['class'][]= 'hidden';
+	      $form['field_banner_ad_state']['#attributes']['class'][]= 'hidden';
+	      $form['field_ecategory']['#attributes']['class'][]= 'hidden';
+	      $form['field_event_date']['#attributes']['class'][]= 'hidden';
+	      
+	      $form['body']['#attributes']['class'][]= 'hidden';
+	      $form['field_name_of_performance']['#attributes']['class'][]= 'hidden';
+	      $form['field_performance_listing_date']['#attributes']['class'][]= 'hidden';
+	      $form['field_url_including']['#attributes']['class'][]= 'hidden';
+		  $form['field_website_name']['#attributes']['class'][]= 'hidden';
+		  $form['field_town_or_suburb']['#attributes']['class'][]= 'hidden';
+	     // $form['venue_type']['#access'] = false;
+	      $form['actions']['preview']['#access'] = FALSE;
+	      $form['state_and_or_region']['widget']['#multiple'] = false;
+	     // $form['field_contact_name']['widget'][0]['value']['#type'] = 'textfield';
+	      $form['body']['widget'][0]['#placeholder'] = 'Describe what is special about your event and any other important information.Please don’t use all capitals. There is no need to repeat the event title or dates.';
+	      $form['actions']['submit']['#value'] = t('Review');    
+		  $form['actions']['#markup'] = '<div class="extra_review_button">Review</div>'; 	  
+	      /* $form['second_submit'] = array(
+	        '#type' => 'submit',
+	        '#value' => t('Go back to edit event'),
+	        '#submit' => array('back_event_builder_callback'),
+	        '#weight' => 99,
+	      ); */
+	    } 
+    } 
+ }
+    if ( $form_id == "node_performance_listing_edit_form" && in_array('paid_member', $roles)) {
+    $form['revision_information']['#access'] = FALSE;     
+  } 
+
+
+  /**************node teacher form**********************/
+
+  if ( $form_id == "node_teacher_form" && in_array('paid_member', $roles)) {	 
+    $form['first_submit'] = array(
+      '#type' => 'submit',
+      '#value' => t('Next'),
+      '#submit' => array('my_teacher_form_builder_callback'),
+      '#weight' => 99,
+    );
+    if (isset($form_state->step) && !empty($form_state->step)) {
+      $form['#step'] = $form_state->step;
+    }
+    else{
+      $form['#step'] = '1';
+       }
+
+    if($form['#step'] == '1'){
+      //hide revision  
+      $form['revision_information']['#access'] = FALSE;
+      $form['#attributes']['class'] = 'node-teacher-form node-form step1';
+      $form['title']['#markup'] = '<div class="custom-event"><h3>Create a TEACHER listing</h3><div class="imagebar"><img src="/themes/custom/bartikcustomgary/images/teacher-step1.png"></div><span class="text">Teacher Details</span></div>';
+       $form['moderation_state']['widget'][0]['state']['#default_value'] = 'draft';
+	  // $form['field_image']['#access'] = false;	  
+	  
+	  //$form['price']['widget'][0]['value']['#default_value'] = $teacher_Price;
+	  
+	  $form['field_image']['#attributes']['class'][]= 'hidden'; 
+      $form['actions']['submit']['#value'] = t('Review');
+    }
+    if($form['#step'] == '2'){
+      $form['revision_information']['#access'] = FALSE;
+	  //$form['price']['widget'][0]['value']['#default_value'] = $teacher_Price;
+      $form['#attributes']['class'] = 'node-teacher-form node-form step2';
+      $form['header']['#markup'] = '<div class="custom-choir1"><h1>Upload TEACHER image</h1><div class="imagebar1"><img src="/themes/custom/bartikcustomgary/images/teacher-step2.png"></div></div>'; 
+      $form['imagebar']['#weight'] = '-100';
+      $form['field_image']['widget'][0]['#required']= true;
+	  $form['field_image']['#access'] = true;
+	  $form['moderation_state']['widget'][0]['state']['#default_value'] = 'draft';
+	  $form['field_tour_venue_street_address']['#attributes']['class'][]= 'hidden'; 
+	  $form['title']['#attributes']['class'][]= 'hidden'; 
+	  $form['body']['#attributes']['class'][]= 'hidden'; 
+	  $form['field_banner_ad_email']['#attributes']['class'][]= 'hidden'; 
+	  $form['field_url_including_http']['#attributes']['class'][]= 'hidden'; 
+	  $form['field_banner_ad_phone']['#attributes']['class'][]= 'hidden'; 
+	  $form['field_banner_ad_state']['#attributes']['class'][]= 'hidden'; 	  
+	  
+      $form['actions']['submit']['#value'] = t('Review');
+	  $form['actions']['#markup'] = '<div class="extra_review_button">Review</div>'; 
+      /* $form['second_submit'] = array(
+        '#type' => 'submit',
+        '#value' => t('Go back to edit Teacher'),
+        // '#executes_submit_callback' => TRUE,
+        '#submit' => array('back_teacher_builder_callback'),
+        '#weight' => 99,
+      ); */
+    }  
+  }
+
+
+   /**************node teacher edit form**********************/
+  
+  if ( $form_id == "node_teacher_edit_form" ) {
+    $form['title']['#markup'] = '<div class="custom-event"><h3>Create a TEACHER listing</h3><span class="text">Teacher Details</span></div>';
+    $form['state_and_or_region']['widget']['#multiple'] = false;
+    $form['field_teacher_name']['#access'] = false;
+    $form['field_teacher_address_1']['#access'] = false;
+    $form['field_teacher_address_2']['#access'] = false;
+    $form['field_teacher_phone']['#access'] = false;
+    $form['field_teacher_url']['#access'] = false;
+    $form['field_teacher_qualification']['#access'] = false;
+    $form['field_teacher_sequence']['#access'] = false;
+    $form['upload']['#access'] = false;
+    $form['actions']['submit']['#value'] = t('Save');
+    $form['revision_information']['#access'] = FALSE;  
+    $form['bottom']['#markup'] = '<div class="custom-edit_con">“ To edit you listing further before you submit it, you can go to your saved listing in the ‘YOUR CONTENT’ section.“</div>';
+    $form['bottom']['#weight'] = '50';
+  } 
+  
+  /******************node workshop form*****************/
+		
+	if ( $form_id == "node_workshops_form" && in_array('paid_member', $roles)) {
+		//dump($form);
+		$form['first_submit'] = array(
+		  '#type' => 'submit',
+		  '#value' => t('Next'),
+		  '#submit' => array('my_workshop_form_builder_callback'),
+		  '#weight' => 99,
+		);
+    if (isset($form_state->step) && !empty($form_state->step)) {
+      $form['#step'] = $form_state->step;
+    }
+    else{
+      $form['#step'] = '1';
+       }
+    if($form['#step'] == '1'){	
+	//dump($form);
+	//$form['price']['widget'][0]['value']['#default_value'] = $workshop_Price;
+		$form['title']['#markup'] = '<div class="custom-event"><h3>Create a Workshop listing</h3><div class="imagebar"><img src="/themes/custom/bartikcustomgary/images/costep1.png"></div><span class="text">Workshop Details</span></div>';
+			
+		$form['#attributes']['class'] = 'node-workshop-list-sstype node-form step1';
+		$form['moderation_state']['widget'][0]['state']['#default_value'] = 'draft';
+		$form['field_image']['#attributes']['class'][]= 'hidden'; 
+		$form['field_image']['widget'][0]['#required']= false;		
+		// $form['field_image']['widget'][0]['#crop_types_required']= array();
+		$form['field_banner_ad_state']['widget']['#options']['_none'] = 'Please Select';
+		
+		$form['field_event_date']['widget'][0]['value']['#date_year_range'] = $current_year.':+10';
+		$form['field_event_date']['widget'][0]['end_value']['#date_year_range'] = $current_year.':+10';
+		$form['actions']['submit']['#value'] = t('Review');
+    }
+    if($form['#step'] == '2'){
+		//dump($form);
+      $form['#attributes']['class'] = 'node-workshop-list-sstype node-form step2';
+      $form['header']['#markup'] = '<div class="custom-choir1"><h1>Upload WORKSHOP image</h1><div class="imagebar1"><img src="/themes/custom/bartikcustomgary/images/costep2.jpg"></div></div>'; 
+	     $form['moderation_state']['widget'][0]['state']['#default_value'] = 'draft';
+	  //$form['price']['widget'][0]['value']['#default_value'] = $workshop_Price;
+      $form['title']['#attributes']['class'][]= 'hidden';
+      $form['body']['#attributes']['class'][]= 'hidden'; 
+      $form['field_event_date']['#attributes']['class'][]= 'hidden'; 
+      $form['field_venue_name']['#attributes']['class'][]= 'hidden';
+      $form['field_venue_street_address']['#attributes']['class'][]= 'hidden';
+      $form['field_banner_ad_state']['#attributes']['class'][]= 'hidden';
+      $form['field_workshop_location']['#attributes']['class'][]= 'hidden';
+      $form['field_contact_phone']['#attributes']['class'][]= 'hidden';
+      $form['field_contact_email']['#attributes']['class'][]= 'hidden';
+      $form['field_url_including_http']['#attributes']['class'][]= 'hidden';
+      
+	  $form['field_image']['#access'] = true;
+	  $form['field_image']['widget'][0]['#required']= true;
+      $form['actions']['submit']['#value'] = t('Review');
+	  
+	  $form['actions']['#markup'] = '<div class="extra_review_button">Review</div>'; 
+	// dump($form);
+      /* $form['second_submit'] = array(
+        '#type' => 'submit',
+        '#value' => t('Go back to edit workshop'),
+        '#submit' => array('back_workshop_builder_callback'),
+        '#weight' => 99,
+      );   */
+    }
+  }
+  
+    /******************node Auditions and Open Nights  form*****************/
+		
+	if ( $form_id == "node_auditions_and_open_nights_form" && in_array('paid_member', $roles)) {
+		//dump($form);
+		$form['first_submit'] = array(
+		  '#type' => 'submit',
+		  '#value' => t('Next'),
+		  '#submit' => array('my_auditions_and_open_nights_form_builder_callback'),
+		  '#weight' => 99,
+		);
+    if (isset($form_state->step) && !empty($form_state->step)) {
+      $form['#step'] = $form_state->step;
+    }
+    else{
+      $form['#step'] = '1';
+       }
+    if($form['#step'] == '1'){	
+	//dump($form);
+	//$form['price']['widget'][0]['value']['#default_value'] = $workshop_Price;
+		$form['title']['#markup'] = '<div class="custom-event"><h3>Create a Workshop listing</h3><div class="imagebar"><img src="/themes/custom/bartikcustomgary/images/costep1.png"></div><span class="text">Workshop Details</span></div>';
+			
+		$form['#attributes']['class'] = 'node-workshop-list-sstype node-form step1';
+		$form['moderation_state']['widget'][0]['state']['#default_value'] = 'draft';
+		$form['field_image']['#attributes']['class'][]= 'hidden'; 
+		$form['field_image']['widget'][0]['#required']= false;		
+		// $form['field_image']['widget'][0]['#crop_types_required']= array();
+		$form['field_banner_ad_state']['widget']['#options']['_none'] = 'Please Select';
+		
+		$form['field_event_date']['widget'][0]['value']['#date_year_range'] = $current_year.':+10';
+		$form['field_event_date']['widget'][0]['end_value']['#date_year_range'] = $current_year.':+10';
+		$form['actions']['submit']['#value'] = t('Review');
+    }
+    if($form['#step'] == '2'){
+		//dump($form);
+      $form['#attributes']['class'] = 'node-workshop-list-sstype node-form step2';
+      $form['header']['#markup'] = '<div class="custom-choir1"><h1>Upload WORKSHOP image</h1><div class="imagebar1"><img src="/themes/custom/bartikcustomgary/images/costep2.jpg"></div></div>'; 
+	     $form['moderation_state']['widget'][0]['state']['#default_value'] = 'draft';
+	  //$form['price']['widget'][0]['value']['#default_value'] = $workshop_Price;
+      $form['title']['#attributes']['class'][]= 'hidden';
+      $form['body']['#attributes']['class'][]= 'hidden'; 
+      $form['field_event_date']['#attributes']['class'][]= 'hidden'; 
+      $form['field_venue_name']['#attributes']['class'][]= 'hidden';
+      $form['field_venue_street_address']['#attributes']['class'][]= 'hidden';
+      $form['field_banner_ad_state']['#attributes']['class'][]= 'hidden';
+      $form['field_workshop_location']['#attributes']['class'][]= 'hidden';
+      $form['field_contact_phone']['#attributes']['class'][]= 'hidden';
+      $form['field_contact_email']['#attributes']['class'][]= 'hidden';
+      $form['field_url_including_http']['#attributes']['class'][]= 'hidden';
+      
+	  $form['field_image']['#access'] = true;
+	  $form['field_image']['widget'][0]['#required']= true;
+      $form['actions']['submit']['#value'] = t('Review');
+	  
+	  $form['actions']['#markup'] = '<div class="extra_review_button">Review</div>'; 
+	// dump($form);
+      /* $form['second_submit'] = array(
+        '#type' => 'submit',
+        '#value' => t('Go back to edit workshop'),
+        '#submit' => array('back_workshop_builder_callback'),
+        '#weight' => 99,
+      );   */
+    }
+  }
+	/************ node tour listing **************/
+    if ( $form_id == "node_tours_form" && in_array('paid_member', $roles)) {
+    $form['first_submit'] = array(
+      '#type' => 'submit',
+      '#value' => t('Next'),
+      '#submit' => array('my_tour_form_builder_callback'),
+      '#weight' => 99,
+    );
+    if (isset($form_state->step) && !empty($form_state->step)) {
+      $form['#step'] = $form_state->step;
+    }
+    else{
+      $form['#step'] = '1';
+       }
+    if($form['#step'] == '1'){
+      $form['#attributes']['class'] = 'node-tours-form node-form step1';
+      $form['field_image']['#attributes']['class'][]='hidden'; 
+	   $form['field_image']['widget'][0]['#required']= false; 
+      $form['title']['#markup'] = '<div class="custom-event"><h3>Create a TOUR listing</h3><div class="imagebar"><img src="/themes/custom/bartikcustomgary/images/tour1.png"></div><span class="text">TOUR Details</span></div>';
+	  
+      $form['middle']['#markup'] = '<div class="custom-Sessions"><h3>Sessions</h3></div>';      
+      $form['middle']['#weight'] = '3';
+	  
+	  //$form['price']['widget'][0]['value']['#default_value'] = $tours_Price;
+      $form['body']['widget'][0]['#placeholder'] = 'Describe what is special about your event and any other important information. Please don’t use all capitals. There is no need to repeat the event title or dates.';
+      $form['field_category']['widget']['#options']['_none'] = '-Select-';
+	  
+	  $form['field_event_date']['#markup'] = '<p class="duration-text">Please enter the dates when your tour begins and ends. This will determine when your listing finishes.</p>';
+	  
+	 
+		$form['field_tour_duration']['widget'][0]['value']['#date_year_range'] = $current_year.':+10';
+		$form['field_tour_duration']['widget'][0]['end_value']['#date_year_range'] = $current_year.':+10';
+		
+		
+		$form['field_event_date']['widget'][0]['value']['#date_year_range'] = $current_year.':+10';
+		$form['field_event_date']['widget'][0]['end_value']['#date_year_range'] = $current_year.':+10';
+		
+		$form['field_date_date_2']['widget'][0]['value']['#date_year_range'] = $current_year.':+10';
+		$form['field_date_date_2']['widget'][0]['end_value']['#date_year_range'] = $current_year.':+10';
+		$form['field_date_date_3']['widget'][0]['value']['#date_year_range'] = $current_year.':+10';
+		$form['field_date_date_3']['widget'][0]['end_value']['#date_year_range'] = $current_year.':+10';
+		$form['field_date_4']['widget'][0]['value']['#date_year_range'] = $current_year.':+10';
+		$form['field_date_4']['widget'][0]['end_value']['#date_year_range'] = $current_year.':+10';
+		$form['field_date_5']['widget'][0]['value']['#date_year_range'] = $current_year.':+10';
+		$form['field_date_5']['widget'][0]['end_value']['#date_year_range'] = $current_year.':+10';
+		$form['field_date_6']['widget'][0]['value']['#date_year_range'] = $current_year.':+10';
+		$form['field_date_6']['widget'][0]['end_value']['#date_year_range'] = $current_year.':+10';
+		$form['field_date_7']['widget'][0]['value']['#date_year_range'] = $current_year.':+10';
+		$form['field_date_7']['widget'][0]['end_value']['#date_year_range'] = $current_year.':+10';
+		$form['field_date_8']['widget'][0]['value']['#date_year_range'] = $current_year.':+10';
+		$form['field_date_8']['widget'][0]['end_value']['#date_year_range'] = $current_year.':+10';
+		$form['field_date_9']['widget'][0]['value']['#date_year_range'] = $current_year.':+10';
+		$form['field_date_9']['widget'][0]['end_value']['#date_year_range'] = $current_year.':+10';
+		$form['field_date_10']['widget'][0]['value']['#date_year_range'] = $current_year.':+10';
+		$form['field_date_10']['widget'][0]['end_value']['#date_year_range'] = $current_year.':+10';
+	  
+      $form['actions']['submit']['#value'] = t('Review');
+    }
+    if($form['#step'] == '2'){ 
+      $form['#attributes']['class'] = 'node-tours-form node-form step2';
+      $form['header']['#markup'] = '<div class="custom-choir1"><h1>Upload TOUR image</h1><div class="imagebar1"><img src="/themes/custom/bartikcustomgary/images/tour2.png"></div></div>'; 
+      $form['imagebar']['#weight'] = '-100';
+	  
+      $form['field_image']['widget'][0]['#required']= true; 
+	  $form['field_image']['#access'] = true;
+	  //$form['price']['widget'][0]['value']['#default_value'] = $tours_Price;
+      $form['title']['#attributes']['class'][]= 'hidden';
+      $form['body']['#attributes']['class'][]= 'hidden'; 
+      $form['field_tours_categories']['#attributes']['class'][]= 'hidden';
+      $form['field_venue_name']['#attributes']['class'][]= 'hidden';
+      $form['field_venue_street_address']['#attributes']['class'][]= 'hidden';
+      $form['field_url_including_http']['#attributes']['class'][]= 'hidden';
+      $form['field_banner_ad_state']['#attributes']['class'][]= 'hidden';
+	  
+	  
+      $form['field_tour_duration']['#attributes']['class'][]= 'hidden';	  
+      $form['field_tours_date']['#attributes']['class'][]= 'hidden';	  
+	  $form['field_add_date_2']['#attributes']['class'][]= 'hidden';
+	  $form['field_add_datee_3']['#attributes']['class'][]= 'hidden';
+	  $form['field_add_date_4']['#attributes']['class'][]= 'hidden';
+	  $form['field_add_date_5']['#attributes']['class'][]= 'hidden';
+	  $form['field_add_date_6']['#attributes']['class'][]= 'hidden';
+	  $form['field_add_date_7']['#attributes']['class'][]= 'hidden';
+	  $form['field_add_date_8']['#attributes']['class'][]= 'hidden';
+	  $form['field_add_date_9']['#attributes']['class'][]= 'hidden';
+	  $form['field_add_date_10']['#attributes']['class'][]= 'hidden';
+	  
+	  $form['field_date_date_2']['#attributes']['class'][]= 'hidden';
+	  $form['field_date_date_3']['#attributes']['class'][]= 'hidden';
+	  $form['field_date_4']['#attributes']['class'][]= 'hidden';
+	  $form['field_date_5']['#attributes']['class'][]= 'hidden';
+	  $form['field_date_6']['#attributes']['class'][]= 'hidden';
+	  $form['field_date_7']['#attributes']['class'][]= 'hidden';
+	  $form['field_date_8']['#attributes']['class'][]= 'hidden';
+	  $form['field_date_9']['#attributes']['class'][]= 'hidden';
+	  $form['field_date_10']['#attributes']['class'][]= 'hidden';
+	  
+	  $form['field_state_date_2']['#attributes']['class'][]= 'hidden';
+	  $form['field_state_date_3']['#attributes']['class'][]= 'hidden';
+	  $form['field_state_4']['#attributes']['class'][]= 'hidden';
+	  $form['field_state_5']['#attributes']['class'][]= 'hidden';
+	  $form['field_state_6']['#attributes']['class'][]= 'hidden';
+	  $form['field_state_7']['#attributes']['class'][]= 'hidden';
+	  $form['field_state_8']['#attributes']['class'][]= 'hidden';
+	  $form['field_state_9']['#attributes']['class'][]= 'hidden';
+	  $form['field_state_10']['#attributes']['class'][]= 'hidden';
+	  $form['field_state_10']['#attributes']['class'][]= 'hidden';
+	  
+	  $form['field_url_including_http']['#attributes']['class'][]= 'hidden';
+	  
+	  $form['field_venue_name_date_2']['#attributes']['class'][]= 'hidden';
+	  $form['field_venue_name_date_3']['#attributes']['class'][]= 'hidden';
+	  $form['field_venue_name_4']['#attributes']['class'][]= 'hidden';
+	  $form['field_venue_name_5']['#attributes']['class'][]= 'hidden';
+	  $form['field_venue_name_6']['#attributes']['class'][]= 'hidden';
+	  $form['field_venue_name_7']['#attributes']['class'][]= 'hidden';
+	  $form['field_venue_name_8']['#attributes']['class'][]= 'hidden';
+	  $form['field_venue_name_9']['#attributes']['class'][]= 'hidden';
+	  $form['field_venue_name_10']['#attributes']['class'][]= 'hidden';
+	  
+	  $form['field_venue_street_add_date_2']['#attributes']['class'][]= 'hidden';
+	  $form['field_venue_street_add_date_3']['#attributes']['class'][]= 'hidden';
+	  $form['field_venue_street_address_4']['#attributes']['class'][]= 'hidden';
+	  $form['field_venue_street_address_5']['#attributes']['class'][]= 'hidden';
+	  $form['field_venue_street_address_6']['#attributes']['class'][]= 'hidden';
+	  $form['field_venue_street_address_7']['#attributes']['class'][]= 'hidden';
+	  $form['field_venue_street_address_8']['#attributes']['class'][]= 'hidden';
+	  $form['field_venue_street_address_9']['#attributes']['class'][]= 'hidden';
+	  $form['field_venue_street_address_10']['#attributes']['class'][]= 'hidden';
+	  
+	  $form['field_town_or_suburb']['#attributes']['class'][]= 'hidden';
+	  $form['field_town_or_suburb_2']['#attributes']['class'][]= 'hidden';
+	  $form['field_town_or_suburb_3']['#attributes']['class'][]= 'hidden';
+	  $form['field_town_or_suburb_4']['#attributes']['class'][]= 'hidden';
+	  $form['field_town_or_suburb_5']['#attributes']['class'][]= 'hidden';
+	  $form['field_town_or_suburb_6']['#attributes']['class'][]= 'hidden';
+	  $form['field_town_or_suburb_7']['#attributes']['class'][]= 'hidden';
+	  $form['field_town_or_suburb_8']['#attributes']['class'][]= 'hidden';
+	  $form['field_town_or_suburb_9']['#attributes']['class'][]= 'hidden';
+	  $form['field_town_or_suburb_10']['#attributes']['class'][]= 'hidden';
+	 
+      $form['actions']['submit']['#value'] = t('Review');
+	  $form['actions']['#markup'] = '<div class="extra_review_button">Review</div>';  
+      $form['field_category']['widget']['#options']['_none'] = '-Select-';
+	 
+      /* $form['second_submit'] = array(
+        '#type' => 'submit',
+        '#value' => t('Go back to edit Tour'),
+        '#submit' => array('back_tour_builder_callback'),
+        '#weight' => 99,
+      );  */
+    }
+  }  
+  
+   if (in_array('paid_member', $roles)) {
+		$form['field_tour_duration']['widget'][0]['value']['#date_year_range'] = $current_year.':+10';
+		$form['field_tour_duration']['widget'][0]['end_value']['#date_year_range'] = $current_year.':+10';
+		
+		
+		$form['field_event_date']['widget'][0]['value']['#date_year_range'] = $current_year.':+10';
+		$form['field_event_date']['widget'][0]['end_value']['#date_year_range'] = $current_year.':+10';
+		
+		$form['field_date_date_2']['widget'][0]['value']['#date_year_range'] = $current_year.':+10';
+		$form['field_date_date_2']['widget'][0]['end_value']['#date_year_range'] = $current_year.':+10';
+		$form['field_date_date_3']['widget'][0]['value']['#date_year_range'] = $current_year.':+10';
+		$form['field_date_date_3']['widget'][0]['end_value']['#date_year_range'] = $current_year.':+10';
+		$form['field_date_4']['widget'][0]['value']['#date_year_range'] = $current_year.':+10';
+		$form['field_date_4']['widget'][0]['end_value']['#date_year_range'] = $current_year.':+10';
+		$form['field_date_5']['widget'][0]['value']['#date_year_range'] = $current_year.':+10';
+		$form['field_date_5']['widget'][0]['end_value']['#date_year_range'] = $current_year.':+10';
+		$form['field_date_6']['widget'][0]['value']['#date_year_range'] = $current_year.':+10';
+		$form['field_date_6']['widget'][0]['end_value']['#date_year_range'] = $current_year.':+10';
+		$form['field_date_7']['widget'][0]['value']['#date_year_range'] = $current_year.':+10';
+		$form['field_date_7']['widget'][0]['end_value']['#date_year_range'] = $current_year.':+10';
+		$form['field_date_8']['widget'][0]['value']['#date_year_range'] = $current_year.':+10';
+		$form['field_date_8']['widget'][0]['end_value']['#date_year_range'] = $current_year.':+10';
+		$form['field_date_9']['widget'][0]['value']['#date_year_range'] = $current_year.':+10';
+		$form['field_date_9']['widget'][0]['end_value']['#date_year_range'] = $current_year.':+10';
+		$form['field_date_10']['widget'][0]['value']['#date_year_range'] = $current_year.':+10';
+		$form['field_date_10']['widget'][0]['end_value']['#date_year_range'] = $current_year.':+10';
+   }
+  
+    /************ node tour edit listing **************/
+    if ( $form_id == "node_tours_edit_form" && in_array('paid_member', $roles)) {
+    $form['title']['#markup'] = '<div class="custom-event"><h3>Create a Tour Listing</h3><span class="text">Tour Details</span></div>';
+    $form['revision_information']['#access'] = FALSE;
+    $form['bottom']['#markup'] = '<div class="custom-edit_con">“ To edit you listing further before you submit it, you can go to your saved listing in the ‘YOUR CONTENT’ section.“</div>';
+    $form['bottom']['#weight'] = '50';
+  }  
+  
+  
+  /*************Choir listing**************/
+  
+if ( $form_id == "node_choir_or_group_listing_form" && in_array('paid_member', $roles)){
+    $form['first_submit'] = array(
+       '#type' => 'submit',
+       '#value' => t('Next'),
+       '#submit' => array('my_choir_form_builder_callback'),
+       '#weight' => 99,
+    );
+    // $step = $form_state->getValue('step', 1);
+
+    if (isset($form_state->step) && !empty($form_state->step)) {
+      $form['#step'] = $form_state->step;
+    }
+    else{
+      $form['#step'] = '1';
+       }
+      //  dd($form['#step']);
+    if($form['#step'] == '1'){
+	
+	//$form['price']['widget'][0]['value']['#default_value'] = $choir_Price;
+      $form['#attributes']['class'] = 'node-choir-form node-form step1';
+      $form['field_image']['#attributes']['class'][]= 'hidden'; 
+      $form['title']['#markup'] = '<div class="custom-choir"><h1>Create a CHOIR or GROUP Listing</h1><div class="imagebar"><img src="/themes/custom/bartikcustomgary/images/Choir-step1.png"></div><span class="left">Choir / group details</span></div>';
+	    $form['imagebar']['#weight'] = '1';
+      $form['middle']['#markup'] = '<div class="custom-choir"><h3>PRIVATE DETAILS - not published publicly.</h3></div>';
+      $form['middle']['#weight'] = '4';
+      $form['middle1']['#markup'] = '<div class="custom-choir"><h3>PUBLIC DETAILS - published publicly with your listing.</h3><h2>You must provide at least one public point of contact for enquiries.</h2></div>';
+      $form['middle1']['#weight'] = '8';
+      $form['actions']['preview']['#access'] = FALSE;
+
+	  $form['title']['widget'][0]['#placeholder'] = 'Please don’t use all capitals';
+     /*  $form['body']['widget'][0]['#placeholder'] = 'Describe what is special about your event and any other important information. Please don’t use all capitals. There is no need to repeat the event title or dates.'; */
+	  
+	 /*  $form['field_website_url']['widget'][0]['#placeholder'] = 'e.g www.myevent.com';
+	  $form['field_website_name']['widget'][0]['#placeholder'] = 'e.g Official website'; */
+	  
+      $form['actions']['submit']['#value'] = t('Review'); 
+    }
+	 
+    if($form['#step'] == '2'){
+		//$form['price']['widget'][0]['value']['#default_value'] = $choir_Price;
+      $form['#attributes']['class'] = 'node-choir-form node-form step2';
+	  
+	  $form['header']['#markup'] = '<div class="custom-choir1"><h1>Upload CHOIR GROUP image</h1><div class="imagebar1"><img src="/themes/custom/bartikcustomgary/images/choir_step2.png"></div></div>'; 
+      $form['imagebar']['#weight'] = '-100';
+	  
+      $form['title']['#attributes']['class'][]= 'hidden'; 
+	    $form['body']['#attributes']['class'][]= 'hidden';
+      $form['field_audition_required']['#attributes']['class'][]= 'hidden'; 
+      $form['field_banner_ad_email']['#attributes']['class'][]= 'hidden'; 
+	  
+      $form['field_choir_listing_contact_name']['#attributes']['class'][]= 'hidden'; 
+      $form['field_choir_or_group_name']['#attributes']['class'][]= 'hidden';
+      $form['field_banner_ad_phone']['#attributes']['class'][]= 'hidden';
+      $form['field_banner_ad_state']['#attributes']['class'][]= 'hidden';
+      $form['field_choir_town_or_suburb']['#attributes']['class'][]= 'hidden';
+      $form['field_choir_website']['#attributes']['class'][]= 'hidden';
+      $form['field_music_style']['#attributes']['class'][]= 'hidden';
+      $form['field_contact_phone_no']['#attributes']['class'][]= 'hidden';
+      $form['field_email_contact']['#attributes']['class'][]= 'hidden';
+      $form['field_url_including_http']['#attributes']['class'][]= 'hidden';
+      
+      
+      $form['field_name_of_performance']['#access'] = false;
+      $form['field_performance_listing_date']['#access'] = false;
+      $form['field_website_url']['#access'] = false;
+	  $form['field_website_name']['#attributes']['class'][]= 'hidden';
+      $form['actions']['preview']['#access'] = FALSE;
+      $form['state_and_or_region']['widget']['#multiple'] = false;
+	  $form['field_image']['widget'][0]['#required']= true;
+
+      $form['body']['widget'][0]['#placeholder'] = 'Describe what is special about your event and any other important information. Please don’t use all capitals. There is no need to repeat the event title or dates.';
+      $form['actions']['submit']['#value'] = t('Review');   
+	$form['actions']['#markup'] = '<div class="extra_review_button">Review</div>'; 	  
+    } 	
+	
+}
+
+  /************ Choir edit listing **************/
+
+    if ( $form_id == "node_choir_or_group_listing_edit_form" && in_array('paid_member', $roles)) {
+    $form['title']['#markup'] = '<div class="custom-event"><h3>Create a Choir or Group Listing</h3><span class="text">Choir Details</span></div>';
+    $form['revision_information']['#access'] = FALSE;
+    $form['bottom']['#markup'] = '<div class="custom-edit_con">“ To edit you listing further before you submit it, you can go to your saved listing in the ‘YOUR CONTENT’ section.“</div>';
+    $form['bottom']['#weight'] = '50';
+  } 
+
+   /************ event edit listing **************/
+   
+if ( $form_id == "node_performance_listing_edit_form" && in_array('paid_member', $roles)) {
+    $form['title']['#markup'] = '<div class="custom-event"><h3>Create a Performance Listing</h3><span class="text">Performance Details</span></div>';
+    $form['revision_information']['#access'] = FALSE;
+    $form['bottom']['#markup'] = '<div class="custom-edit_con">“ To edit you listing further before you submit it, you can go to your saved listing in the ‘YOUR CONTENT’ section.“</div>';
+    $form['bottom']['#weight'] = '50';
+  }   
+  
+     /************ workshop edit listing **************/
+   
+if ( $form_id == "node_workshops_edit_form" && !in_array('administrator', $roles)) {
+    $form['title']['#markup'] = '<div class="custom-event"><h3>Create a Workshop Listing</h3><span class="text">Workshop Details</span></div>';
+    $form['revision_information']['#access'] = FALSE;
+    $form['bottom']['#markup'] = '<div class="custom-edit_con">“ To edit you listing further before you submit it, you can go to your saved listing in the ‘YOUR CONTENT’ section.“</div>';
+    $form['bottom']['#weight'] = '50';
+  }
+  
+  
+ // if( $form_id == "uc_cart_view_form"){
+	//   $form['title']['#markup'] = '<div class="cart-textt"><p>click Update Cart after changing the number of months</p></div>';
+	//    $cartNid = $form['data'][0]['nid']['#value'];
+	//    if($cartNid == 508){
+	// 	   $form['#attributes']['class'][]= 'memebership_sub';
+	//    }
+ // }
+ 
+  if ($form_id == "user_register_form") {
+	  //session_start();	 
+	  $form['actions']['submit']['#submit'][]  = 'custom_functions_data';	
+		//session_destroy();	  
+	} 
+ 
+ // if( $form_id == "uc_cart_checkout_form"){
+	//  if(\Drupal::currentUser()->isAnonymous()){
+	// 	$user_email = $_SESSION['user_email'];	
+	// 	$form['panes']['customer']['primary_email']['#default_value'] = $user_email; 	
+	// 	$form['#attributes']['class'][]= 'memebership_sub';
+	// 	$form['#submit'][] = 'custom_functions_checkout';	
+	//  }
+ // }
+ 
+}
+
+
+ function custom_functions_data(&$form, \Drupal\Core\Form\FormStateInterface $form_state){
+	 if(\Drupal::currentUser()->isAnonymous()){
+		$mail = $form['account']['mail']['#value'];
+		if(isset($mail)){
+		 $_SESSION["user_email"] = $mail; 
+		}
+	}
+} 
+
+function custom_functions_checkout(&$form, \Drupal\Core\Form\FormStateInterface $form_state){
+	if(\Drupal::currentUser()->isAnonymous()){
+		$checkout_mail = $form['panes']['customer']['primary_email']['#value'];
+		$_SESSION["checkout_mail"] = $checkout_mail; 
+	}
+}
+
+  //event callback
+function my_event_form_builder_callback(&$form, \Drupal\Core\Form\FormStateInterface $form_state){
+$form_state->setRebuild(TRUE);
+	if ($form_state->isRebuilding()){
+		$form_state->step = '2';
+	}
+   return $form;
+}
+function my_choir_form_builder_callback(&$form, \Drupal\Core\Form\FormStateInterface $form_state){
+$form_state->setRebuild(TRUE);
+	if ($form_state->isRebuilding()){
+		$form_state->step = '2';
+	}
+   return $form;
+}
+
+
+
+function my_form_builder_callback(&$form, \Drupal\Core\Form\FormStateInterface $form_state){
+
+$form_state->setRebuild(TRUE);
+if ($form_state->isRebuilding()) {
+    $form_state->step = '2';
+ }
+
+   return $form;
+ }
+
+ function back_form_builder_callback(&$form, \Drupal\Core\Form\FormStateInterface $form_state){
+$form_state->setRebuild(TRUE);
+if ($form_state->isRebuilding()) {
+    $form_state->step = '1';
+ }
+   return $form;
+ }
+ 
+/* function back_ad_form_builder_callback(&$form, \Drupal\Core\Form\FormStateInterface $form_state){
+$form_state->setRebuild(TRUE);
+if ($form_state->isRebuilding()) {
+    $form_state->step = '1';
+ }
+   return $form;
+ } */
+
+
+function back_event_builder_callback(&$form, \Drupal\Core\Form\FormStateInterface $form_state){
+$form_state->setRebuild(TRUE);
+if ($form_state->isRebuilding()) {
+    $form_state->step = '1';
+ }
+   return $form;
+ }
+
+function back_teacher_builder_callback(&$form, \Drupal\Core\Form\FormStateInterface $form_state){
+$form_state->setRebuild(TRUE);
+if ($form_state->isRebuilding()) {
+    $form_state->step = '1';
+ }
+   return $form;
+ }
+
+ function back_tour_builder_callback(&$form, \Drupal\Core\Form\FormStateInterface $form_state){
+$form_state->setRebuild(TRUE);
+if ($form_state->isRebuilding()) {
+    $form_state->step = '1';
+ }
+   return $form;
+ }
+
+
+
+function back_banner_builder_callback(&$form, \Drupal\Core\Form\FormStateInterface $form_state){
+$form_state->setRebuild(TRUE);
+if ($form_state->isRebuilding()) {
+    $form_state->step = '1';
+ }
+   return $form;
+ }
+
+/*   function my_ad_form_builder_callback(&$form, \Drupal\Core\Form\FormStateInterface $form_state){
+$form_state->setRebuild(TRUE);
+if ($form_state->isRebuilding()) {
+    $form_state->step = '2';
+ }
+
+   return $form;
+
+ } */
+
+ function my_teacher_form_builder_callback(&$form, \Drupal\Core\Form\FormStateInterface $form_state){
+$form_state->setRebuild(TRUE);
+if ($form_state->isRebuilding()) {
+    $form_state->step = '2';
+ }
+
+   return $form;
+
+ }
+
+ function my_tour_form_builder_callback(&$form, \Drupal\Core\Form\FormStateInterface $form_state){
+$form_state->setRebuild(TRUE);
+if ($form_state->isRebuilding()) {
+    $form_state->step = '2';
+ }
+   return $form;
+ }
+ 
+function my_workshop_form_builder_callback(&$form, \Drupal\Core\Form\FormStateInterface $form_state){
+	$form_state->setRebuild(TRUE);
+	if($form_state->isRebuilding()){
+		$form_state->step = '2';
+	}
+    return $form;
+}
+function my_auditions_and_open_nights_form_builder_callback_form_builder_callback(&$form, \Drupal\Core\Form\FormStateInterface $form_state){
+	$form_state->setRebuild(TRUE);
+	if($form_state->isRebuilding()){
+		$form_state->step = '2';
+	}
+    return $form;
+}
+function back_workshop_builder_callback(&$form, \Drupal\Core\Form\FormStateInterface $form_state){
+	$form_state->setRebuild(TRUE);
+	if($form_state->isRebuilding()){
+		$form_state->step = '1';
+	}
+	return $form;
+}
+ 
+// function custom_functions_user_insert(&$edit, $account, $category) {
+//     $newly_registered_user_id = $account->uid;
+//     global $user;
+//     $user = user_load($newly_registered_user_id);
+//   $form_state = array();
+//   $form_state['uid'] = user_authenticate($form_state['values']['name'], $form_state['values']['pass']);
+//   	user_login_submit(array(), $form_state);
+// }
+
+
+function custom_functions_mail_alter(&$message,$params) {
+  if (!empty($message['id']) && ($message['id'] == 'contact_page_mail')) {
+     unset($message["body"][0]);
+
+  }
+
+    if (!empty($message['id']) && ($message['id'] == 'rules_rules_action_mail_rules_send_email'|| $message['id'] == 'user_status_blocked' ||  $message['id'] == 'user_cancel_confirm'|| $message['id'] == 'user_status_activated')) {
+ 
+        $headers = array(
+          'MIME-Version' => '1.0',
+          'Content-Type' => 'text/html; charset=UTF-8; format=flowed',
+          'Content-Transfer-Encoding' => '8Bit',
+          'X-Mailer' => 'Drupal'
+          );
+          $message['headers'] = $headers;
+          $body = $message["body"][0];
+          
+        global $base_url;
+        $roles = \Drupal::currentUser()->getRoles();  
+
+        if(in_array('administrator',$roles)){
+          $message["body"]= [];
+            $newdata ='<body style="background:#d9d9d96e">
+          <section >
+            <div style="max-width:700px; margin:0 auto; width:100%;">
+              <table class="main-sec" style="width:100%; margin-bottom: 100px; padding: 0 0 100px 0;" cellspacing="0" cellpadding="0">
+                <tr>
+                  <td colspan="2">
+                    <table class="main-table" style="background: white; margin-top: 100px; width:100%; padding: 0 0 100px 0; box-shadow: 5px 5px #a6a6a6;" cellspacing="0" cellpadding="0">
+                      <tr>
+                        <td style="border-top: 6px solid #4D8631;"></td>
+                        <td style="border-top: 6px solid #4D8631;"></td>
+                      </tr>
+                      <tr>
+                      <td colspan="2" style="text-align: center; padding: 40px 0;"><a href="'.$base_url.'"><img src="'.$base_url.'/sites/default/files/logo-email.png"></a></td>
+                      </tr>
+                      <tr>
+                      <td colspan="2" style="padding: 16px 0;font-family:Helvetica Neue, sans-serif;font-style: normal; font-weight: 400; font-size: 12pt; line-height: 20px; text-align: left; letter-spacing: 0.02em; color: #000000; opacity:0.7; max-width: 600px; margin: 0 auto; display: block;">'.$body.'</td>
+                      </tr>
+
+                      <tr>
+                      <td colspan="2" style="padding: 50px 0 16px;font-family:Helvetica Neue, sans-serif;font-style: normal; font-weight: 400; font-size: 12pt; line-height: 20px; text-align: left; letter-spacing: 0.02em; color: #000000; opacity: 0.7; max-width: 600px; margin: 0 auto; display: block;">Regards<br>The Choir Central Team</td>
+                      </tr>
+
+                      <tr>
+                        <td>
+                          <table style="width: 100%;margin-top: 100px;">
+                            <tr style="display: flex;justify-content: space-between;width: 100%;">
+                              <td style="opacity:0.7; margin:20px 0 0; font-family:Roboto;font-style: normal; font-weight: 400; font-size: 8pt; line-height: 20px; letter-spacing: 0.02em; color: #000000;width: 50%;text-align: center;">Choir Central, Panania, NSW 2213 <br>The Choir Central team<br><a href="tel:(+61) 0414 869 352" style="color: #000000 !important; text-decoration:none;">(+61) 0414 869 352</a></td>
+                              <td style="margin:20px 0 0; font-family:Roboto;font-style: normal; font-weight: 400; font-size: 8pt; line-height: 20px; letter-spacing: 0.02em; color: #000000;width: 50%;text-align: center;">Follow us on: <br><a href="https://www.facebook.com/ChoirCentralAustralia"><img src="'.$base_url.'/sites/default/files/facebook.png"></a></td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </section>
+        </body>';
+      
+    
+        // Assigning new message to mail body.
+      $message['body'][] = $newdata;
+      }
+  
+   
+    }
+  }
+
+
+  // function custom_functions_user_form_submit(&$form, &$form_state) {
+    // Redirect to node/20
+
+  
+    // Don't redirect; reload the password reset page.
+    // $form_state->setRedirect('user.pass');
+  // }

@@ -1,0 +1,24 @@
+uuid: 97ad87de-e299-41b8-9a3a-4474f5a2163f
+langcode: en
+status: true
+dependencies:
+  config:
+    - crop.type.teachers_crop
+  module:
+    - crop
+name: teachers_home_page
+label: 'Teachers Home Page'
+effects:
+  40637348-a368-4dda-96a2-966d1aa37b84:
+    uuid: 40637348-a368-4dda-96a2-966d1aa37b84
+    id: crop_crop
+    weight: 1
+    data:
+      crop_type: teachers_crop
+  e00a2d4f-7865-406a-ad17-dae79badb800:
+    uuid: e00a2d4f-7865-406a-ad17-dae79badb800
+    id: image_resize
+    weight: 2
+    data:
+      width: 122
+      height: 150

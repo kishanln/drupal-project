@@ -1,0 +1,19 @@
+uuid: 6c27ab28-aca4-4ef7-8383-990bb244f21c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_banner_ad_email
+    - node.type.performance_listing
+id: node.performance_listing.field_banner_ad_email
+field_name: field_banner_ad_email
+entity_type: node
+bundle: performance_listing
+label: 'Performance Listing Email'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: email

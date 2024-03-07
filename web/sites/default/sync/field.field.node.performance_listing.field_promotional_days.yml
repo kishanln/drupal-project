@@ -1,0 +1,23 @@
+uuid: d9ade43c-2f2c-41fa-9aa5-6400ed9daa32
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_promotional_days
+    - node.type.performance_listing
+id: node.performance_listing.field_promotional_days
+field_name: field_promotional_days
+entity_type: node
+bundle: performance_listing
+label: 'Promotional Days'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

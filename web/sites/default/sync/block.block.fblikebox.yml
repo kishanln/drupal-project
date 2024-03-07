@@ -1,0 +1,40 @@
+uuid: 750f4716-dc71-46fa-a9b3-8551daf373e0
+langcode: en
+status: true
+dependencies:
+  module:
+    - fb_likebox
+    - system
+  theme:
+    - bartik
+id: fblikebox
+theme: bartik
+region: sidebar_second
+weight: -9
+provider: null
+plugin: fb_likebox_block
+settings:
+  id: fb_likebox_block
+  label: 'FB Likebox'
+  provider: fb_likebox
+  label_display: '0'
+  url: 'https://www.facebook.com/AcappellaCentral/'
+  app_id: ''
+  hide_header: 0
+  stream: 1
+  events: 0
+  messages: 0
+  show_faces: '0'
+  title: 'Acappella Central'
+  width: 280
+  height: 700
+  hide_cta: 0
+  small_header: 0
+  adapt_container_width: 0
+  language: en_GB
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

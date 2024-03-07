@@ -1,0 +1,22 @@
+uuid: bd45a582-97f1-45d5-9d4f-592060b55ccd
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.advertising_banner_ad
+id: node.advertising_banner_ad.promote
+field_name: promote
+entity_type: node
+bundle: advertising_banner_ad
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

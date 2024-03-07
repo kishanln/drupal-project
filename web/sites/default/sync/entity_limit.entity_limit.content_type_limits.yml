@@ -1,0 +1,30 @@
+uuid: 616134b5-80a6-457a-bb43-5580c2b7ad70
+langcode: en
+status: true
+dependencies: {  }
+id: content_type_limits
+label: 'Teacher Listing'
+weight: 0
+plugin: role_limit
+entity_type: node
+entity_bundles:
+  teacher: teacher
+  advertising_banner_ad: '0'
+  advertising_square_ad: '0'
+  ad_type: '0'
+  article: '0'
+  choir_or_group_listing: '0'
+  custom_payment: '0'
+  hero_banner: '0'
+  page: '0'
+  performance_listing: '0'
+  product: '0'
+  simplenews_issue: '0'
+  tours: '0'
+  videos: '0'
+  webform: '0'
+  workshops: '0'
+limits:
+  -
+    id: paid_member
+    limit: 1

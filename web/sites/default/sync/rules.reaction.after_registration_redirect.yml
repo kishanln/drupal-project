@@ -1,0 +1,51 @@
+uuid: 0c3f4fc6-a913-4253-ba50-94a295338b83
+langcode: en
+status: true
+dependencies: {  }
+id: after_registration_redirect
+label: 'After Registration redirect'
+events:
+  -
+    event_name: 'rules_entity_insert:user'
+description: ''
+tags: {  }
+config_version: '3'
+expression:
+  id: rules_rule
+  uuid: 11bea9d9-9de8-4caa-a2c5-cab51ee05c2c
+  conditions:
+    id: rules_and
+    uuid: 2b1dba8c-ba8a-426e-93c4-4bc4765eee87
+    conditions: {  }
+  actions:
+    id: rules_action_set
+    uuid: fc2b4372-0bb5-4f9c-83b4-9c18eca9c1ed
+    actions:
+      -
+        id: rules_action
+        uuid: 26a17583-1d28-48e2-ac1d-470d5ec0ae1f
+        context_values:
+          url: /sign-up
+        context_mapping: {  }
+        context_processors:
+          url:
+            rules_tokens: {  }
+        provides_mapping: {  }
+        action_id: rules_page_redirect
+      -
+        id: rules_action
+        uuid: 3bde490d-678a-46d8-8270-d16bd0753b3c
+        context_values:
+          message: 'To complete your membership click on the JOIN button below which will take you to the payment section.'
+          type: 'drupal_set_message reg-mssg'
+          repeat: false
+        context_mapping: {  }
+        context_processors:
+          message:
+            rules_tokens: {  }
+          type:
+            rules_tokens: {  }
+          repeat:
+            rules_tokens: {  }
+        provides_mapping: {  }
+        action_id: rules_system_message

@@ -1,0 +1,25 @@
+uuid: 105e32e7-1415-4dbb-a600-64fe9ff680a9
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: for_all
+label: 'for all'
+type: 'canonical_entities:node'
+pattern: '[node:content-type]/[node:title]'
+selection_criteria:
+  91bbe8b0-8125-4240-b8b7-126794a19405:
+    id: 'entity_bundle:node'
+    negate: false
+    uuid: 91bbe8b0-8125-4240-b8b7-126794a19405
+    context_mapping:
+      node: node
+    bundles:
+      choir_or_group_listing: choir_or_group_listing
+      teacher: teacher
+      tours: tours
+      workshops: workshops
+selection_logic: and
+weight: -5
+relationships: {  }

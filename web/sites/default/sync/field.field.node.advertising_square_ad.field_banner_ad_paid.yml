@@ -1,0 +1,23 @@
+uuid: 15c4ae0e-b9a9-4ac5-8ed0-d43e55c0fc64
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_banner_ad_paid
+    - node.type.advertising_square_ad
+id: node.advertising_square_ad.field_banner_ad_paid
+field_name: field_banner_ad_paid
+entity_type: node
+bundle: advertising_square_ad
+label: 'Square Ad Paid'
+description: ''
+required: true
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

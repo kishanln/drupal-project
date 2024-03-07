@@ -1,0 +1,29 @@
+uuid: 1435ac2e-e3ee-4ac6-a181-d82705efb66f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_banner_ad_state
+    - node.type.ad_type
+    - taxonomy.vocabulary.state
+id: node.ad_type.field_banner_ad_state
+field_name: field_banner_ad_state
+entity_type: node
+bundle: ad_type
+label: State
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      state: state
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

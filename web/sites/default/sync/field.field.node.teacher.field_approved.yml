@@ -1,0 +1,23 @@
+uuid: 8a199bde-a4c2-4592-af4e-2e83fe6da8d4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_approved
+    - node.type.teacher
+id: node.teacher.field_approved
+field_name: field_approved
+entity_type: node
+bundle: teacher
+label: 'Teacher Approved'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

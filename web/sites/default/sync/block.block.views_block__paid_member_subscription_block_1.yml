@@ -1,0 +1,31 @@
+uuid: 529d3ef7-4a22-4657-9cc9-b8a8e3a6d780
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.paid_member_subscription
+  module:
+    - system
+    - views
+  theme:
+    - bartikcustomgary
+id: views_block__paid_member_subscription_block_1
+theme: bartikcustomgary
+region: content
+weight: -17
+provider: null
+plugin: 'views_block:paid_member_subscription-block_1'
+settings:
+  id: 'views_block:paid_member_subscription-block_1'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+  context_mapping: {  }
+visibility:
+  request_path:
+    id: request_path
+    pages: "/user/*\r\n!/user/*/payment-methods\r\n!/user/*/address-book\r\n!/user/*/edit\r\n!/user/*/orders\r\n!/user/*/subscriptions\r\n!/user/*/listing\r\n"
+    negate: false
+    context_mapping: {  }

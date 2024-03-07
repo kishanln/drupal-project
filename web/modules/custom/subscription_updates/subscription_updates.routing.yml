@@ -1,0 +1,21 @@
+subscription_updates.list:
+ path: '/add/susbcription-product'
+ defaults:
+   _controller: '\Drupal\subscription_updates\Controller\CartsController::addToCart'
+   _title: ''
+ requirements:
+   _permission: 'access content'
+
+
+subscription_updates.user_data:
+ path: '/add/user-data'
+ defaults:
+   _controller: '\Drupal\subscription_updates\Controller\UserController::content'
+   _title: ''
+ requirements:
+   _permission: 'access content'
+
+
+
+
+

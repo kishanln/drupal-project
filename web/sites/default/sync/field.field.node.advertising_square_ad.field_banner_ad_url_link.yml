@@ -1,0 +1,19 @@
+uuid: dc323878-967b-4c86-bacd-4d10783b25ed
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_banner_ad_url_link
+    - node.type.advertising_square_ad
+id: node.advertising_square_ad.field_banner_ad_url_link
+field_name: field_banner_ad_url_link
+entity_type: node
+bundle: advertising_square_ad
+label: 'Square Ad URL Link'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

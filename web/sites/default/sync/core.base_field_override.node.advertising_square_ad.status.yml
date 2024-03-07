@@ -1,0 +1,22 @@
+uuid: 24fc936a-d5e0-4a1f-85fb-9e0aa200b742
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.advertising_square_ad
+id: node.advertising_square_ad.status
+field_name: status
+entity_type: node
+bundle: advertising_square_ad
+label: Published
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

@@ -1,0 +1,23 @@
+uuid: a3146266-3426-493e-8015-e47cfd2a9988
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.choir_or_group_listing
+  module:
+    - text
+id: node.choir_or_group_listing.body
+field_name: body
+entity_type: node
+bundle: choir_or_group_listing
+label: 'Choir Description'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

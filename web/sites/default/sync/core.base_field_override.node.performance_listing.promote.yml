@@ -1,0 +1,22 @@
+uuid: 74a0d0c2-771c-43a7-82ca-cb7e42cd277f
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.performance_listing
+id: node.performance_listing.promote
+field_name: promote
+entity_type: node
+bundle: performance_listing
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

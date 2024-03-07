@@ -1,0 +1,19 @@
+uuid: f78125b2-210b-489d-9c67-4bc5852fca17
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_venue_street_address_10
+    - node.type.tours
+id: node.tours.field_venue_street_address_10
+field_name: field_venue_street_address_10
+entity_type: node
+bundle: tours
+label: 'Venue Street Address 10'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

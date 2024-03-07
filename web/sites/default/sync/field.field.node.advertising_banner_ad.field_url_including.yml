@@ -1,0 +1,23 @@
+uuid: 341d9c75-9989-4809-b5f1-15baffb5619e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_url_including
+    - node.type.advertising_banner_ad
+  module:
+    - link
+id: node.advertising_banner_ad.field_url_including
+field_name: field_url_including
+entity_type: node
+bundle: advertising_banner_ad
+label: 'URL - including http://'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 16
+  title: 0
+field_type: link

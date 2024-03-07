@@ -1,0 +1,29 @@
+uuid: 75d844cf-7353-4f9d-bd92-10b9b8bc63d4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_music_style
+    - node.type.choir_or_group_listing
+    - taxonomy.vocabulary.music_style
+id: node.choir_or_group_listing.field_music_style
+field_name: field_music_style
+entity_type: node
+bundle: choir_or_group_listing
+label: 'Music Style'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      music_style: music_style
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,45 @@
+<?php 
+
+function custom_map_node_presave(Drupal\Core\Entity\EntityInterface $entity){
+
+  if ($entity->getEntityTypeId() == 'node') {
+    // Check if the node type is the one you're interested in.
+    $node_type = $entity->getType();
+    if ($node_type == 'teacher'||'choir_or_group_listing'||' workshops'||'performance_listing') {
+     
+        $location = $entity->get('field_workshop_location')->getValue()[0]['value'];
+        $street_address = $entity->get('field_venue_street_address')->getValue()[0]['value'];
+        $combinedAddress = $location . ' ' . $street_address;
+        $address = str_replace(" ", "+", $combinedAddress);
+        // Construct the API URL for fetching coordinates.
+       
+        $apiUrl =  "https://api.mapbox.com/geocoding/v5/mapbox.places/".$address.".json?access_token=pk.eyJ1IjoiZGV2bG4iLCJhIjoiY2w4aWhxdmF0MGhzdjN3bjByb3QyOWU2biJ9.vPRhL3D2uigs5Zpn4GG_Bg&limit=1";
+        // Fetch data from the API.
+        $json = file_get_contents($apiUrl);
+  
+        // Decode the JSON response.
+        $data = json_decode($json);
+      
+        $coordinate = $data->features[0]->geometry->coordinates;
+    
+        $longitude = $coordinate[0];
+        $latitude = $coordinate[1];
+  
+   
+        $location = $entity->get('field_location')->getValue();
+          // Set the values using setValue()
+          $array=[
+            'value' => 'POINT (' . $longitude . ' ' . $latitude . ')',
+            'geo_type' => 'Point',
+            'lon' => $longitude,
+            'lat' => $latitude,
+            'left' => $longitude,
+            'top' => $latitude,
+            'right' => $longitude,
+            'bottom' => $latitude,
+            'geohash' => 'xmg7sp',
+            'latlon' => $latitude . ',' . $longitude,
+          ];
+          $entity->set('field_location',$array);
+    }}
+  }

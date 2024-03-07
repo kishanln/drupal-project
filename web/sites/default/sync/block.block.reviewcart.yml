@@ -1,0 +1,41 @@
+uuid: d5aaadd6-3b70-4e6b-9415-b888c166320a
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:84ec438b-5de8-4892-90fb-29e7aa052974'
+  module:
+    - block_content
+    - system
+    - user
+  theme:
+    - bartikcustomgary
+id: reviewcart
+theme: bartikcustomgary
+region: content
+weight: -29
+provider: null
+plugin: 'block_content:84ec438b-5de8-4892-90fb-29e7aa052974'
+settings:
+  id: 'block_content:84ec438b-5de8-4892-90fb-29e7aa052974'
+  label: 'Review cart'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: "/cart\r\n/cart/checkout\r\n/cart/checkout/review"
+    negate: false
+    context_mapping: {  }
+  user_role:
+    id: user_role
+    roles:
+      authenticated: authenticated
+      administrator: administrator
+      paid_member: paid_member
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'

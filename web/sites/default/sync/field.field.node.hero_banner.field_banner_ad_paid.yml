@@ -1,0 +1,23 @@
+uuid: 392df1c4-0a06-438e-8267-1083d2d2506f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_banner_ad_paid
+    - node.type.hero_banner
+id: node.hero_banner.field_banner_ad_paid
+field_name: field_banner_ad_paid
+entity_type: node
+bundle: hero_banner
+label: 'Hero Banner Paid'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

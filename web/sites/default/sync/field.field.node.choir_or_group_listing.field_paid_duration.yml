@@ -1,0 +1,21 @@
+uuid: adf99ce5-70d2-4f31-8163-1d40768da6f3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_paid_duration
+    - node.type.choir_or_group_listing
+  module:
+    - datetime_range
+id: node.choir_or_group_listing.field_paid_duration
+field_name: field_paid_duration
+entity_type: node
+bundle: choir_or_group_listing
+label: 'Paid Duration'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: daterange

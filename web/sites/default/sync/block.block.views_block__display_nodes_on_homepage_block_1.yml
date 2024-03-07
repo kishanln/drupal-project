@@ -1,0 +1,30 @@
+uuid: b587393f-d10a-4dd0-8721-127484cd6917
+langcode: en
+status: false
+dependencies:
+  config:
+    - views.view.display_nodes_on_homepage
+  module:
+    - system
+    - views
+  theme:
+    - bartikcustomgary
+id: views_block__display_nodes_on_homepage_block_1
+theme: bartikcustomgary
+region: content
+weight: -9
+provider: null
+plugin: 'views_block:display_nodes_on_homepage-block_1'
+settings:
+  id: 'views_block:display_nodes_on_homepage-block_1'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

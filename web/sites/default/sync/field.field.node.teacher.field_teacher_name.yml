@@ -1,0 +1,19 @@
+uuid: 539eef72-9440-4a6f-b714-cd251f0525a7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_teacher_name
+    - node.type.teacher
+id: node.teacher.field_teacher_name
+field_name: field_teacher_name
+entity_type: node
+bundle: teacher
+label: 'Teacher Name'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

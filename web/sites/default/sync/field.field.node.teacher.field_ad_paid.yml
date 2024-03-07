@@ -1,0 +1,23 @@
+uuid: 703f2519-d92b-4032-aefa-dd26d867684a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ad_paid
+    - node.type.teacher
+id: node.teacher.field_ad_paid
+field_name: field_ad_paid
+entity_type: node
+bundle: teacher
+label: 'Teacher paid'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

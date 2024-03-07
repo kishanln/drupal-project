@@ -1,0 +1,20 @@
+uuid: 126c4675-25ee-487d-bac9-303ac59cf296
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - node.type.custom_payment
+  module:
+    - user
+id: node.custom_payment.teaser
+targetEntityType: node
+bundle: custom_payment
+mode: teaser
+content:
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }

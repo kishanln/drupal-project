@@ -1,0 +1,345 @@
+<?php
+use Drupal\node\Entity\Node;
+use Drupal\commerce_order\Entity\Order;
+use Drupal\Core\Form\FormStateInterface;
+use Symfony\Component\HttpFoundation\RedirectResponse;
+use Drupal\Core\Entity\EntityForm;
+use \Drupal\Core\Messenger\MessengerInterface;
+use Drupal\Component\Utility\SafeMarkup;
+/**
+ * Implements hook_form_alter().
+ */
+function subscription_updates_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+
+    if (isset($form[ "#attributes" ])) {
+      if (isset($form[ "#attributes" ][ "class" ])) {
+  if( is_array($form[ "#attributes" ][ "class" ])){
+  if ( isset( $form[ "#attributes" ][ "class" ] ) && in_array( "commerce-order-item-add-to-cart-form", $form[ "#attributes" ][ "class" ] ) ){
+    $arraydata = explode('commerce_order_item_add_to_cart_form_commerce_product_', $form_id);
+    $product_id = $arraydata[1];
+    $product = \Drupal\commerce_product\Entity\Product::load($product_id); //load product     
+    if($product->bundle() == 'default'){
+      $form['checkbox'] = array(
+      '#type' => 'checkbox',
+      '#required' => true,
+    );
+    $form['actions']['submit']['#value'] = t('Yes,feature my listing');
+    }elseif ($product->bundle() == 'recurring_product') {
+       $form['actions']['submit']['#value'] = t('JOIN');
+    }
+  }
+  }
+}
+    }
+
+  
+  // if 
+  // (
+  //   $form_id == 'node_teacher_form' || $form_id == 'node_choir_or_group_listing_form' || 
+  //   $form_id == 'node_performance_listing_form' || $form_id == 'node_tours_form' || 
+  //   $form_id == 'node_workshops_form'
+  // ) {
+  //   $roles = \Drupal::currentUser()->getRoles();
+  //   if (in_array('paid_member', $roles) && !in_array('administrator', $roles)) {
+  //     $current_path = \Drupal::service('path.current')->getPath();
+  //     $node_arg  = explode('/', $current_path);    
+  //     $username = \Drupal::currentUser()->getUsername();
+  //     if ($node_arg['1'] == 'node' && $node_arg['2'] == 'add') {
+  //       $content_type = $node_arg['3'];
+  //       $node = Node::create([
+  //         'type'        => $content_type,
+  //         'title'       => $content_type.' draft content created by '.$username,
+  //         'moderation_state'=> 'draft',
+  //       ]);
+  //       $node->save();             
+  //     }
+  //   }
+  // }
+
+  if 
+  (
+    $form_id == 'node_teacher_edit_form' || $form_id == 'node_choir_or_group_listing_edit_form' ||
+    $form_id == 'node_performance_listing_edit_form' || $form_id == 'node_tours_edit_form' ||
+    $form_id == 'node_workshops_edit_form'
+  ) {
+
+    $nid = \Drupal::routeMatch()->getParameter('node')->id();
+    $node_details = Node::load($nid);
+    $promotion_end_date =$node_details->field_promotion_end_date->value;
+ 
+    if($promotion_end_date=='1970-01-01'){
+ 
+      
+      $dateTime = \DateTime::createFromFormat('Y-m-d','2022-01-01');
+      $newDateString = $dateTime->format('Y-m-d\TH:i:s');
+      $form['field_promotion_end_date']['widget'][0]['value']['#default_value'] = $newDateString;
+    }
+    
+    $roles = \Drupal::currentUser()->getRoles();
+    if (in_array('paid_member', $roles) && !in_array('administrator', $roles)) {
+      $current_path = \Drupal::service('path.current')->getPath();
+      $node_arg  = explode('/', $current_path); 
+      $username = \Drupal::currentUser()->getAccountName();
+      if ($form_state->getFormObject() instanceof EntityForm) {
+        $node = $form_state->getFormObject()->getEntity();
+        $content_type = $node->getType();
+        $moderation_state = $node->moderation_state->value;
+      }
+      $validate_title = $content_type.' draft content created by '.$username;
+      if($form['moderation_state']['widget'][0]['state']['#default_value'] == 'review'){
+         $form['moderation_state']['widget'][0]['state']['#default_value'] = 'review';
+      }
+      if($form['moderation_state']['widget'][0]['state']['#default_value'] == 'published'){
+         $form['moderation_state']['widget'][0]['state']['#default_value'] = 'published';
+      }
+      $form["moderation_state"]['#access'] = FALSE;
+      $form['field_promotion_end_date']['#disabled'] = TRUE;
+      if ($form["title"]['widget'][0]['value']['#default_value'] == $validate_title ) {
+        $form["title"]['widget'][0]['value']['#default_value'] = '';
+      } 
+      if ($moderation_state == 'review') {
+        /*$form['actions']['submit']['#access'] = FALSE;*/
+        \Drupal::messenger()->addMessage('Contnet is under-review state.', 'status');
+      }
+    }   
+  }
+
+}
+/**
+ * Implements hook_mail_alter().
+ */
+// function subscription_updates_mail_alter(&$message) {
+//   if ($message['id'] == 'commerce_order_receipt') {
+//     $order = $message['params']['order'];
+//     $order_id = $order->id();
+//     $items = $order->getItems(); 
+//   if (!empty($items)) {
+//   foreach ($items as $key => $item) {
+//     $purchasedEntity = $item->getPurchasedEntity();
+//     $product = $purchasedEntity->getProduct();
+//     $product_id = $product->id();
+//     $product_variation_type = $purchasedEntity->bundle();
+//     $node_id = $item->get('field_content_id')->getValue();
+//       if(isset($product_variation_type) && $product_variation_type == 'default' ) {
+//             $user = \Drupal::currentUser()->getUsername();
+//             $message['subject'] = t('ADD ON PRODUCT #@number', [
+//                   '@number' => $order->getOrderNumber(),
+//                 ]);
+//             $message['body'] =$user.',Thank you for registering at Choir Central. Your application for an account is currently pending approval. Once it has been approved, you will receive another e-mail containing information about how to log in, set your password, and other details. -- Choir Central team';
+            
+//           }else{
+//             if (isset($product_variation_type) && $product_variation_type == 'recurring_product') {
+//                 $user = \Drupal::currentUser()->getUsername();
+//                 $message['subject'] = t('Subscription has been Completed #@number', [
+//                   '@number' => $order->getOrderNumber(),
+//                 ]);
+//                // $message['body'] =$user.',Thank you for registering at Choir Central. Your application for an account is currently pending approval. Once it has been approved, you will receive another e-mail containing information about how to log in, set your password, and other details. -- Choir Central team';
+             
+//             }
+//           }
+//        }
+//      }
+//         $system_site_config = \Drupal::config('system.site');
+//         $site_email = $system_site_config->get('mail');
+//         $mailManager = \Drupal::service('plugin.manager.mail');
+//         $module = 'subscription_updates';
+//         $key = 'admin_content';
+//         $to = $site_email;
+//         $user = \Drupal::currentUser()->getUsername();
+//         $params['subject'] = 'Your new account at Choir Central has been approved.';
+//         $params['message'] = $user. ',Your new account at Choir Central has been approved -- Choir Central team';
+//         $langcode = \Drupal::currentUser()->getPreferredLangcode();
+//         $send = true;
+//         $result = $mailManager->mail($module, $key, $to, $langcode, $params, FALSE);
+    
+//     }
+// }
+function subscription_updates_theme($existing, $type, $theme, $path) {
+  return [
+    'commerce_order_receipt' => [
+      'template' => 'subscription-updates-order-receipt',
+      'base hook' => 'commerce_order_receipt',
+    ],
+  ];
+}
+function subscription_updates_entity_insert(Drupal\Core\Entity\EntityInterface $entity) {
+   $current_user_roles = \Drupal::currentUser()->getRoles();
+if (in_array('paid_member', $current_user_roles)) {
+    if($entity->bundle() == 'choir_or_group_listing' || $entity->bundle() == 'teacher' || $entity->bundle() == 'tours' || $entity->bundle() == 'workshops' || $entity->bundle() == 'performance_listing'){
+      $entity->set('moderation_state','draft');
+      $entity->save();
+    } 
+  }
+}
+/**
+* Implements hook_mail().
+*/
+function subscription_updates_mail($key, &$message, $params) {
+ $system_site_config = \Drupal::config('system.site');
+ $site_email = $system_site_config->get('mail');
+ $options = array(
+    'langcode' => $message['langcode'],
+  );
+  switch ($key){
+    case 'node_content':
+    $message['from'] = $site_email;
+    $message['subject'] = $params['subject'];
+
+    // $message['body'][] = $params['message'];
+    $headers = array(
+      'MIME-Version' => '1.0',
+      'Content-Type' => 'text/html; charset=UTF-8; format=flowed',
+      'Content-Transfer-Encoding' => '8Bit',
+      'X-Mailer' => 'Drupal'
+      );
+      $message['headers'] = $headers;
+  
+  /*Unsetting message body field*/
+  $message['body'] = [];
+
+
+   $newdata ='<div style="max-width:700px; margin:0 auto; width:100%;">
+   <table class="main-sec" style="width:100%;" cellspacing="0" cellpadding="0">
+     <tr>
+       <td colspan="2">
+         <table class="main-table" style="background: white; margin-top: 100px; width:100%;"  cellspacing="0" cellpadding="0">
+           <tr>
+             <td style="border-top: 6px solid #4D8631;"></td>
+             <td style="border-top: 6px solid #4D8631;"></td>
+           </tr>
+           <tr>
+           
+               <td colspan="2" style="text-align: center; padding: 40px 0;"><a href="#"><img src="http://dev.choircentral.com.au/sites/default/files/logo-email.png"></a></td>
+           </tr>
+           <tr>
+             <td colspan="2">
+               <table class="inner-table" style="max-width: 500px; margin: auto; width:100%"  cellspacing="0" cellpadding="0">
+                <td colspan="2" style="padding: 40px 0 0;font-style: normal; font-weight: 400; font-size: 14px; line-height: 20px; text-align: center; letter-spacing: 0.02em; color: #000000; opacity:0.7;">
+                <td colspan="2" style="border-top: 1px solid #D9D9D9; border-bottom: 1px solid #D9D9D9;max-width: 400px; width:100%; padding: 24px 0; font-weight: 700; font-size:24px; line-height: 34px; text-align:center; letter-spacing: 0.01em;color: #000000;">'.$message["params"]["message"].'</td>
+                   </table>
+             </td>
+           </tr>
+           <tr>
+             <td colspan="2" style="padding: 40px 0;font-style: normal; font-weight: 400; font-size: 14px; line-height: 20px; text-align: center; letter-spacing: 0.02em; color: #000000;">Welcome and thanks! <br>The Choir Central Team</td>
+           </tr>
+         </table>
+       </td>
+     </tr>
+     <tr>
+       <td style="text-align: left; opacity:0.7; margin:20px 0 0; ;font-style: normal; font-weight: 400; font-size: 14px; line-height: 20px; letter-spacing: 0.02em; color: #000000;">Choir Central, Panania, NSW 2213 <br><a href="tel:(+61) 0414 869 352" style="color: #000000; text-decoration:none;">(+61) 0414 869 352</a></td>
+
+       <td style="text-align:left; float:right; margin:20px 0 0;;font-style: normal; font-weight: 400; font-size: 14px; line-height: 20px; letter-spacing: 0.02em; color: #000000;">Follow us on: <br><a href="#"><img src="http://dev.choircentral.com.au/sites/default/files/facebook.png"></a></td>
+       
+     </tr>
+   </table>
+ </div>';
+    // Assigning new message to mail body.
+  $message['body'][] = $newdata;
+    //test
+    break;
+
+    case 'admin_content':
+    $message['from'] = $site_email;
+    $message['subject'] = $params['subject'];
+    $message['body'][] = $params['message'];
+    break;
+
+  }
+}
+
+/**
+ * Implements hook_node_presave().
+ */
+function subscription_updates_entity_presave(Drupal\Core\Entity\EntityInterface $entity) {
+  // $user = \Drupal\user\Entity\User::load(\Drupal::currentUser()->id());
+  
+  $current_user_roles = \Drupal::currentUser()->getRoles();
+
+if (in_array('administrator', $current_user_roles)) {
+    if($entity->bundle() == 'choir_or_group_listing' || $entity->bundle() == 'teacher' || $entity->bundle() == 'tours' || $entity->bundle() == 'workshops' || $entity->bundle() == 'performance_listing'){
+  $mod = $entity->moderation_state->value;
+	if ($mod == 'published') {
+      $promotional_end_date = $entity->field_promotion_end_date->value;
+      $promotional_start_date = $entity->field_promotion_start_date->value;
+      $promotional_days =  $entity->field_promotional_days->value;
+
+      // if (empty($promotional_days)) {
+      //   $promotional_days = '30';
+      //   $entity->set('field_promotional_days', $promotional_days); 
+      // }
+      $ori_value = $entity->original;
+      // if (empty($promotional_end_date)) {
+      if (empty($promotional_end_date) && !empty($promotional_days) && $promotional_days > 1) {
+        $promotional_end_date = date('Y-m-d', strtotime(" + {$promotional_days} days"));
+        $entity->set('field_promotion_end_date', $promotional_end_date); 
+      }
+      $original_value = $ori_value->field_promotion_end_date->value;
+      $current_value =  $entity->field_promotion_end_date->value;
+       if($original_value !== $current_value){
+        $user = \Drupal\user\Entity\User::load($entity->toArray()['uid'][0]['target_id']);
+        $system_site_config = \Drupal::config('system.site');
+        $site_email = $system_site_config->get('mail');
+        $mailManager = \Drupal::service('plugin.manager.mail');
+        $userMail = $user->get('mail')->value;
+        $userName= $user->get('name')->value;
+        $module = 'subscription_updates';
+        $key = 'node_content';
+        $to = $userMail;
+
+        $params['subject'] = $entity->label().' promotion has been approved';
+        $params['message'] = $userName . 'Your promotion at Choir Central has been approved -- Choir Central team';
+      
+ 
+        $langcode = \Drupal::currentUser()->getPreferredLangcode();
+        $send = true;
+        $result = $mailManager->mail($module, $key, $to, $langcode, $params, FALSE);
+        if ($result['result'] !== true) {
+          \Drupal::messenger()->addError(t('There was a problem sending your message and it was not sent.'), 'error');
+        }
+        else{
+          \Drupal::messenger()->addStatus(t('Your message has been sent.'));
+        }
+     }
+    }
+  }
+ }
+}
+
+/**
+ * Implements hook_cron().
+ */
+function subscription_updates_cron() {
+  $current_date = date("Y-m-d") ;
+  /* By static date
+  $current_date = '2021-06-22';
+  */
+  $nidQuery = \Drupal::database()->select('content_moderation_state_field_data', 'cms');
+  $nidQuery->leftJoin('node__field_promotion_end_date', 'ped', 'cms.content_entity_id = ped.entity_id');
+  $nidQuery->leftJoin('node_field_data', 'nfd', 'cms.content_entity_id = nfd.nid');
+  $nidQuery->fields('nfd', ['nid']);
+  $nidQuery->condition('cms.content_entity_type_id', 'node');
+  $nidQuery->condition('cms.moderation_state', 'published');
+  $nidQuery->condition('nfd.status',1);
+  $nidQuery->condition('ped.field_promotion_end_date_value', $current_date,'<');
+  $node_ids = $nidQuery->execute()->fetchcol();
+  if (isset($node_ids) && !empty($node_ids)) {
+    foreach ($node_ids as $key => $nid) {
+      $node = Node::load($nid);
+      $node->set('moderation_state', "archive");
+      $node->save();
+    }
+  }
+}
+
+function subscription_updates_preprocess_status_messages(&$variables) {
+  if(isset($variables['message_list']['status'])){
+    $status_messages = $variables['message_list']['status'];
+    foreach($status_messages as $delta => $message) {
+      if (strpos((string) $message, 'The message that I am expecting') !== FALSE) {
+        $variables['message_list']['status'][$delta] = "Some different message text";
+      }
+    }
+  }
+}
+
+

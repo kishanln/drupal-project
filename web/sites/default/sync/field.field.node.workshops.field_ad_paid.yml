@@ -1,0 +1,23 @@
+uuid: 59998e26-2b7d-4d72-bd2f-67b876361342
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ad_paid
+    - node.type.workshops
+id: node.workshops.field_ad_paid
+field_name: field_ad_paid
+entity_type: node
+bundle: workshops
+label: 'Workshop paid'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

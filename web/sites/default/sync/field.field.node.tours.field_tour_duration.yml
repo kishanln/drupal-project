@@ -1,0 +1,21 @@
+uuid: 34159509-becf-42ea-adeb-564f3475d420
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_tour_duration
+    - node.type.tours
+  module:
+    - datetime_range
+id: node.tours.field_tour_duration
+field_name: field_tour_duration
+entity_type: node
+bundle: tours
+label: 'Tour Date'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: daterange

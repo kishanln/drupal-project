@@ -1,0 +1,22 @@
+uuid: b658ca69-2307-46af-b3de-2b8d9249f338
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: ad_type
+label: 'Ad type'
+type: 'canonical_entities:node'
+pattern: 'ad/[node:field_select_adtype]/[node:title]'
+selection_criteria:
+  4ac5ee0c-f83a-47d2-88c0-7e05249e206d:
+    id: 'entity_bundle:node'
+    negate: false
+    uuid: 4ac5ee0c-f83a-47d2-88c0-7e05249e206d
+    context_mapping:
+      node: node
+    bundles:
+      ad_type: ad_type
+selection_logic: and
+weight: -5
+relationships: {  }

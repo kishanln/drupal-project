@@ -1,0 +1,19 @@
+uuid: 7b45d82c-01ec-4e25-9a54-b11fc77d7365
+langcode: en
+status: true
+dependencies: {  }
+id: test
+label: Test
+weight: -10
+plugin: manual
+configuration:
+  display_label: Test
+  mode: n/a
+  payment_method_types:
+    - credit_card
+  collect_billing_information: false
+  instructions:
+    value: ''
+    format: plain_text
+conditions: {  }
+conditionOperator: AND

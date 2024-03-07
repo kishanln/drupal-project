@@ -1,0 +1,31 @@
+uuid: 7f5ed05c-c91c-49bf-a9db-adcfa0ed7f27
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:1277dab6-b7c6-4966-8d48-c760aea19d0d'
+  module:
+    - block_content
+    - system
+  theme:
+    - bartikcustomgary
+id: step3
+theme: bartikcustomgary
+region: content
+weight: -23
+provider: null
+plugin: 'block_content:1277dab6-b7c6-4966-8d48-c760aea19d0d'
+settings:
+  id: 'block_content:1277dab6-b7c6-4966-8d48-c760aea19d0d'
+  label: step3
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: '/event/*'
+    negate: false
+    context_mapping: {  }

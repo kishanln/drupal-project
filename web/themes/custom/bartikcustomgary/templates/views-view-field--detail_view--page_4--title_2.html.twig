@@ -1,0 +1,15 @@
+{% set prices = row._entity.price.value %}
+<div style="width:100%;">
+	<p>For more options to promote and market your event, view our advertising options for newsletter features, homepage features, takeovers and banners</p>
+</div>
+<div style="width:100%;">
+<a class="advertising-class" href="/core/themes/bartikcustomgary/images/CHOIR CENTRAL RATES CARD NOV2019 PROOF2.pdf" target="_blank">Further Advertising Options</a>
+</div>
+<div style="width:100%;">
+	<span class="tickbox">
+	<input type="checkbox" value="1" id="PayCheck" class="checkBox" required> Yes enhance the visibility of my listing - ${{ prices|number_format(2) }}
+	</span>
+	<span class="tickbox-text">
+	<label id="massag" style="display:none;">Please tick this box if you want to proceed</label>
+	</span>
+</div>

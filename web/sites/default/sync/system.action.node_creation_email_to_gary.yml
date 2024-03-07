@@ -1,0 +1,12 @@
+uuid: a26bdc64-3959-4c31-a9b5-71bd90be32a0
+langcode: en
+status: true
+dependencies: {  }
+id: node_creation_email_to_gary
+label: 'Node Creation Email to Gary'
+type: system
+plugin: action_send_email_action
+configuration:
+  recipient: gary@choircentral.com.au
+  subject: 'Moderation required'
+  message: "A node has been created that may need moderating.\r\n\r\n%username\r\n\r\n%node_url\r\n\r\n%node_type"

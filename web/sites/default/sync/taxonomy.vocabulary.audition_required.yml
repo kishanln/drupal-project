@@ -1,0 +1,8 @@
+uuid: 420295f7-93c6-46f5-8a84-03bf360b194c
+langcode: en
+status: true
+dependencies: {  }
+name: 'Audition Required'
+vid: audition_required
+description: 'Audition Required'
+weight: 0

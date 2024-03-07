@@ -1,0 +1,12 @@
+uuid: 564f688d-eef3-4fdc-903b-2ae3733da692
+langcode: en
+status: true
+dependencies: {  }
+label: 'Full Listing Image'
+id: full_listing_image
+description: 'Crop Used for Performance, Choirs, Tours and Workshops Main Page 136:75'
+aspect_ratio: '136:75'
+soft_limit_width: null
+soft_limit_height: null
+hard_limit_width: 680
+hard_limit_height: 375

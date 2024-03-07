@@ -1,0 +1,21 @@
+uuid: 8af4df47-ce03-4e5c-864f-cb62fda416df
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_promotion_start_date
+    - node.type.choir_or_group_listing
+  module:
+    - datetime
+id: node.choir_or_group_listing.field_promotion_start_date
+field_name: field_promotion_start_date
+entity_type: node
+bundle: choir_or_group_listing
+label: 'Promotion Start Date'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

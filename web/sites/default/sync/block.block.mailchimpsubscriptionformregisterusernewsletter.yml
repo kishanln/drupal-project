@@ -1,0 +1,20 @@
+uuid: 3479e16f-91a7-45d9-87a9-748022313015
+langcode: en
+status: true
+dependencies:
+  module:
+    - mailchimp_signup
+  theme:
+    - bartikcustomgary
+id: mailchimpsubscriptionformregisterusernewsletter
+theme: bartikcustomgary
+region: sidebar_first
+weight: -25
+provider: null
+plugin: 'mailchimp_signup_subscribe_block:register_user_newsletter'
+settings:
+  id: 'mailchimp_signup_subscribe_block:register_user_newsletter'
+  label: 'Sign up for latest newsletter'
+  provider: mailchimp_signup
+  label_display: visible
+visibility: {  }

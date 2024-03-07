@@ -1,0 +1,18 @@
+uuid: fb843ec3-4805-484c-9016-23fe971713cf
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: 'Create Your Own Ad'
+type: ad_type
+description: 'Home page Square and Banner advertising.'
+help: ''
+new_revision: false
+preview_mode: 0
+display_submitted: false

@@ -1,0 +1,61 @@
+uuid: dfd55588-4044-47f5-ab2c-90f0b9c92c5b
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.webform_default
+    - node.type.ad_type
+    - node.type.choir_or_group_listing
+    - node.type.performance_listing
+    - node.type.teacher
+    - node.type.tours
+    - node.type.workshops
+  module:
+    - commerce_checkout
+    - commerce_order
+    - commerce_payment
+    - commerce_product
+    - commerce_recurring
+    - contact
+    - field_permissions
+    - file
+    - filter
+    - mailchimp_signup
+    - media
+    - menu_per_role
+    - node
+    - profile
+    - search
+    - system
+_core:
+  default_config_hash: dJ0L2DNSj5q6XVZAGsuVDpJTh5UeYkIPwKrUOOpr8YI
+id: authenticated
+label: 'Authenticated user'
+weight: 1
+is_admin: false
+permissions:
+  - 'access checkout'
+  - 'access content'
+  - 'access mailchimp signup pages'
+  - 'access site-wide contact form'
+  - 'administer menu_per_role'
+  - 'cancel own commerce_subscription'
+  - 'create field_subscriptions'
+  - 'delete own choir_or_group_listing content'
+  - 'delete own files'
+  - 'delete own performance_listing content'
+  - 'delete own teacher content'
+  - 'delete own tours content'
+  - 'delete own workshops content'
+  - 'edit own ad_type content'
+  - 'edit own field_subscriptions'
+  - 'manage own commerce_payment_method'
+  - 'search content'
+  - 'use advanced search'
+  - 'use text format webform_default'
+  - 'view commerce_product'
+  - 'view media'
+  - 'view own commerce_order'
+  - 'view own commerce_subscription'
+  - 'view own field_approved'
+  - 'view own profile'

@@ -1,0 +1,14 @@
+uuid: 43aa12dc-f341-4490-a7e9-93559c6ac68a
+langcode: en
+status: true
+dependencies: {  }
+id: limit_product
+label: 'Limit product'
+events:
+  -
+    event_name: 'rules_entity_update:commerce_order--recurring'
+description: ''
+tags: {  }
+config_version: '3'
+expression:
+  id: rules_rule

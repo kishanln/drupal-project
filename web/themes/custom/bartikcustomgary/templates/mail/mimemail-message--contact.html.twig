@@ -1,0 +1,49 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+	<link href="http://fonts.cdnfonts.com/css/helvetica-neue-9" rel="stylesheet"> 
+	<title>Account</title>
+</head>
+<body style="background:#d9d9d96e">
+
+	<section >
+		<div style="max-width:700px; margin:0 auto; width:100%;">
+			<table class="main-sec" style="width:100%; margin-bottom: 100px; padding: 0 0 100px 0;" cellspacing="0" cellpadding="0">
+				<tr>
+					<td colspan="2">
+						<table class="main-table" style="background: white; margin-top: 100px; width:100%; padding: 0 0 100px 0; box-shadow: 5px 5px #a6a6a6;" cellspacing="0" cellpadding="0">
+							<tr>
+								<td style="border-top: 6px solid #4D8631;"></td>
+								<td style="border-top: 6px solid #4D8631;"></td>
+							</tr>
+							<tr>
+								<td colspan="2" style="text-align: center; padding: 40px 0;"><a href="{{ url('<front>') }}"><img src="{{ url('<front>') }}sites/default/files/logo-email.png"></a></td>
+							</tr>
+							<tr>
+								<td colspan="2" style="padding: 16px 0;font-family:'Helvetica Neue', sans-serif;font-style: normal; font-weight: 400; font-size: 12pt; line-height: 20px; text-align: left; letter-spacing: 0.02em; color: #000000; opacity:0.7; max-width: 600px; margin: 0 auto; display: block;">{{ body|raw}}</td>
+							</tr>
+							
+							{# <tr>
+								<td colspan="2" style="padding: 50px 0 16px;font-family:'Helvetica Neue', sans-serif;font-style: normal; font-weight: 400; font-size: 12pt; line-height: 20px; text-align: center; letter-spacing: 0.02em; color: #000000; opacity: 0.7; max-width: 600px; margin: 0 auto; display: block;">Regards<br>The Choir Central Team</td>
+							</tr> #}
+							<tr>
+								<td>
+									<table style="width: 100%;margin-top: 100px;">
+										<tr style="display: flex;justify-content: space-between;width: 100%;">
+											<td style="opacity:0.7; margin:20px 0 0; font-family:'Roboto';font-style: normal; font-weight: 400; font-size: 8pt; line-height: 20px; letter-spacing: 0.02em; color: #000000;width: 50%;text-align: center;">Choir Central, Panania, NSW 2213 <br>The Choir Central team<br><a href="tel:(+61) 0414 869 352" style="color: #000000 !important; text-decoration:none;">(+61) 0414 869 352</a></td>
+											<td style="margin:20px 0 0; font-family:'Roboto';font-style: normal; font-weight: 400; font-size: 8pt; line-height: 20px; letter-spacing: 0.02em; color: #000000;width: 50%;text-align: center;">Follow us on: <br><a href="https://www.facebook.com/ChoirCentralAustralia"><img src="{{ url('<front>') }}sites/default/files/facebook.png"></a></td>
+										</tr>
+									</table>
+								</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+			</table>
+		</div>
+	</section>
+</body>
+</html>

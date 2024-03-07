@@ -1,0 +1,67 @@
+uuid: d1b11ead-8bc7-421f-a417-1b58416a8c6e
+langcode: en
+status: true
+dependencies: {  }
+id: slid
+name: slid
+label: slide
+weight: 0
+group: ''
+skin: asnavfor
+breakpoints: 2
+optimized: true
+options:
+  options__active_tab: edit-options-responsives
+  settings:
+    autoplay: true
+    autoplaySpeed: 20000
+    pauseOnHover: false
+    pauseOnFocus: false
+    dots: true
+    draggable: false
+    lazyLoad: blazy
+    slidesPerRow: 4
+    slidesToShow: 4
+    speed: 1000
+    swipe: false
+    touchMove: false
+    useCSS: false
+    useTransform: false
+    easing: swing
+    variableWidth: true
+    regionLabel: carousel
+    useGroupRole: true
+    instructionsText: ''
+    useAutoplayToggleButton: true
+    pauseIcon: slick-pause-icon
+    playIcon: slick-play-icon
+    arrowsPlacement: ''
+  responsives:
+    responsive:
+      -
+        breakpoint: 767
+        unslick: false
+        settings:
+          autoplay: true
+          pauseOnHover: false
+          pauseOnFocus: false
+          dots: true
+          draggable: false
+          slidesPerRow: 2
+          slidesToShow: 2
+          speed: 1000
+          swipe: false
+          touchMove: false
+          variableWidth: true
+      -
+        breakpoint: 480
+        unslick: false
+        settings:
+          centerMode: true
+          centerPadding: ''
+          dots: true
+          draggable: false
+          focusOnSelect: true
+          swipe: false
+          touchMove: false
+          variableWidth: true

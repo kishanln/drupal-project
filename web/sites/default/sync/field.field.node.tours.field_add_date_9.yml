@@ -1,0 +1,23 @@
+uuid: 4784489e-f8ac-4c3c-b600-7caf4c4fc571
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_add_date_9
+    - node.type.tours
+id: node.tours.field_add_date_9
+field_name: field_add_date_9
+entity_type: node
+bundle: tours
+label: 'add date 9'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

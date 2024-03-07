@@ -1,0 +1,25 @@
+uuid: 186f9ea1-a57d-4b82-b23a-51619ff86502
+langcode: en
+status: true
+dependencies:
+  config:
+    - crop.type.full_listing_image
+  module:
+    - crop
+name: choir_listing_image
+label: 'Choir Listing Image'
+effects:
+  66df2847-289f-4f18-8bb5-510a416d07a8:
+    uuid: 66df2847-289f-4f18-8bb5-510a416d07a8
+    id: crop_crop
+    weight: 2
+    data:
+      crop_type: full_listing_image
+  0a20fb60-295d-4afb-acd4-7785ab408bb4:
+    uuid: 0a20fb60-295d-4afb-acd4-7785ab408bb4
+    id: image_scale_and_crop
+    weight: 3
+    data:
+      width: 680
+      height: 375
+      anchor: center-center

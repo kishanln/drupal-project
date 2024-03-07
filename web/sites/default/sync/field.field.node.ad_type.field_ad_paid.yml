@@ -1,0 +1,23 @@
+uuid: b228753e-3196-43da-b7f1-950e858e073a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ad_paid
+    - node.type.ad_type
+id: node.ad_type.field_ad_paid
+field_name: field_ad_paid
+entity_type: node
+bundle: ad_type
+label: 'Ad paid'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

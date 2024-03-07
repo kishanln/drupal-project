@@ -1,0 +1,23 @@
+uuid: 70d7ec7c-282b-41d2-a764-6cc9bf1d32c4
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_variation_type.default
+    - field.storage.commerce_product_variation.field_number_of_days
+id: commerce_product_variation.default.field_number_of_days
+field_name: field_number_of_days
+entity_type: commerce_product_variation
+bundle: default
+label: 'Number of days'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: 31
+  prefix: ''
+  suffix: ''
+field_type: integer

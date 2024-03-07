@@ -1,0 +1,33 @@
+uuid: b87e965c-2741-4573-a2bd-d4d19dc9a87d
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:f07e0dc5-4af3-45f0-a8b7-f4273347ac4c'
+  module:
+    - block_content
+    - user
+  theme:
+    - bartikcustomgary
+id: createlistingforlogoutuser
+theme: bartikcustomgary
+region: primary_menu
+weight: -24
+provider: null
+plugin: 'block_content:f07e0dc5-4af3-45f0-a8b7-f4273347ac4c'
+settings:
+  id: 'block_content:f07e0dc5-4af3-45f0-a8b7-f4273347ac4c'
+  label: 'create listing for logout user'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  user_role:
+    id: user_role
+    roles:
+      anonymous: anonymous
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'

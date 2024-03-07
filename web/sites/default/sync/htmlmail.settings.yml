@@ -1,0 +1,15 @@
+hmtlmail_theme: ''
+_core:
+  default_config_hash: Wu3IKMk26-vsOrYw0-gdQelLF90-LJG4ce9mvT9zooE
+debug: false
+theme: bartikcustomgary
+html_with_plain: false
+postfilter: full_html
+test:
+  to: test.ckln@gmail.com
+  subject: 'subject test'
+  body:
+    value: "<p><strong>body test</strong></p>\r\n<img alt=\"adsds\" data-align=\"center\" data-entity-type=\"file\" data-entity-uuid=\"7d433c1c-440e-4860-8d2c-f24e0a6af3b2\" src=\"/sites/default/files/inline-images/background-e1568966642445.jpg\" />\r\n<p>&nbsp;</p>\r\n"
+    format: full_html
+  class: htmlmail
+use_mail_mime: false

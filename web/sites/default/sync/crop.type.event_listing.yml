@@ -1,0 +1,12 @@
+uuid: 3d834989-a117-4645-82e6-c854c812e9d7
+langcode: en
+status: true
+dependencies: {  }
+label: 'Event listing'
+id: event_listing
+description: ''
+aspect_ratio: '35:16'
+soft_limit_width: null
+soft_limit_height: null
+hard_limit_width: null
+hard_limit_height: null

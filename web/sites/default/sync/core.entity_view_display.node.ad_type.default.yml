@@ -1,0 +1,68 @@
+uuid: 7ca892f0-1f81-4ff2-9b9f-4e2880a339a7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.ad_type.body
+    - field.field.node.ad_type.field_ad_paid
+    - field.field.node.ad_type.field_approved
+    - field.field.node.ad_type.field_banner_ad_images
+    - field.field.node.ad_type.field_banner_ad_state
+    - field.field.node.ad_type.field_contact_email
+    - field.field.node.ad_type.field_contact_phone
+    - field.field.node.ad_type.field_orderid
+    - field.field.node.ad_type.field_select_adtype
+    - field.field.node.ad_type.field_square_banner_ad_image_
+    - field.field.node.ad_type.field_url_including_http
+    - node.type.ad_type
+  module:
+    - image
+    - text
+    - user
+id: node.ad_type.default
+targetEntityType: node
+bundle: ad_type
+mode: default
+content:
+  body:
+    type: text_default
+    weight: 2
+    region: content
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+  field_banner_ad_images:
+    weight: 1
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_square_banner_ad_image_:
+    type: image
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+hidden:
+  add_to_cart: true
+  cost: true
+  dimensions: true
+  display_price: true
+  field_ad_paid: true
+  field_approved: true
+  field_banner_ad_state: true
+  field_contact_email: true
+  field_contact_phone: true
+  field_orderid: true
+  field_select_adtype: true
+  field_url_including_http: true
+  links: true
+  model: true
+  price: true
+  weight: true

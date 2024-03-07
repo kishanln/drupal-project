@@ -1,0 +1,500 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap');
+body{font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;box-sizing:border-box;}
+html{overflow-x: hidden;}
+form#mailchimp-signup-subscribe-block-register-user-newsletter-form label{cursor:auto !important;}
+.node-event-form.step1 #edit-submit,.node-event-form.step2 #edit-first-submit,.step2 #edit-price-wrapper,#edit-model-wrapper {display:none;}         
+.node-form.step2 .messages.messages--status{display:none !important;}      
+:focus{outline:-webkit-focus-ring-color auto 0px;} 
+.region-secondary-menu .menu{margin:0 50px !important;}
+.step1 .field--name-field-banner-,.step1 .field--name-field-square-ad-price{display:none !important;}  
+.uc-product-add-to-cart-form .form-submit{display:none;}
+.page-node-type-ad-type .uc-product-add-to-cart-form .form-submit{display:block;}
+.node-own-ad-type .field--widget-uc-price{display:none;}
+.views_slideshow_cycle_main .views-field-nothing{position:absolute;bottom:6px;left:0;right:0;background:rgba(0, 0, 0, 0.6);padding:20px 30px;}
+.views_slideshow_cycle_main .views-row{position:relative;}
+.views_slideshow_cycle_main .slider-title{color:#fff;font-size:30px;font-weight:100;line-height:30px;font-family:'Open Sans', sans-serif;}
+.views_slideshow_cycle_main .slider-state,.views_slideshow_cycle_main .slider-date{color:#fff;font-size:20px;font-weight:100;font-family:'Open Sans', sans-serif;}
+#edit-actions .extra_review_button{background:#4d8631 none repeat scroll 0 0;border:0 none;border-radius:0;color:#ffffff;font-family:"Open Sans", sans-serif;font-size:16px;font-weight:500;margin:0;padding:5px 30px;text-decoration:none;width:auto;float:left;cursor:pointer;}
+/*****************06/08/2019**************/
+.page-node-type-performance-listing .display-price{display:none;}
+.page-node-type-performance-listing .field--name-model{display:none;}
+#node-performance-listing-form .field--name-model{display:none;}
+#content{border:1px solid #ccc;}
+.node-form .js-form-item label{font-family:'Open Sans', sans-serif;font-weight:400;font-size:14px;color:#717273;float:left;width:100%;cursor:auto;}
+.node-form .js-form-item input{width:100%;border-radius:5px;max-width:750px;font-size:14px;padding:5px 10px;}
+form#node-performance-listing-form.step1 .custom-event .imagebar{margin-bottom:5px;}
+#block-bartikcustomgary-content .node-type-list dt a{font-size:16px;color:#5e8746;border:0px;font-weight:700;}
+.page-node-type-ad-type .uc-product-add-to-cart-form #edit-actions{display:none;}
+.bottom_cntnt{float:left;width:100%;margin-top:20px;}
+#block-bartikcustomgary-content .node-type-list dd{font-family:'Open Sans', sans-serif;font-weight:400;font-size:15px;color:#717273;margin-bottom:10px;}
+#block-bartikcustomgary-content .node-type-list dt a:hover{border-bottom: 1px solid #5e8746;}
+.node-form .custom-event span,.custom-choir span.left{font-size:25px;color:#717273;display:block;font-weight:600;font-family:'Open Sans', sans-serif;}
+.node-form #edit-field-event-date-wrapper{margin-bottom:0px;}
+.node-form .field--widget-options-select select{width:50%;-webkit-appearance:none;appearance:none;position:relative;-moz-appearance:none;background-image:url("http://choircentral.com.au/themes/bartikcustom2/images/down-arrow.jpg") !important;background-position:96% center;background-repeat:no-repeat;background-size:17px auto;border-radius:5px;font-size:14px;color:#676767;padding:7px 10px;}
+.bef-exposed-form .form--inline .form-item input{display:none;}
+.node-form .custom-Sessions h3{color:#4d8631;float:left;font-weight:100;margin-bottom:0;width:100%;text-align:left;font-size:24px;margin-top:0px;font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;}
+.node-form fieldset.required{border:0px;}
+.node-form .field--type-uc-price{display:none !important;}
+.node-form fieldset.required span.fieldset-legend:after{display:none;}
+.node-form .required .fieldset-wrapper h4{color:#4d8631;font-size: 18px;}
+form#node-performance-listing-form.step1 fieldset#edit-field-event-date-0 #edit-field-event-date-0-value{margin-bottom:20px;}
+.node-form .field--widget-daterange-datelist select.form-select{-moz-appearance: none;background-image: url("http://choircentral.com.au/themes/bartikcustom2/images/down-arrow.jpg") !important;background-position:96% center;background-repeat:no-repeat;background-size:17px auto;border-radius:5px;font-size:14px;width:80px;margin-right:6px;color:#676767;-webkit-appearance:none;}
+form#node-performance-listing-form.step1 fieldset#edit-field-event-date-0 #edit-field-event-date-0-value .js-form-item:nth-child(3n) select.form-select {margin-right:65px !important;}
+form#node-performance-listing-form.step1 fieldset#edit-field-event-date-0 #edit-field-event-date-0-end-value select.form-select {-moz-appearance: none;background-image:url("http://choircentral.com.au/themes/bartikcustom2/images/down-arrow.jpg") !important;background-position:96% center;background-repeat:no-repeat;background-size:17px auto;border-radius:5px;font-size:14px;width:80px;margin-right:6px;color:#676767;-webkit-appearance:none;}
+form#node-performance-listing-form.step1 fieldset#edit-field-event-date-0 #edit-field-event-date-0-end-value .js-form-item:nth-child(3n) select.form-select {margin-right:65px !important;}
+form#node-performance-listing-form .custom-Optional h3 {font-size:24px;color:#5c853e;font-weight:300;margin-bottom:10px;text-align:left;margin-top:0px;width:100%;float:left;font-family:'Open Sans semi bold';}
+.node-form .form-textarea-wrapper textarea.js-text-full{border-radius:5px;max-width:750px;font-size:14px;padding:5px 10px;}
+.node-form .form-textarea-wrapper .counter {font-family:'Open Sans', sans-serif;color:#787878;font-size:14px;}
+.node-form .form-actions{margin-top:10px !important;}
+.node-form #edit-first-submit,.form-actions .form-submit{background:#4d8631 none repeat scroll 0 0;border:0 none;border-radius:0;color:#fff;font-family:"Open Sans", sans-serif;font-size:16px;font-weight:500;margin:0;padding:5px 14px !important;text-decoration:none;width:auto !important;}
+.view-id-after_submit_node_details .views-label{float:left;width:auto;line-height:1.2;color:#676767;padding-right:10px;text-transform:capitalize;}
+.view-id-after_submit_node_details .field-content {float:left;width:auto;}
+.views-field.views-field-buy-it-now{position:relative;}
+.node-form #edit-first-submit:focus,.form-actions .form-submit:focus{background:#4d8631;color:#fff;}
+.view-id-after_submit_node_details .views-field{float:left;width:100%;margin-bottom:10px;}
+div#block-bartikcustomgary-content .tech-link span{margin-left:10px;}
+div#block-bartikcustomgary-content .tech-link span a{color:#4d8631;font-weight:300;}
+div#block-bartikcustomgary-content .tech-link p{display:inline;}
+#sidebar-first .mailchimp-signup-subscribe-form .form-submit {float:left;background:#4d8631;margin:0px;padding:5px 10px;color:#fff;border-radius:0px;}
+.site-footer__bottom .views-element-container h2{width:auto;float:left;margin-bottom: 18px !important;background:#7f90a7;color:#fff;padding:3px 10px;position:absolute;left:0;top:0px;}
+form#node-performance-listing-form.step1 #edit-body-wrapper .filter-wrapper{display: none;}
+form#node-performance-listing-form.step1 #edit-price-wrapper{display:none;}
+form#node-performance-listing-form.step1 #edit-field-event-price-wrapper{display:none;}
+.node-form .custom-choir1 h1 {color:#676767;font-size:36px;margin-top:20px;margin-bottom:22px;text-align:center;line-height:1.2;font-weight:300;font-family:'Open Sans';}
+#node-performance-listing-form.step2 #edit-field-banner-ad-image-ajax-wrapper summary {font-family:'Open Sans', sans-serif;}
+#node-performance-listing-form.step2 #edit-field-banner-ad-image-ajax-wrapper .image-widget-data #edit-field-banner-ad-image-0-upload{border:0px;}
+.node-form input#edit-second-submit{background:#4d8631 none repeat scroll 0 0;border:0 none;border-radius: 0;color:#ffffff;font-family:"Open Sans", sans-serif;font-size:16px;font-weight:500;margin:15px 15px 15px 0px;padding:6px 30px;text-decoration:none;width:auto;float:left;}
+.path-node .image-widget-data .form-submit{background:#4d8631 none repeat scroll 0 0;border:0 none;border-radius: 0;color:#ffffff;font-family:"Open Sans", sans-serif;font-size:16px;font-weight:500;margin:15px 0px 0px 0px;padding:5px 30px;text-decoration:none;width: auto;float:left;}
+.node--unpublished{background:transparent;}
+#edit-field-banner-ad-images-wrapper .image-widget-data .form-submit,#edit-field-square-banner-ad-image-wrapper .image-widget-data .form-submit{float:none;}
+#node-performance-listing-form.step2 #edit-actions{width:auto;padding-top:0;margin-left:20px !important;margin-top:0;display:inline-block;}
+#node-performance-listing-form.step2 #edit-submit{background:#4d8631 none repeat scroll 0 0;border:0 none;border-radius:0px;color:#fff;font-size:16px;}
+.node__content .field.field--name-field-image{float:left;width:100%;}
+.form-actions .form-submit:hover,.form-actions .form-submit:active{background:#418635;color:#fff;}
+#node-performance-listing-form.step2 fieldset#edit-field-event-date-0 {border:0px;}
+#node-performance-listing-form.step2 fieldset#edit-field-event-date-0 span.fieldset-legend{background-image:url("http://choircentral.com.au/themes/bartikcustom2/images/small-calendar.png");background-repeat:no-repeat;width:50px;height:50px;font-size:0;display:block;background-size:35px;opacity:.8;}
+form#node-performance-listing-form.step2 fieldset#edit-field-event-date-0 .fieldset-wrapper h4 {color: #5c853e;font-size:18px;}
+form#node-performance-listing-form.step2 fieldset#edit-field-event-date-0 #edit-field-event-date-0-value {margin-bottom:20px;}
+form#node-performance-listing-form.step2 fieldset#edit-field-event-date-0 #edit-field-event-date-0-value select.form-select{-moz-appearance:none;background-image:url("http://choircentral.com.au/themes/bartikcustom2/images/down-arrow.jpg") !important;background-position:96% center;background-repeat:no-repeat;background-size:17px auto;border-radius:5px;font-size:14px;width:80px;margin-right:6px;color:#676767;-webkit-appearance:none;}
+form#node-performance-listing-form.step2 fieldset#edit-field-event-date-0 #edit-field-event-date-0-value .js-form-item:nth-child(3n) select.form-select {margin-right:65px !important;}
+form#node-performance-listing-form.step2 fieldset#edit-field-event-date-0 #edit-field-event-date-0-end-value select.form-select {-moz-appearance:none;background-image:url("http://choircentral.com.au/themes/bartikcustom2/images/down-arrow.jpg") !important;background-position:96% center;background-repeat:no-repeat;background-size:17px auto;border-radius:5px;font-size:14px;width:80px;margin-right:6px;color:#676767;-webkit-appearance:none;}
+form#node-performance-listing-form.step2 fieldset#edit-field-event-date-0 #edit-field-event-date-0-end-value .js-form-item:nth-child(3n) select.form-select {margin-right:65px !important;}
+form#node-performance-listing-form.step2 .js-form-item input {width:100px;max-width:750px;font-size:14px;padding:5px 10px;float:right;}
+.image-widget-data .image-data__crop-wrapper{float:left;width:80%;}
+form#node-performance-listing-form.step2 #edit-field-event-price-wrapper {display:none;}
+.node-form .form-file{opacity:0;}
+.node-form .js-form-type-managed-file label{position:absolute;background:#4d8631;padding:4px 10px;display:block;cursor:pointer;width:auto;font-size:14px !important;font-family:'Open Sans', sans-serif;color:#fff;}
+.node-form .js-form-type-managed-file label::after{content: 'No file selected';color:#333;width:120px;position:absolute;left:100%;top:7px;display:block;background:none;margin-left:5px;cursor:auto;}
+table#edit-items td .form-submit {float:left;background:#4d8631;margin:0px;padding:5px 5px;color:#fff;border-radius:0px;}
+.step2 #edit-field-banner-ad-image-wrapper details .details-description {font-style: italic;font-size: 14px !important;font-family: 'Open Sans', sans-serif;color: #3b3b3b;}
+.node-form #node-performance-listing-form .image-widget-data input {opacity: 0;}
+.node-form .draggable td .button {background: #5e8746;color: #fff;padding: 4px 8px;display: block;cursor: pointer;z-index: 99999;border-radius: 0px;font-size: 14px;}
+.ajax-progress.ajax-progress-throbber {background: rgb(0, 0, 0, 0.5);position: fixed;top: 0;width: 100%;left: 0;right: 0;height: 100%;z-index: 9999;text-align: center;}
+.ajax-progress-throbber .throbber {display: inline;padding: 1px 5px 2px;position: absolute;top: 45%;text-align: center;}
+.region-content .node--type-performance-listing .field__label {float: left;width: auto;font-size: 18px !important;line-height: 1.2;color: #676767;padding-right: 10px;font-weight: bold;}
+.region-content span .Save_for_later a {width: auto;margin-right: 20px;background: #4d8631 none repeat scroll 0 0;border: 0 none;color: #fff;font-size: 15px;padding: 8px 10px;text-align: center;margin-bottom: 40px;text-decoration: none;margin-top: 20px;}
+.region-content span .Pay_for_later a {    margin-left: 20px;width: auto;margin-right: 20px;background: #4d8631 none repeat scroll 0 0;border: 0 none;color: #fff;font-size: 15px;padding: 8px 10px;text-align: center;margin-bottom: 40px;text-decoration: none;margin-top: 20px;}
+form#uc-cart-view-form div#edit-actions {position: relative;text-align: right;float: right;margin: 20px 0px !important;padding-top: 0px;}
+.cart-textt {float: left;width: 73%;margin: 25px 0px 0px;}
+.uc-cart-view-form.memebership_sub .cart-textt {float: left;width: 87%;margin: 25px 0px 0px;}
+form#uc-cart-view-form .cart-textt p{font-size: 15px;line-height: 1.6;color: #989797;text-transform: capitalize;float: right;margin: 0px;}
+form#uc-cart-view-form .cart-textt p{font-size: 15px;line-height: 1.6;color: #989797;text-transform: capitalize;float: right;margin: 0px;}
+.review-button-row #edit-actions float: left;margin: 0px !important;padding-top: 0px;}
+.order-review-table .review-button-row td {padding-bottom: 10px;}
+.view-node-edit-block .views-field-edit-node-1 span a {float: left;width: auto;margin-right: 20px;background: #4d8631 none repeat scroll 0 0;border: 0 none;color: #fff;font-size: 15px;padding: 5px 10px;text-align: center;margin-bottom: 15px;text-decoration: none;margin-top: 20px;}  
+#block-step3 .field--name-body p{float: left;width: 100%;font-size: 14px;font-weight: 700;color: #3b3b3b;font-family: 'Open Sans', sans-serif;}
+#block-step3 .field--name-body .eventTtile {text-align: left;margin-bottom: 0px;font-size: 20px;}
+.node--type-performance-listing .page_title {margin: 0px;font-size: 26px;color: #5c853e;font-family: 'Open Sans', sans-serif;font-weight: 300;margin-bottom: 30px;}
+.region-content .node__content .field__item {font-size: 17px;color: #5c853e;font-family: 'Open Sans', sans-serif;font-weight: 300;float: left;width: auto;}
+.post-outer {width: 100%;display: block;box-shadow: 0px 0px 3px 0px rgba(50, 50, 50, 0.79);box-sizing: border-box;float: left;padding: 20px 15px 100px;}
+.post-img {float: left;margin-right: 18px;width: 25%;}
+.post-right {float: left;width: 47%;}
+.post-right a {border: 0 none;color: #4d8631;font-size: 36px;text-decoration: none;float: left;width: 100%;font-family: 'Open Sans', sans-serif;}
+.post-outer .datetime {color: #787878;font-size: 24px;font-weight: 700;font-family: 'Open Sans', sans-serif;}
+.post-right a:last-child {border: 0 none;color: #4d8631;font-size: 15px;text-decoration: none;float: left;width: 100%;}
+.post-outer .Awaiting.-btn {background: #4d8631 none repeat scroll 0 0;color: #ffffff;display: inline-block;font-size: 15px;padding: 5px 22px;font-family: 'Open Sans', sans-serif;}
+#block-bartikcustomgary-content .views-field-nothing h1 {color: #4d8631;font-size: 36px;text-align: left;display: block;margin: 20px 0px 0px;float: left;width: 100%;font-family: 'Open Sans', sans-serif;}
+#block-bartikcustomgary-content .views-field-nothing h2 {color: #4d8631;font-size: 30px;text-align: left;display: block;margin: 0px 0px 20px 0px;float: left;width: 100%;font-family: 'Open Sans', sans-serif;}
+.processing {float: left;box-shadow: 0px 0px 3px 0px rgba(50, 50, 50, 0.79);float: left;padding: 12px;width: 26%;margin-bottom: 8px;}
+.processing .imgewe img {width: 100%;}
+.right-div {float: left;width: 69%;padding-left: 20px;}
+.right-div h1 {color: #787878;font-size: 36px;margin: 0px;font-family: 'Open Sans', sans-serif;}
+.right-div p {font-size: 14px;margin: 0px;font-family: 'Open Sans', sans-serif;}
+#block-bartikcustomgary-content .views-field-title-2 p {float: left;font-size: 14px;margin: 10px 0px;width: 100%;font-family: 'Open Sans', sans-serif;}
+#block-bartikcustomgary-content .views-field-title-2 a {margin-bottom: 15px; overflow: hidden; display: inline-block;background: #4d8631 none repeat scroll 0 0;border: 0 none;border-radius: 0;color: #ffffff;font-family: "Open Sans", sans-serif;font-size: 16px;font-weight: 500;margin: 0;padding: 5px 15px;text-decoration: none;}
+#block-bartikcustomgary-content #uc-product-buy-it-now-form-163 #edit-actions {margin: 0px;padding: 0px;}
+.pay_img a {color: #000;font-size: 18px;font-weight: 700;margin-bottom: 7px;margin-top: 4px;border: 0px;display: block;margin: 0px;}
+#block-bartikcustomgary-content .views-field-title-2 #PayCheck {margin-right: 3px;}
+.outer-bottom-ctnt {float: left;width: 100%;}
+.block .view-what-s-new-view .view-content {float: left;width: 40%;margin-right: 24px;}
+.view-display-id-attachment_2 .views-field.views-field-nothing {float: left;width: auto;margin-left: 30px;}
+.view-display-id-attachment_2 .views-field-field-image {float: left;width: auto;}
+.view-footer .view-what-s-new-view .view-content .views-col {width: 49% !important;margin-right: 2%;}
+.view-footer .views-field-field-banner-ad-image {float: left;width: auto;margin-right: 30px;}
+.view-footer .views-field-field-url-including-http {float: left;width: 60%;margin-top: 10px;}
+.view-footer .views-row {float: left;width: 100%;}
+.view-footer .view-what-s-new-view .view-content .views-col:last-child {margin-right: 0%;}
+.attachment.attachment-after .view-content {float: left;width: 100%;}
+.view-what-s-new-view .attachment-after {float: left;width: 55%;}
+.view-what-s-new-view .view-footer {float: left;width: 100%;}
+.view-footer .view-what-s-new-view {float: left;width: 100%;}
+.view-footer .view-what-s-new-view .view-content {float: left;width: 100%;}
+.path-frontpage .main-content h2 {font-weight: 700;text-transform: uppercase;color: #4d8631;margin: 9px 0 0;margin-bottom: 0px;font-size: 14px;margin-bottom: 12px;}
+.attachment.attachment-after .views-field span a {font-size: 15px;color: #000;font-weight: bold;width: 100%;float: left;border: 0px;}
+/* .view-what-s-new-view .views-field span a { *//* font-size: 17px; *//* color: #000; *//* font-weight: bold; *//* width: 100%; *//* float: left; *//* border: 0px; *//* } */
+.attachment.attachment-after .view-content li {margin-bottom: 10px;}
+.right-teacher-sec .tech-title a {font-size: 16px;color: #000;font-weight: bold;border: 0px;}
+/* .right-teacher-sec .tech-link a { *//* font-size: 14px; *//* color: #000; *//* font-weight: bold; *//* border: 0px; *//* } */
+.right-teacher-sec a {font-size: 14px;color: #000;font-weight: 400;border: 0px;}
+.right-teacher-sec .tech-link a {font-weight: bold;}
+.owl-carousel .owl-item .views-field a {font-size: 12px;color: #000;font-weight: bold;}
+.site-footer__bottom .owl-carousel .owl-item .views-field a {font-size: 12px;color: #fff;font-weight: bold;}
+.right-teacher-sec .tech-title a:hover,
+.right-teacher-sec .tech-link a:hover {color: #4d8631;}
+div#page-wrapper .main-content .section {padding: 0 15px 15px;}
+#edit-field-event-date-0 .container-inline {margin: 2px 0px 15px;}
+
+/*********************login and add new create account popup**********************/
+.ui-dialog .ui-dialog-title {color: #5e8746;font-size: 26px;margin: 0 0;text-align: center;width: 100%;}
+.ui-dialog .ui-dialog-titlebar.ui-corner-all {background: transparent;padding: 10px 14px;}
+.ui-dialog.ui-corner-all {border-radius: 20px;}
+.ui-dialog .ui-dialog-content {padding: 20px 30px 0;}
+#user-login-form .required,.ui-dialog .required,.ui-dialog .form-text {border-radius: 4px;height: 42px;width: 100%;}
+#user-login-form .required:focus,.ui-dialog .required:focus,.ui-dialog .form-text:focus {outline: 2px solid #ccc;}
+.user-login-form .left,.user-register-form .left{color: #4d8631;font-size: 18px;font-weight: bold;text-decoration: none;}
+.user-login-form .path-frontpage label {color: #000;display: inline-block;cursor: pointer;font-weight: bold;padding: 3px 12px;border: solid 1px transparent;}
+.ui-dialog .custom-text .textOR,form#user-login-form .custom-text .textOR {display: block;text-align: center;font-size: 24px;color: gray;font-weight: 600;}
+.ui-dialog .login-popup-form .reg-button h4{font-size: 17px !important;}
+.ui-dialog .login-popup-form h4,form#user-login-form .login-popup-form h4 {color: #4d8631;font-size: 13px;font-weight: bold;text-decoration: none;margin: 15px 0px;}
+.ui-dialog .custom-text .text,form#user-login-form .custom-text .text {display: block;font-size: 14px;}
+.ui-dialog .button.js-form-submit{background: #4d8631 none repeat scroll 0 0;border: 1px solid #5e8746;border-radius: 6px;color: #fff;font-size: 18px;font-weight: bold;padding: 10px 10px 11px;width: 97.5%;display:block;}
+.ui-dialog.ui-corner-all .form-actions .button {width: 100% !important;height: 100% !important;visibility: visible;border: 1px solid #5e8746;border-radius: 6px;color: #fff;font-size: 18px;font-weight: bold;padding: 10px 10px 11px !important;margin-top: 10px;}
+.ui-dialog-buttonpane.ui-widget-content {display: none;}
+.ui-dialog.ui-corner-all .form-actions {display: block;width: 100%;height: 100%;margin-bottom:20px;}
+form#user-login-form .button.js-form-submit {background: #4d8631 none repeat scroll 0 0;border: 0 none;border-radius: 0;color: #ffffff;font-family: "Open Sans", sans-serif;font-size: 16px;font-weight: 500;margin: 0;padding: 5px 30px;text-decoration: none;}
+.ui-dialog .ui-dialog-buttonset {width: 100%;}
+.ui-dialog .ui-dialog-buttonpane {background-color: transparent;}
+.ui-dialog .js-form-item label {padding: 4px;cursor: unset;}
+.ui-dialog .ui-dialog-buttonpane {border: 0;padding: 7px 30px;}
+.ui-dialog .custom-text .text a,form#user-login-form .custom-text .text a {font-size: 15px;border: none;color: #4d8631;font-weight: bold;}
+.ui-dialog .field--name-field-subscriptions legend {display: none;}
+.ui-dialog .field--name-field-subscriptions fieldset {border: 0px !important;padding: 0px;margin-top: 0px;}
+.ui-dialog .field--name-field-subscriptions label {font-size: 20px;color: #5e8746;}
+.ui-dialog .ui-widget-overlay {z-index: 9999;}
+.ui-dialog .fieldgroup {height: auto;margin-bottom: 0px;}
+.node-own-ad-type .field--name-field-banner-ad-images.hidden {display: none !important}
+.node-own-ad-type .field--name-field-square-banner-ad-image-.hidden {display: none !important}
+.ui-dialog .form-radios .js-form-item {float: left;width: auto;margin: 5px 7px 0px 0px;}
+.ui-dialog .custom-text a,form#user-login-form .custom-text a {width: auto !important;display: inline-block;border: 0px;}
+/*********node/add/ad_type page*********/
+/************1st step******************/
+#node-ad-type-form .field--name-field-select-adtype h2 {font-size: 24px;color: #676767;font-weight: 600;font-family: 'Open Sans', sans-serif;float: left;width: 100%;}
+#node-ad-type-form .field--type-list-string h2 {font-size: 25px !important;color: #4d8631;margin: 20px 0px !important;}
+#node-ad-type-form .form-wrapper .form-text,#node-ad-type-form .form-wrapper .form-url,#node-ad-type-form .form-wrapper .form-select {font-size: 14px;margin: 0px;font-family: 'Open Sans', sans-serif;width: 50% !important;border-radius: 4px;height: 42px;width: 100%;border: 2px solid #ccc;}
+#node-ad-type-form #edit-first-submit {background: #4d8631 none repeat scroll 0 0;border: 0 none;border-radius: 0;color: #ffffff;font-family: "Open Sans", sans-serif;font-size: 16px;font-weight: 500;margin: 0;padding: 5px 40px;text-decoration: none;width: 130px;}
+#node-ad-type-form #edit-actions input {background: #4d8631 none repeat scroll 0 0;border: 0 none;border-radius: 0;color: #ffffff;font-family: "Open Sans", sans-serif;font-size: 16px;font-weight: 500;margin: 0;padding: 5px 40px;text-decoration: none;width: 130px;}
+#node-ad-type-form .appear-col {float: left;width: 100%;}
+#node-ad-type-form .banner-ad {float: left;width: 100%;margin-bottom: 20px;}
+#edit-actions {float: left;/* position: absolute; */bottom: 0;left: 0px;margin:15px 0px 15px !important;}
+.path-detail-view #edit-actions {float: left;position: absolute;bottom:-5px;left: 25%;margin: 0px !important;padding-top: 0px;}
+#node-ad-type-form .banner img {width: 70%;float: left;}
+#node-ad-type-form .square {float: left;width: 28%;text-align: right;}
+#node-ad-type-form .square-col p {color: #787878;font-size: 15px;margin: 0px;font-family: 'Open Sans', sans-serif;text-align: left;font-weight: bold;}
+#node-ad-type-form .square p {color: #787878;font-size: 16px;margin: 0px;font-family: 'Open Sans', sans-serif;margin-top: 100px;text-align: center;font-weight: bold;}
+#node-ad-type-form .appear-col p {color: #787878;font-size: 18px;margin: 0px;font-family: 'Open Sans', sans-serif;margin-top: 15%;text-align: center;font-weight: bold;width: 30%;float: left;}
+#node-ad-type-form .fieldset-legend.js-form-required.form-required {font-size: 20px !important;color: #4d8631;margin: 0px 0px !important;font-family: 'Open Sans', sans-serif;font-weight: normal;float: left;width: 100%;position: relative;height: auto;}
+fieldset#edit-field-select-adtype--wrapper .form-required:after {display: none;}
+fieldset#edit-field-select-adtype--wrapper span.fieldset-legend {background: none;}
+fieldset#edit-field-select-adtype--wrapper .form-required:after {position: absolute;left: -6px;top: 32px;}
+#node-ad-type-form .square-col {float: left;width: 100%;margin: 20px 0px;}
+#node-ad-type-form #edit-field-select-adtype--wrapper {margin-bottom: 0px;float: left;width: 100%;}
+#node-ad-type-form #edit-field-select-adtype-wrapper {margin-bottom: 0px;}
+#node-ad-type-form .banner-ad p {color: #787878;font-size: 14px;margin: 0px;font-family: 'Open Sans', sans-serif;font-weight: bold;}
+#node-ad-type-form .appear-col p {color: #787878;font-size: 16px;margin: 0px;font-family: 'Open Sans', sans-serif;font-weight: bold;margin-top: 13%;}
+#node-ad-type-form .appear-col img {float: left;width: auto;}
+#node-ad-type-form #edit-field-select-adtype .js-form-item.form-item {float: left;width: 20%;}
+#node-ad-type-form #edit-field-select-adtype input {float: left;width: 50%;margin-top: 30px;}
+.node-own-ad-type.node-form.step1  #edit-field-select-adtype label {width: 100%;float: left;color: #787878;font-size: 14px;margin: 0px;margin-top: -45px;font-family: 'Open Sans', sans-serif;font-weight: bold;text-align: left;cursor: auto;}
+/************2nd step******************/
+#node-ad-type-form .field--type-uc-price {display: none !important;}
+.image-widget.js-form-managed-file {float: left;width: 100%;margin-top: 35px;}
+.js-form-managed-file  .image-preview img {margin: 0px;}
+#node-ad-type-form #edit-field-banner-ad-images-0--description {color: #787878;font-size: 12px;margin: 0px;margin-top: 20px;}
+#node-ad-type-form #edit-field-banner-ad-images-0--label {font-size: 14px !important;font-family: 'Open Sans', sans-serif;color: #fff;}
+/*********3rd step**********************/
+.block-block-content h2, .block-block-content .eventTtile{margin-bottom: 20px;font-size: 20px;color:#676767;font-weight: 300;text-transform: capitalize;font-family: 'Open Sans', sans-serif;line-height: 1.2;margin-top: 0px;text-align: left;}
+#block-bartikcustomgary-conten .display-price.uc-product-212 {display: none;}
+#uc-product-add-to-cart-form-212 #edit-actions {float: left;width: 100%;margin: 0px;padding: 0px;}
+#uc-product-add-to-cart-form-212 {float: left;width: 100%;margin: 0px;padding: 0px;}
+#uc-product-add-to-cart-form-212 #edit-actions .form-submit {width: auto;background: #418635 none repeat scroll 0 0;border: 0 none;border-radius: 5px;color: #fff;font-size: 16px;padding: 5px 10px;text-align: center;margin-bottom: 40px;text-decoration: none;margin-top: 20px;}
+#uc-product-add-to-cart-form-212 .field.field--name-field-banner-ad-images {margin-top: 30px;}
+#main-wrapper #sidebar-second .section {padding: 0;border: 0px;}
+#sidebar-second .views-field-field-performance-listing-date {margin: 5px 0px;}
+/*Tour-listing*/
+.all_sessions .js-form-item legend {display: none;}
+.all_sessions #field-date-2, .all_sessions #field-date-3,.all_sessions #edit-group-date-4,
+.all_sessions #edit-group-date-5,.all_sessions #edit-group-date-6,.all_sessions #edit-group-date-7,
+.all_sessions #edit-group-date-8,.all_sessions #edit-group-date-9,.all_sessions #edit-group-date-10,
+.all_sessions #edit-group-date-11{display: none;border: 0px;padding: 0px;}
+.all_sessions #field-date-2 .fieldset-wrapper,.all_sessions #field-date-3 .fieldset-wrapper,.all_sessions #edit-group-date-4 .fieldset-wrapper,.all_sessions #edit-group-date-5 .fieldset-wrapper,.all_sessions #edit-group-date-6 .fieldset-wrapper,.all_sessions #edit-group-date-7 .fieldset-wrapper,.all_sessions #edit-group-date-8 .fieldset-wrapper,.all_sessions #edit-group-date-9 .fieldset-wrapper,.all_sessions #edit-group-date-10 .fieldset-wrapper,.all_sessions #edit-group-date-11 .fieldset-wrapper{padding: 20px;border: 1px solid #ccc;}
+.all_sessions #field-date-2 .js-form-item .fieldset-wrapper,.all_sessions #field-date-3 .js-form-item .fieldset-wrapper,.all_sessions #edit-group-date-4  .js-form-item .fieldset-wrapper,.all_sessions #edit-group-date-5 .js-form-item .fieldset-wrapper,.all_sessions #edit-group-date-6 .js-form-item .fieldset-wrapper,.all_sessions #edit-group-date-7 .js-form-item .fieldset-wrapper,.all_sessions #edit-group-date-8 .js-form-item .fieldset-wrapper,.all_sessions #edit-group-date-9 .js-form-item .fieldset-wrapper,.all_sessions #edit-group-date-10 .js-form-item .fieldset-wrapper,.all_sessions #edit-group-date-11 .js-form-item .fieldset-wrapper{padding: 0px;border: 0px;}
+.all_sessions {width: 100%;float: left;}
+.all_sessions .field--type-boolean {margin-top: 30px;}
+.all_sessions .js-form-type-checkbox {width: 35px;font-size: 0px;background-image: url('../images/newplus_PNG110.png') !important;background-size: 20px !important;background-repeat: no-repeat !important;background-position: center;background-color: #4d8631;border-radius: 0px;position: relative;border-radius: 100%;height: 35px;}
+.all_sessions .js-form-type-checkbox::after {content: "Add another date for your tour";position: absolute;width: 165px;top: -23px;font-size: 12px;left: 0;text-align: left;pointer-events : none;}
+.all_sessions .js-form-type-checkbox input {height: 100% !important;width: 100% !important;border: 0px !important;background: transparent;opacity: 0;cursor: pointer;}
+.all_sessions .js-form-type-checkbox  label {font-family: 'Open Sans', sans-serif;font-weight: 400;font-size: 14px;color: #717273;float: left;width: auto;cursor: auto;position: absolute;margin-left: 15px;margin-top: 9px;display: none;}
+.all_sessions #edit-field-add-date-2-wrapper{width: 4%;}
+.uc-cart-view-form.memebership_sub .qty {font-size: 0px;}
+.uc-cart-view-form.memebership_sub .js-form-type-uc-quantity {display: none;}  
+.uc-cart-view-form.memebership_sub .odd td:nth-child(4) {opacity: 0;}
+.user-logged-in.path-frontpage #ui-id-1{display: none;}
+.uc-cart-view-form.memebership_sub #edit-actions  #edit-update{display: none;}
+.node.node--type-tours .js-form-item.form-item {border: 0px;margin-bottom: 0px;padding: 0px;float:left;width:100%;} 
+.node.node--type-tours .field--name-field-url-including-http{margin-bottom:0px;}
+.node.node--type-tours .form-item legend{display:none;}
+.node.node--type-tours .field .field__item p {margin-bottom: 0px !important;}
+.messages__wrapper .messages.messages--drupal_set_message {color: #325e1c;border-color: #c9e1bd #c9e1bd #c9e1bd transparent;background-color: #f3faef;box-shadow: -8px 0 0 #77b259;padding: 10px 20px;line-height: 10px;}
+.region-footer-third .clearfix.menu li{position:relative;cursor: pointer;}
+#block-footer .menu-item--expanded {list-style-type: circle;list-style-image: none;} 
+.region-content .text-formatted  p {color: grey;font-size: 14px;}
+.region-footer-third .clearfix.menu li::after {list-style-type: circle;background-image: url("../images/icons8-more-than-32.png");width: 30%;height: 100%;position: absolute; left: -11px;right: 0;content: "";background-repeat: no-repeat;top: 0;background-size: 12px;background-position: left center;}
+.clearfix.menu .menu-item--expanded .menu-item::after {display: none;}
+.site-footer__bottom {border-top: 1px solid #ccc;float: left;width: 100%;}
+/********22 jan 2020************/
+/*******************************/
+.view-display-id-page_1 th.views-field.views-field-field-approved,.view-display-id-page_1 td.views-field-field-approved { display: none;}
+.view-display-id-page_1 table th,.view-display-id-page_1 table tr{color:#757575!important;background:none;text-transform:capitalize;font-size: 16px}
+.view-display-id-page_1 td.views-field-title,.view-display-id-page_1 td.views-field-type{background:#d0e0c6;text-transform:capitalize;}
+.view-display-id-page_1 table th,.view-display-id-page_1 td{border: 5px solid #fff;padding: 1px 9px;font-size: 14px;}
+.view-display-id-page_1 td.views-field.views-field-edit-node a {background: #4d8631 none repeat scroll 0 0;border: 0 none;border-radius: 0;color: #fff;font-family: "Open Sans", sans-serif;font-size: 16px;font-weight: 500;margin: 0;padding: 3px 30px !important;text-decoration: none;width: auto !important;border-radius: 5px;display: inline-block}
+.view-display-id-page_1 .views-field-buy-it-now #edit-actions{position:static;}
+.view-display-id-page_1 .form-submit{border-radius:5px;}
+.view-display-id-page_1 div#edit-actions--5 {margin: 0;padding-top: 0;}
+form#views-exposed-form-user-content-page-1 select#edit-type-1 {box-sizing: border-box;max-width: 100%;margin: 2px 0;color: #3b3b3b;border: 1px solid #ccc;height: 28px;}
+.layout-one-sidebar div#block-bartikcustomgary-content form#views-exposed-form-user-content-page-1 .form--inline.clearfix {display: flex;}
+.layout-one-sidebar div#block-bartikcustomgary-content form#views-exposed-form-user-content-page-1 .form--inline.clearfix div#edit-actions {padding-top: 18px;}
+.layout-one-sidebar div#block-bartikcustomgary-content .view-header h2 {font-weight: 600;font-size: 18px;color: #4d8631;}
+.path-user div#block-bartikcustomgary-content .field--type-string,.path-user .field.field--name-field-location.field--type-entity-reference.field--label-above {display: flex;font-size:14px;}
+.path-user div#block-bartikcustomgary-content .field--type-string .field__item,.path-user .field.field--name-field-location.field--type-entity-reference.field--label-above .field__item {margin-left: 15px!important;}
+.path-user .field.field--name-field-location.field--type-entity-reference.field--label-above .field__label {font-size: 14px!important;font-weight: 600!important;}
+.path-user.field.field--name-field-location.field--type-entity-reference.field--label-above{
+margin-bottom: 0!important;}
+.path-user div#edit-actions--3 { position: static!important; margin: 0!important;}
+/********23rd jan 2020************/
+/*******************************/
+form#views-exposed-form-user-content-page-1 input#edit-title {height: 28px;}
+input#edit-submit-user-content {margin: 2px 0;}
+.path-user main#content .region.region-content div#block-bartikcustomgary-local-tasks ul.tabs.primary{display:block!important;padding: 5px 0px 0;}
+.layout-one-sidebar main#content .region.region-content div#block-bartikcustomgary-local-tasks ul.tabs.primary li.is-active a {background: #4d8631!important;text-shadow: none!important;color: #fff!important;border-top: 1px solid #4d8631!important;border-right: 1px solid #4d8631!important;border-bottom: none!important;}
+.layout-one-sidebar main#content .region.region-content div#block-bartikcustomgary-local-tasks ul.tabs.primary li a {background-color: #fff;line-height: 2.2;}
+/********24th jan 2020************/
+/*******************************/
+.view-display-id-page_1 tr td.views-field-title{min-width:300px!important;}
+.view-display-id-page_1 tr td.views-field-type{min-width:150px!important;}
+/********27th jan 2020************/
+/*******************************/
+.view-id-user_content .views-view-table .views-field .form-actions { padding-top: 0; margin-bottom: 0; margin-top: 0;}
+.user-custom-text{display:none;}
+.passwordEdit #edit-mail--description{display:none;}
+/********28th jan 2020************/
+/*******************************/
+.passwordEdit  .user-custom-text {display: none;}
+#user-form .form-item-mail{max-width: 100%;}
+.passwordEdit #user-form .form-item-mail{max-width: 33em;}
+#edit-account .js-form-item input {border-radius: 30px!important;border: 2px solid #999;}
+.passwordEdit   #edit-account .js-form-item input {border-radius: 2px!important;border: 1px solid #999 !important;}
+.passwordEdit  #user-form .form-item-mail input#edit-mail{max-width: 100%!important;} 
+#user-form .form-item-mail input#edit-mail {max-width: 35em;}
+#user-form .form-item-mail div#edit-mail--description {color: #666;}
+#user-form .form-item-mail div#edit-mail--description h3 {font-size: 16px;margin-top: 10px;margin-bottom: 15px;}
+#user-form .form-item-mail div#edit-mail--description p {font-size: 14px;}
+/********31st jan 2020************/
+/*******************************/
+.path-videos-test div#block-bartikcustomgary-content .views-row {float: left!important;padding: 1%;width: 22.3%!important;}
+.path-videos-test .views_slideshow_cycle_slide {width: 100%!important;}
+div#block-bartikcustomgary-views-block-videos-block-block-1 .slick__slide {padding: 10px 20px;}
+div#block-bartikcustomgary-views-block-videos-block-block-1 .slick-arrow::before{color:#fff!important;}
+div#block-bartikcustomgary-views-block-videos-block-block-1 .slick-prev {left: -20px;}
+div#block-bartikcustomgary-views-block-videos-block-block-1 .slick-next {right: -22px;}
+div#block-bartikcustomgary-views-block-videos-block-block-1 .views-field-title {text-align: center;}
+div#block-bartikcustomgary-views-block-videos-block-block-1  .views-field-title a {text-align: center;font-size: 13px!important;}
+/********6th fab 2020************/
+/*******************************/
+.site-footer__top nav#block-footersecond .content .menu .menu-item a {padding: 0px 0 6px 0!important;margin-left: 25px;display: inline-block;border: none;color: #555;color: #616161;font-size: 14px;/*font-weight: bold;*/padding-left:24px;}
+.site-footer__top nav#block-footersecond .content .menu {display: inline-block;margin-top: 8px;}
+.site-footer__top nav#block-footersecond .content{position:static;}
+.site-footer__top nav#block-footersecond .content .menu .menu-item a:hover {color: #4d8631;}
+.region.region-footer-fifth {margin-top: 0;text-align: center;color: #555;}
+.region.region-footer-fifth p{color: #555;}
+div#block-copyright .content{padding:0;}
+div#block-bartikcustomgary-content .welcome_wraper ul li {list-style: none;margin-bottom: 5px;position: relative;color: rgb(113, 114, 115);}
+a.advertise_btn {background: #4d8631;margin-top: 4px;color: white;text-transform: uppercase;letter-spacing: 1px;font-weight: 600;border: navajowhite;float: right;position: absolute;left: 46%;bottom: 53px;padding: 5px 10px;}
+a.advertise_btn:hover{color:#fff;}
+/********7th fab 2020************/
+/*******************************/
+/*.user-logged-in form#uc-cart-view-form table#edit-items  tr.odd td.priority-low {border-left: 4px solid #fff!important;}*/
+.user-logged-in form#uc-cart-view-form table#edit-items th,
+.user-logged-in .block-system-main-block form#uc-cart-checkout-form details#cart-pane .details-wrapper table.cart-review th {vertical-align: bottom;
+    padding-bottom: 0;background: #fff;color: #6c6d73;font-size: 15px;font-weight: 500;}
+.user-logged-in form#uc-cart-view-form table#edit-items,
+.user-logged-in .block-system-main-block form#uc-cart-checkout-form details#cart-pane .details-wrapper table.cart-review  {font-size: 15px;font-weight: 500;margin-bottom: 5px;} 
+.user-logged-in form#uc-cart-view-form table#edit-items th.remove {background: #fff;color: #fff;}
+.user-logged-in form#uc-cart-view-form table#edit-items tr,
+.user-logged-in .block-system-main-block form#uc-cart-checkout-form details#cart-pane .details-wrapper table.cart-review tr{background: #fff;}
+.user-logged-in form#uc-cart-view-form table#edit-items tr,
+.user-logged-in .block-system-main-block form#uc-cart-checkout-form details#cart-pane .details-wrapper table.cart-review  tr {background: #d4e1cc;border-bottom: 5px solid #fff;padding: 5px;}
+.user-logged-in form#uc-cart-view-form table#edit-items tr td,
+.user-logged-in .block-system-main-block form#uc-cart-checkout-form details#cart-pane .details-wrapper table.cart-review td {border: none;color: #6c6d73;font-size: 15px;font-weight: 500;vertical-align: middle;}
+.user-logged-in form#uc-cart-view-form table#edit-items tr td a{pointer-events: none;border: none;color: #6c6d73;font-size: 15px;font-weight: 500;}
+.user-logged-in form#uc-cart-view-form table#edit-items tr td.price {border-left: 4px solid #fff!important;}
+.user-logged-in form#uc-cart-view-form  table#edit-items td .form-submit {padding: 5px 12px;border-radius: 5px;border: none;}
+.user-logged-in form#uc-cart-view-form  table#edit-items td input.form-uc-quantity {background: none;border: none;padding: 0;margin: 0;text-align: center;}
+.user-logged-in form#uc-cart-view-form  table#edit-items  td.subtotal-title {padding: 6px 5px;}
+.user-logged-in form#uc-cart-view-form .cart-textt {float: none;width: 100%;margin: 0;text-align: left;}
+.user-logged-in form#uc-cart-view-form .cart-textt p{float:none;color: #6c6d73;}
+.user-logged-in form#uc-cart-view-form div#edit-actions{position: relative;float: none;display: flex;justify-content: space-between;margin-top: 10px!important;}
+.user-logged-in form#uc-cart-view-form div#edit-actions input#edit-update,
+.user-logged-in form#uc-cart-view-form div#edit-actions input#edit-checkout--2 {padding: 6px 10px!important;font-size:14px;border-radius: 5px;}
+.user-logged-in form#uc-cart-view-form table#edit-items tr td span.uc-price,
+.user-logged-in .block-system-main-block form#uc-cart-checkout-form details#cart-pane .details-wrapper table.cart-review td span.uc-price {width: 110px;display: block;text-align: center;}
+.user-logged-in form#uc-cart-view-form table#edit-items tr th.price,
+.user-logged-in .block-system-main-block form#uc-cart-checkout-form details#cart-pane .details-wrapper table.cart-review tr th.price{text-align: center;}
+.user-logged-in .block-system-main-block form#uc-cart-checkout-form details#cart-pane {margin: 0;border: none;}
+.user-logged-in .block-system-main-block form#uc-cart-checkout-form details#cart-pane .details-wrapper{padding:0;overflow: auto;}
+.user-logged-in .block-system-main-block form#uc-cart-checkout-form details#cart-pane summary,
+.path-cart main#content .region-content .block-system-main-block table.order-review-table tr.pane-title-row td {    font-weight: 500;text-shadow: none;font-size: 18px;color: #6d6d71;background: none;padding: 0;}
+.user-logged-in .block-system-main-block form#uc-cart-checkout-form details#cart-pane .details-wrapper table.cart-review tr td{border-right:4px solid #fff!important;border-left:4px solid #fff!important;}
+.user-logged-in .block-system-main-block form#uc-cart-checkout-form details#customer-pane {margin-top: 50px!important;border: none;}
+.user-logged-in .block-system-main-block form#uc-cart-checkout-form details#customer-pane  summary {background: #d4e1cc;text-shadow: none;color: #6c6d73;font-size: 15px;font-weight: 500;}
+.user-logged-in .block-system-main-block form#uc-cart-checkout-form details#customer-pane  .details-wrapper {padding: 0;color: #6c6d73;font-size: 15px;}
+.user-logged-in .block-system-main-block form#uc-cart-checkout-form details#customer-pane  .details-wrapper .details-description {color: #6c6d73;font-size: 15px;margin-top: 5px;}
+.user-logged-in .block-system-main-block form#uc-cart-checkout-form details#customer-pane  .details-wrapper  a {color: #4d8631;border: none;}
+.user-logged-in .block-system-main-block form#uc-cart-checkout-form div#edit-actions input#edit-continue {border-radius: 5px;font-size: 15px;padding: 5px 10px!important;}
+.user-logged-in .block-system-main-block form#uc-cart-checkout-form details#cart-pane .details-wrapper table.cart-review tr td.qty {text-align: left!important;}
+.path-cart main#content .region-content .block-system-main-block table.order-review-table {width: 100%;background: none;border: none;}
+.path-cart main#content .region-content .block-system-main-block table.order-review-table tr.pane-title-row{background:none;}
+.path-cart main#content .region-content .block-system-main-block table.order-review-table tr{background:none;}
+.path-cart main#content .region-content .block-system-main-block .content p{padding-left: 5px;color: #6c6d73;font-size: 15px;font-weight: 500;margin-bottom: 0;}
+.path-cart main#content .region-content .block-system-main-block table.order-review-table tr th{background: #fff;color: #6c6d73;font-size: 15px;font-weight: 500;}
+.path-cart main#content .region-content .block-system-main-block table.order-review-table table.cart-review tbody tr {background: #d4e1cc!important;border-bottom: 5px solid #fff;padding: 5px;color: #6c6d73;font-size: 15px;font-weight: 500;border-bottom: 4px solid #fff;}
+.path-cart main#content .region-content .block-system-main-block table.order-review-table table.cart-review tbody tr td{padding:5px;border-right: 4px solid #fff!important;border-left: 4px solid #fff;}
+.path-cart main#content .region-content .block-system-main-block table.order-review-table td.title-col{	font-weight: bold;padding-left: 5px;text-align: left;white-space: nowrap;color: #6c6d73;font-size: 15px;font-weight: 500;width: 10%;background: #d4e1cc;}
+.path-cart main#content .region-content .block-system-main-block table.order-review-table td.data-col{background: #d4e1cc;padding: 5px;color: #6c6d73;font-size: 15px;font-weight: 500;}
+.path-cart main#content .region-content .block-system-main-block table.order-review-table tbody td {border-right: 4px solid #fff;border-left: 4px solid #fff;padding: 5px 5px 5px 0;}
+.path-cart main#content .region-content .block-system-main-block table.order-review-table tr{  border-bottom: 4px solid #fff;}
+.path-cart main#content .region-content .block-system-main-block table.order-review-table table.cart-review td.price span.uc-price {width: 110px;display: block;text-align: center;}
+.path-cart main#content .region-content .block-system-main-block table.order-review-table  tr.pane-title-row td {padding: 20px 0 5px 0!important;font-weight: 600;font-size: 16px;}
+.path-cart main#content .region-content .block-system-main-block table.order-review-table tr.review-button-row form#uc-payment-paypal-wps-offsite-form div#edit-actions {float: none;}
+.path-cart main#content .region-content .block-system-main-block table.order-review-table tr.review-button-row td{text-align:left; padding-top: 20px; }
+.path-cart main#content .region-content .block-system-main-block table.order-review-table tr.review-button-row input#edit-back {border-radius: 5px;margin-right: 15px;}
+.path-cart main#content .region-content .block-system-main-block table.order-review-table tr.review-button-row input#edit-submit{border-radius: 5px;}
+/*tr.odd td:first-child {background: #fff;padding:0;}*/
+.path-cart main#content .region-content .block-system-main-block table.order-review-table th.price {text-align: center;}
+td.subtotal-title { font-weight: 600!important;}
+.user-logged-in .block-system-main-block form#uc-cart-checkout-form details#cart-pane summary,
+.user-logged-in .block-system-main-block form#uc-cart-checkout-form details#customer-pane summary{pointer-events: none;}
+/********10th fab 2020************/
+/*******************************/
+td.td-remove {background: #fff;padding: 0;border-right: 4px solid #fff!important;width: 8%;}
+div#block-reviewcart .field.field--name-body h1 {font-weight: 600;font-size: 22px;color: #6c6d70;}
+/********17th fab 2020************/
+/*******************************/
+
+form#contact-message-feedback-form label {color: #4a4848;font-size: 16px!important;font-weight: 500;}
+form#contact-message-feedback-form .js-form-item{color: #666666;font-size: 13px;} 
+form#contact-message-feedback-form label.option {color: #666666!important;}
+.view.view-user-content.view-id-user_content.view-display-id-page_1 {overflow: auto;}
+
+/********25th june 2020************/
+/*******************************/
+.views_slideshow_cycle_main .views-row a { border: 0;}
+
+@media screen and (max-width: 37.5em){
+.tabs ul.primary li {display: inline-block!important;}
+.tabs ul.primary li a{display: inline-block!important;}
+.tabs ul.primary li a {padding: 0 10px!important;border-top-left-radius: 5px;border-top-right-radius: 5px;}
+}
+
+@media only screen and (max-width:768px){
+.site-footer__top nav#block-footersecond .content .menu .menu-item a {
+margin-left: 8px;
+}
+
+.view-id-detail_view #edit-actions{position: absolute!important;}
+span.tickbox {display: inline-flex;align-items: center;}
+
+/**24th june 2020**/
+
+div#block-bartikcustomgary-content article .node__content.clearfix .field__item p {margin-bottom: 0!important;}
+.region-content .text-formatted p { margin-bottom: 0;}
+
+@media only screen and (max-width:493px){
+.view.view-node-edit-block.view-id-node_edit_block .views-field.views-field-edit-node-1 span.field-content a {margin-bottom: 0; display: block;width: 193px;}
+.region-content span .Pay_for_later a,.region-content span .Save_for_later a{margin-top: 15px!important;} 
+.ui-dialog .reg-button h4{font-size: 17px;}
+.offering{margin: 0px;}
+}
+
+
+.views-field.views-field-buy-it-now {display: inline-block;}
+#block-bartikcustomgary-content .views-field-title-2 a{ margin-bottom: 15px; overflow: hidden; display: inline-block;}
+#block-bartikcustomgary-content .views-field-title-2 a{overflow: hidden; display: inline-block;}
+.view-display-id-page_1 td.views-field.views-field-edit-node a{word-break: normal;}
+.user-logged-in .block-system-main-block form#uc-cart-checkout-form details#customer-pane .details-wrapper .details-description{text-align: justify;}
+table.cart-review {min-width: 420px;}
+table.cart-review th.qty {width: 30%!important;}
+th.qty {width: 30%;}
+th.qty { width: 30%;}
+
+#block-bartikcustomgary-content .views-field-title-2 a {width: 240px;}
+
+/******24th july 2020******/
+/*************************/
+.custom-text.login-popup-form a.use-ajax.login-popup-form.reg-button h4 {margin-bottom: 0!important;}
+.custom-text.login-popup-form span.text h4 {margin-top: 0!important;}
+div#drupal-modal .form-actions.js-form-wrapper.form-wrapper input.button.js-form-submit.form-submit{display: block!important;}
+
+.path-event-detail-view .view-detail-view a.advertising-class, .path-event-detail-view .view-detail-view div#edit-actions input, .path-event-detail-view .view-detail-view div#edit-actions,
+.path-teacher-detail-vieww .view-detail-view a.advertising-class, .path-teacher-detail-view .view-detail-view div#edit-actions input, .path-teacher-detail-view .view-detail-view div#edit-actions,
+.path-detail-view .view-detail-view a.advertising-class,.path-detail-view .view-detail-view div#edit-actions input,.path-detail-view .view-detail-view div#edit-actions{
+max-width: 240px!important;width: 100%!important;}
+
+/******4th dec. 2020******/
+/*************************/
+#edit-items-0-remove {
+    padding: 5px 12px !important;
+    border-radius: 5px !important;
+    border: none;
+    font-size: 15px;
+    font-weight: 500;
+    vertical-align: middle;
+}
+#edit-items tr {
+    background: #d4e1cc;
+    border-bottom: 5px solid #fff;
+    padding: 5px;
+}
+#edit-items th {
+    background: #fff;
+    color: #686e64;
+    font-size: 15px;
+    font-weight: 500;
+}
+#edit-items td, #edit-items th {
+    border: 0;
+}
+#edit-items td, #edit-items th {
+    border: none;
+    color: #6c6d73;
+    font-size: 15px;
+    font-weight: 500;
+    vertical-align: middle;
+}
+#edit-items .remove {
+    font-size: 0;
+}
+/*new css for view date 12-dec-2023*/
+.view-what-s-new-view .views_slideshow_cycle_teaser_section {
+    min-height: 270px;
+}

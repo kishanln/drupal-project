@@ -1,0 +1,111 @@
+uuid: 507bc633-435f-4ff2-95e9-b660219dcb86
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.advertising_banner_ad.body
+    - field.field.node.advertising_banner_ad.field_approved
+    - field.field.node.advertising_banner_ad.field_banner_ad_email
+    - field.field.node.advertising_banner_ad.field_banner_ad_image
+    - field.field.node.advertising_banner_ad.field_banner_ad_phone
+    - field.field.node.advertising_banner_ad.field_banner_ad_state
+    - field.field.node.advertising_banner_ad.field_url_including
+    - field.field.node.advertising_banner_ad.uc_product_image
+    - image.style.thumbnail
+    - node.type.advertising_banner_ad
+  module:
+    - image
+    - link
+    - path
+id: node.advertising_banner_ad.default
+targetEntityType: node
+bundle: advertising_banner_ad
+mode: default
+content:
+  field_banner_ad_email:
+    weight: 3
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: email_default
+    region: content
+  field_banner_ad_image:
+    weight: 5
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_banner_ad_phone:
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_banner_ad_state:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_url_including:
+    weight: 4
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  model:
+    type: string_textfield
+    weight: 6
+    settings:
+      size: 32
+      placeholder: ''
+    region: content
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 7
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  price:
+    type: uc_price
+    weight: 8
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 9
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  body: true
+  cost: true
+  created: true
+  default_qty: true
+  dimensions: true
+  field_approved: true
+  pkg_qty: true
+  promote: true
+  shippable: true
+  sticky: true
+  uc_product_image: true
+  uid: true
+  weight: true

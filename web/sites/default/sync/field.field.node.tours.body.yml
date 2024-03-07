@@ -1,0 +1,23 @@
+uuid: 0479df69-a4c3-4227-b56b-892fe397bd07
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.tours
+  module:
+    - text
+id: node.tours.body
+field_name: body
+entity_type: node
+bundle: tours
+label: 'Tour Description'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

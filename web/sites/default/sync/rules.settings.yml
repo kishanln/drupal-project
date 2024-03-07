@@ -1,0 +1,12 @@
+log: true
+debug_screen: true
+log_level_system: warning
+log_level_screen: warning
+_core:
+  default_config_hash: alE0QceCqKyU2plA8_LELZeCByMYgh2CnTfuBeINp4g
+system_log:
+  log_level: error
+debug_log:
+  enabled: false
+  system_debug: false
+  log_level: null

@@ -1,0 +1,23 @@
+uuid: 23a752ab-81fe-4b7d-80f4-a3f4a18f5b84
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.teacher
+  module:
+    - text
+id: node.teacher.body
+field_name: body
+entity_type: node
+bundle: teacher
+label: 'Teacher Description'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

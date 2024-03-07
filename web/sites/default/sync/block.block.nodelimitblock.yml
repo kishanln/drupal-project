@@ -1,0 +1,39 @@
+uuid: 91600e3b-fc1a-4cd2-9581-6eec44ef8649
+langcode: en
+status: false
+dependencies:
+  content:
+    - 'block_content:basic:06038872-0410-4c74-8354-4a0108ecc487'
+  module:
+    - block_content
+    - system
+    - user
+  theme:
+    - bartikcustomgary
+id: nodelimitblock
+theme: bartikcustomgary
+region: content
+weight: 0
+provider: null
+plugin: 'block_content:06038872-0410-4c74-8354-4a0108ecc487'
+settings:
+  id: 'block_content:06038872-0410-4c74-8354-4a0108ecc487'
+  label: 'node limit block'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: /node/add
+    negate: false
+    context_mapping: {  }
+  user_role:
+    id: user_role
+    roles:
+      paid_member: paid_member
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'

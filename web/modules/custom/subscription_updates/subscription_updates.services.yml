@@ -1,0 +1,15 @@
+services:
+  subscription_updates.order_complete:
+    class: Drupal\subscription_updates\EventSubscriber\OrderCompleteSubscriber
+    tags:
+      - { name: event_subscriber }
+  
+  subscription_updates.order_manage:
+    class: Drupal\subscription_updates\RecurringOrderManage
+    arguments: ['@entity_type.manager', '@datetime.time']
+
+  paramconverter.latest_revision:
+    class: Drupal\Core\ParamConverter\EntityConverter
+    tags:
+      - { name: paramconverter }
+    arguments: [ '@entity_type.manager', '@entity.repository' ]

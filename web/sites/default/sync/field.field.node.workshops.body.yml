@@ -1,0 +1,23 @@
+uuid: 80d51c6e-694d-485a-a957-456ea765d7a8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.workshops
+  module:
+    - text
+id: node.workshops.body
+field_name: body
+entity_type: node
+bundle: workshops
+label: 'Workshop Description'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

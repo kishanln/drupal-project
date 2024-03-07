@@ -1,0 +1,15 @@
+uuid: 9b74e805-7a4b-40d0-93c9-b1076ac5b2de
+langcode: en
+status: true
+dependencies: {  }
+name: teacher
+label: 'Teacher thumbnail'
+effects:
+  dce3edc1-4dc8-4724-98df-1796d0e69913:
+    uuid: dce3edc1-4dc8-4724-98df-1796d0e69913
+    id: image_scale
+    weight: 1
+    data:
+      width: 260
+      height: 320
+      upscale: false

@@ -1,0 +1,15 @@
+uuid: bbe83174-13f4-45f2-bb01-e40c6234ae6e
+name: 'Choir Central'
+mail: test@choircentral.com.au
+slogan: 'For Australian Choirs'
+page:
+  403: ''
+  404: ''
+  front: /node/55
+admin_compact_mode: false
+weight_select_max: 100
+langcode: en
+default_langcode: en
+_core:
+  default_config_hash: yXadRE77Va-G6dxhd2kPYapAvbnSvTF6hO4oXiOEynI
+mail_notification: ''

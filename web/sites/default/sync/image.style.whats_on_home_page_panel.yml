@@ -1,0 +1,25 @@
+uuid: b25d467b-9a96-4982-b2eb-90705906238b
+langcode: en
+status: true
+dependencies:
+  config:
+    - crop.type.full_listing_image
+  module:
+    - crop
+name: whats_on_home_page_panel
+label: 'Whats On Home Page Panel'
+effects:
+  74e2e8e7-4a39-4c45-af40-7f8133c9a0f3:
+    uuid: 74e2e8e7-4a39-4c45-af40-7f8133c9a0f3
+    id: crop_crop
+    weight: 1
+    data:
+      crop_type: full_listing_image
+  55743348-845b-4986-9334-f52e285c4389:
+    uuid: 55743348-845b-4986-9334-f52e285c4389
+    id: image_scale_and_crop
+    weight: 2
+    data:
+      width: 285
+      height: 157
+      anchor: center-center

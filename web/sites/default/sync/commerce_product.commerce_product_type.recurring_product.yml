@@ -1,0 +1,12 @@
+uuid: ab9a45f4-7e27-4eb3-829f-3e8a33c38e46
+langcode: en
+status: true
+dependencies: {  }
+id: recurring_product
+label: 'Recurring Product'
+description: ''
+variationType: recurring_product
+multipleVariations: true
+injectVariationFields: true
+traits: {  }
+locked: false

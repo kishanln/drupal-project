@@ -1,0 +1,30 @@
+uuid: 42659c21-b7d0-435b-bd2b-4768786acfd2
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.hero_banner
+  module:
+    - system
+    - views
+  theme:
+    - bartikcustomgary
+id: views_block__hero_banner_block_1_2
+theme: bartikcustomgary
+region: sidebar_first
+weight: -28
+provider: null
+plugin: 'views_block:hero_banner-block_1'
+settings:
+  id: 'views_block:hero_banner-block_1'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

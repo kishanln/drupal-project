@@ -1,0 +1,8 @@
+uuid: 0c0f6409-979a-42da-b18a-d171291262bd
+langcode: en
+status: true
+dependencies: {  }
+name: 'Tours categories'
+vid: tours_categories
+description: ''
+weight: 0

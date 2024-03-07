@@ -1,0 +1,23 @@
+uuid: 315b1b41-8f8c-4b36-a297-954c72b919b3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_select_adtype
+    - node.type.ad_type
+  module:
+    - options
+id: node.ad_type.field_select_adtype
+field_name: field_select_adtype
+entity_type: node
+bundle: ad_type
+label: 'Select AD Type'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: 'Banner AD'
+default_value_callback: ''
+settings: {  }
+field_type: list_string

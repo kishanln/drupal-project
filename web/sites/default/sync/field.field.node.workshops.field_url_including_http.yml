@@ -1,0 +1,23 @@
+uuid: 379f8cf0-36e5-4adf-92b5-02e88e73f99d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_url_including_http
+    - node.type.workshops
+  module:
+    - link
+id: node.workshops.field_url_including_http
+field_name: field_url_including_http
+entity_type: node
+bundle: workshops
+label: 'Website URL (optional)'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 16
+  title: 0
+field_type: link

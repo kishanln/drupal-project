@@ -1,0 +1,25 @@
+uuid: 66c2759c-8475-43c4-9ee5-ad6fa9f046b7
+langcode: en
+status: true
+dependencies:
+  config:
+    - crop.type.full_listing_image
+  module:
+    - crop
+name: tours_home_page_panel
+label: 'Tours Home Page Panel'
+effects:
+  ae7b63b4-76d6-47e1-b317-98ed84146c33:
+    uuid: ae7b63b4-76d6-47e1-b317-98ed84146c33
+    id: crop_crop
+    weight: 1
+    data:
+      crop_type: full_listing_image
+  0f81405f-b333-4773-acb1-6e52fd8ee088:
+    uuid: 0f81405f-b333-4773-acb1-6e52fd8ee088
+    id: image_scale_and_crop
+    weight: 2
+    data:
+      width: 230
+      height: 127
+      anchor: center-center

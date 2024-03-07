@@ -1,0 +1,21 @@
+uuid: fbe8168e-d3f5-495f-97fe-c3fef5cbabbd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_qualifications
+    - node.type.teacher
+  module:
+    - text
+id: node.teacher.field_qualifications
+field_name: field_qualifications
+entity_type: node
+bundle: teacher
+label: Qualifications
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text

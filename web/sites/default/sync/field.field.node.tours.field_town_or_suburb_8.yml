@@ -1,0 +1,19 @@
+uuid: 8959e677-3d00-440b-ae9a-f85f10f4d788
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_town_or_suburb_8
+    - node.type.tours
+id: node.tours.field_town_or_suburb_8
+field_name: field_town_or_suburb_8
+entity_type: node
+bundle: tours
+label: 'Town or Suburb 8'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

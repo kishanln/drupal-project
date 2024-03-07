@@ -1,0 +1,23 @@
+uuid: e68a66c1-b3db-461c-b5fd-924ad6826701
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_url_including_http
+    - node.type.choir_or_group_listing
+  module:
+    - link
+id: node.choir_or_group_listing.field_url_including_http
+field_name: field_url_including_http
+entity_type: node
+bundle: choir_or_group_listing
+label: 'Website URL (optional)'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 16
+  title: 0
+field_type: link

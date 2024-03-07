@@ -1,0 +1,91 @@
+uuid: 56cfb335-0253-4dc2-ac02-f105ca12a221
+langcode: en
+status: true
+dependencies: {  }
+id: tour_listing_notifications
+label: 'Tour listing Notifications'
+events:
+  -
+    event_name: 'rules_entity_insert:node'
+description: ''
+tags: {  }
+config_version: '3'
+expression:
+  id: rules_rule
+  uuid: 5485bbb8-e00a-4ae1-a9a8-a0f11b953f53
+  weight: 0
+  conditions:
+    id: rules_and
+    uuid: f4b900be-3d22-46d7-9d6b-433c05fec4b3
+    weight: 0
+    conditions:
+      -
+        id: rules_condition
+        uuid: b0c2c548-e95c-4854-a2af-3fa74a2c8cc5
+        weight: 0
+        context_values:
+          types:
+            - tours
+        context_mapping:
+          node: node
+        context_processors:
+          types:
+            rules_tokens: {  }
+        provides_mapping: {  }
+        condition_id: rules_node_is_of_type
+        negate: false
+  actions:
+    id: rules_action_set
+    uuid: 4621a298-2308-487b-9b9e-938c951af493
+    weight: 0
+    actions:
+      -
+        id: rules_action
+        uuid: 1ece1eda-3598-4dc8-9974-7c5c0162b887
+        weight: 0
+        context_values:
+          to:
+            - info@choircentral.com.au
+          subject: 'A new tour listing has been created and may need moderating.'
+          message: 'A new tour listing has been created and may need moderating. https://choircentral.com.au/node/{{node.nid}}/edit'
+          reply: ''
+          language: ''
+        context_mapping: {  }
+        context_processors:
+          to:
+            rules_tokens: {  }
+          subject:
+            rules_tokens: {  }
+          message:
+            rules_tokens: {  }
+          reply:
+            rules_tokens: {  }
+          language:
+            rules_tokens: {  }
+        provides_mapping: {  }
+        action_id: rules_send_email
+      -
+        id: rules_action
+        uuid: 832c2c09-6baf-4ea5-bfe2-a34518909a22
+        weight: 0
+        context_values:
+          to:
+            - '{{node.uid.entity.mail.value}}'
+          subject: 'A new choir listing has been created and may need moderating.'
+          message: 'Your choir listing has been created and may need moderating.'
+          reply: ''
+          language: ''
+        context_mapping: {  }
+        context_processors:
+          to:
+            rules_tokens: {  }
+          subject:
+            rules_tokens: {  }
+          message:
+            rules_tokens: {  }
+          reply:
+            rules_tokens: {  }
+          language:
+            rules_tokens: {  }
+        provides_mapping: {  }
+        action_id: rules_send_email

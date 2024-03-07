@@ -1,0 +1,25 @@
+uuid: 3375777d-fd7b-423e-b04c-3bfb28a3733d
+langcode: en
+status: false
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - system
+  theme:
+    - bartikcustomgary
+id: mainnavigation_2
+theme: bartikcustomgary
+region: footer_third
+weight: -17
+provider: null
+plugin: 'system_menu_block:main'
+settings:
+  id: 'system_menu_block:main'
+  label: Links
+  provider: system
+  label_display: visible
+  level: 1
+  depth: 1
+  expand_all_items: false
+visibility: {  }

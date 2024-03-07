@@ -1,0 +1,21 @@
+uuid: 061f5330-a579-4b18-a539-a11f64725543
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_promotion_end_date
+    - node.type.choir_or_group_listing
+  module:
+    - datetime
+id: node.choir_or_group_listing.field_promotion_end_date
+field_name: field_promotion_end_date
+entity_type: node
+bundle: choir_or_group_listing
+label: 'Promotion End Date'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime
